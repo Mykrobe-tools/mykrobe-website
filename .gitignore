@@ -1,0 +1,10 @@
+.DS_Store
+target/
+local.properties
+node_modules
+*.cache
+website/*.log
+website/wp-content/cache/
+website/wp-content/backups/
+website/wp-content/wp-cache-config.php
+website/sitemap.*
