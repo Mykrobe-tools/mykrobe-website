@@ -3,6 +3,7 @@ target/
 local.properties
 node_modules
 *.cache
+.sass-cache/
 website/*.log
 website/wp-content/cache/
 website/wp-content/backups/
