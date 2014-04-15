@@ -5,6 +5,7 @@ node_modules
 *.cache
 .sass-cache/
 dist/
+.tmp/
 website/*.log
 website/wp-content/cache/
 website/wp-content/backups/
