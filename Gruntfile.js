@@ -32,9 +32,13 @@ module.exports = function(grunt) {
             },
         },
         watch: {
-            compass: {
-                files: ['<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css/{,*/}*.{scss,sass}'],
-                tasks: ['compass:server', 'autoprefixer']
+            // compass: {
+            //     files: ['<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css/{,*/}*.{scss,sass}'],
+            //     tasks: ['compass:server', 'autoprefixer']
+            // },
+            sass: {
+                files: ['<%= yeoman.app %>/css/{,*/}*.{scss,sass}'],
+                tasks: ['sass']
             },
             gruntfile: {
                 files: ['Gruntfile.js']
@@ -80,28 +84,28 @@ module.exports = function(grunt) {
             server: '.tmp'
         },
         compass: {
-            options: {
-                sassDir: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css',
-                cssDir: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css',
-                generatedImagesDir: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/img',
-                imagesDir: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/img',
-                javascriptsDir: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js',
-                fontsDir: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css/fonts',
-                httpImagesPath: '/wp-content/themes/<%= yeomanConfig.themeName %>/img',
-                httpGeneratedImagesPath: '/wp-content/themes/<%= yeomanConfig.themeName %>/img',
-                httpFontsPath: '/wp-content/themes/<%= yeomanConfig.themeName %>/fonts',
-                relativeAssets: false
-            },
-            dist: {
-                options: {
-                    generatedImagesDir: '<%= yeomanConfig.dist %>/img/generated'
-                }
-            },
-            server: {
-                options: {
-                    debugInfo: true
-                }
-            }
+            // options: {
+            //     sassDir: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css',
+            //     cssDir: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css',
+            //     generatedImagesDir: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/img',
+            //     imagesDir: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/img',
+            //     javascriptsDir: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js',
+            //     fontsDir: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css/fonts',
+            //     httpImagesPath: '/wp-content/themes/<%= yeomanConfig.themeName %>/img',
+            //     httpGeneratedImagesPath: '/wp-content/themes/<%= yeomanConfig.themeName %>/img',
+            //     httpFontsPath: '/wp-content/themes/<%= yeomanConfig.themeName %>/fonts',
+            //     relativeAssets: false
+            // },
+            // dist: {
+            //     options: {
+            //         generatedImagesDir: '<%= yeomanConfig.dist %>/img/generated'
+            //     }
+            // },
+            // server: {
+            //     options: {
+            //         debugInfo: true
+            //     }
+            // }
         },
         autoprefixer: {
             options: {
@@ -117,19 +121,19 @@ module.exports = function(grunt) {
             }
         },
         // Automatically inject Bower components into the HTML file
-        'bower-install': {
-            app: {
-                html: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/footer.php',
-                ignorePath: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/'
-            }
-        },
-        rev: {
-            dist: {
-                files: {
-                    src: ['<%= yeomanConfig.dist %>/scripts/{,*/}*.js', '<%= yeomanConfig.dist %>/css/{,*/}*.css', '<%= yeomanConfig.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}', '<%= yeomanConfig.dist %>/css/fonts/{,*/}*.*']
-                }
-            }
-        },
+        // 'bower-install': {
+        //     app: {
+        //         html: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/footer.php',
+        //         ignorePath: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/'
+        //     }
+        // },
+        // rev: {
+        //     dist: {
+        //         files: {
+        //             src: ['<%= yeomanConfig.dist %>/scripts/{,*/}*.js', '<%= yeomanConfig.dist %>/css/{,*/}*.css', '<%= yeomanConfig.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}', '<%= yeomanConfig.dist %>/css/fonts/{,*/}*.*']
+        //         }
+        //     }
+        // },
         // useminPrepare: {
         //     options: {
         //         dest: '<%= yeomanConfig.dist %>'
@@ -143,13 +147,50 @@ module.exports = function(grunt) {
         //     html: ['<%= yeomanConfig.dist %>/{,*/}*.html'],
         //     css: ['<%= yeomanConfig.dist %>/css/{,*/}*.css']
         // },
+        sass: {
+            options: {
+                // sassDir: '<%= yeoman.app %>/styles',
+                // cssDir: '.tmp/styles',
+                // generatedImagesDir: '.tmp/images/generated',
+                // imagesDir: '<%= yeoman.app %>/images',
+                // javascriptsDir: '<%= yeoman.app %>/scripts',
+                // fontsDir: '<%= yeoman.app %>/styles/fonts',
+                // importPath: '<%= yeoman.app %>/bower_components',
+                // httpImagesPath: '/images',
+                // httpGeneratedImagesPath: '/images/generated',
+                // httpFontsPath: '/styles/fonts',
+                // relativeAssets: false,
+                // assetCacheBuster: false
+                // expand: true
+            },
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css/',
+                    // src: '{,*/}*.scss',
+                    src: 'main.scss',
+                    dest: '<%= yeomanConfig.dist %>/css/',
+                    ext: '.css'
+                }]
+            },
+            server: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css/',
+                    // src: '{,*/}*.scss',
+                    src: 'main.scss',
+                    dest: '.tmp/css/',
+                    ext: '.css'
+                }]
+            }
+        },
         imagemin: {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/images',
+                    cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/img',
                     src: '{,*/}*.{png,jpg,jpeg}',
-                    dest: '<%= yeomanConfig.dist %>/images'
+                    dest: '<%= yeomanConfig.dist %>/img'
                 }]
             }
         },
@@ -157,10 +198,44 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/images',
+                    cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/img',
                     src: '{,*/}*.svg',
-                    dest: '<%= yeomanConfig.dist %>/images'
+                    dest: '<%= yeomanConfig.dist %>/img'
                 }]
+            }
+        },
+        concat: {
+            options: {
+                separator: ';',
+            },
+            dist: {
+                // the files to concatenate
+                src: [
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/vendor/jquery.smooth-scroll.min.js',
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/helixcentre/*.js',
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/helixcentre/behaviour/*.js',
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/script.js',
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/vendor/jquery.easing.1.3.js',
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/vendor/fastclick.js',
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/plugins.js',
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/script.clean.js'
+                ],
+                // the location of the resulting JS file
+                dest: '<%= yeomanConfig.dist %>/js/script.min.js'
+            }
+        },
+        uglify: {
+            options:{
+                compress: {
+                    drop_console: true
+                }
+            },
+            dist: {
+                files: {
+                    '<%= yeomanConfig.dist %>/js/script.min.js': [
+                        '<%= yeomanConfig.dist %>/js/script.min.js'
+                    ]
+                }
             }
         },
         cssmin: {
@@ -180,25 +255,25 @@ module.exports = function(grunt) {
             // }
         },
         htmlmin: {
-            dist: {
-                options: {
-                    /*removeCommentsFromCDATA: true,
-                // https://github.com/yeoman/grunt-usemin/issues/44
-                //collapseWhitespace: true,
-                collapseBooleanAttributes: true,
-                removeAttributeQuotes: true,
-                removeRedundantAttributes: true,
-                useShortDoctype: true,
-                removeEmptyAttributes: true,
-                removeOptionalTags: true*/
-                },
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>',
-                    src: '*.html',
-                    dest: '<%= yeomanConfig.dist %>'
-                }]
-            }
+            // dist: {
+            //     options: {
+            //         removeCommentsFromCDATA: true,
+            //     // https://github.com/yeoman/grunt-usemin/issues/44
+            //     //collapseWhitespace: true,
+            //     collapseBooleanAttributes: true,
+            //     removeAttributeQuotes: true,
+            //     removeRedundantAttributes: true,
+            //     useShortDoctype: true,
+            //     removeEmptyAttributes: true,
+            //     removeOptionalTags: true
+            //     },
+            //     files: [{
+            //         expand: true,
+            //         cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>',
+            //         src: '*.html',
+            //         dest: '<%= yeomanConfig.dist %>'
+            //     }]xx§
+            // }
         },
         // Put files not handled in other tasks here
         copy: {
@@ -208,26 +283,36 @@ module.exports = function(grunt) {
                     dot: true,
                     cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>',
                     dest: '<%= yeomanConfig.dist %>',
-                    src: ['*.{ico,png,txt}', '.htaccess', 'images/{,*/}*.{webp,gif}', 'styles/fonts/{,*/}*.*', 'bower_components/sass-bootstrap/fonts/*.*']
+                    src: [
+                        '*.{css,ico,png,txt}', 
+                        '.htaccess', 
+                        'images/{,*/}*.{webp,gif}',
+                        '{,*/}*.html',
+                        '{,*/}*.php',
+                        'css/fonts/{,*/}*.*',
+                        'css/font-awesome/{,*/}*.*',
+                        'api/**',
+                        'scripts/**',
+                    ]
                 }]
             },
             styles: {
                 expand: true,
                 dot: true,
-                cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/styles',
+                cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css',
                 dest: '.tmp/css/',
                 src: '{,*/}*.css'
             }
         },
-        modernizr: {
-            devFile: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/bower_components/modernizr/modernizr.js',
-            outputFile: '<%= yeomanConfig.dist %>/bower_components/modernizr/modernizr.js',
-            files: ['<%= yeomanConfig.dist %>/scripts/{,*/}*.js', '<%= yeomanConfig.dist %>/css/{,*/}*.css', '!<%= yeomanConfig.dist %>/scripts/vendor/*'],
-            uglify: true
-        },
+        // modernizr: {
+            // devFile: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/bower_components/modernizr/modernizr.js',
+            // outputFile: '<%= yeomanConfig.dist %>/bower_components/modernizr/modernizr.js',
+            // files: ['<%= yeomanConfig.dist %>/scripts/{,*/}*.js', '<%= yeomanConfig.dist %>/css/{,*/}*.css', '!<%= yeomanConfig.dist %>/scripts/vendor/*'],
+            // uglify: true
+        // },
         concurrent: {
-            server: ['compass', 'copy:styles'],
-            dist: ['compass', 'copy:styles', 'imagemin', 'svgmin', 'htmlmin']
+            server: ['sass', 'copy:styles'],
+            dist: ['sass', 'copy:styles', 'imagemin', 'svgmin']
         },
         bower: {
             options: {
@@ -245,7 +330,7 @@ module.exports = function(grunt) {
         grunt.task.run(['clean:server', 'concurrent:server', 'autoprefixer', 'connect:livereload', 'watch']);
     });
     grunt.registerTask('test', ['clean:server', 'concurrent:test', 'autoprefixer', 'connect:test', 'mocha']);
-    grunt.registerTask('build', ['clean:dist', 'concurrent:dist', 'autoprefixer', 'modernizr', 'copy:dist']);
+    grunt.registerTask('build', ['clean:dist', 'concurrent:dist', 'autoprefixer', 'concat', 'uglify', 'copy:dist']);
     grunt.registerTask('default', ['build']);
     grunt.registerTask('backup-local-db', ['exec:backup-local-db']);
     grunt.registerTask('import-local-db', ['exec:import-local-db']);
