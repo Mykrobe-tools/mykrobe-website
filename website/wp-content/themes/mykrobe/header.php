@@ -54,7 +54,6 @@ $page_title = str_replace('&#8217;', '’', $page_title);
 		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php bloginfo('template_directory');?>/img/AppIcon76.png">
 		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php bloginfo('template_directory');?>/img/AppIcon76@2x.png">
         <script src="<?php bloginfo('template_directory');?>/js/vendor/modernizr.custom.62260.js"></script>
-		<link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/normalize.min.css">
 	<?php if (useMinified()) {
 		?>
       	<link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/main.min.css">

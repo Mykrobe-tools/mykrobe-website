@@ -37,7 +37,7 @@ module.exports = function(grunt) {
             //     tasks: ['compass:server', 'autoprefixer']
             // },
             sass: {
-                files: ['<%= yeoman.app %>/css/{,*/}*.{scss,sass}'],
+                files: ['<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css/{,*/}*.{scss,sass}'],
                 tasks: ['sass']
             },
             gruntfile: {
@@ -179,7 +179,7 @@ module.exports = function(grunt) {
                     cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css/',
                     // src: '{,*/}*.scss',
                     src: 'main.scss',
-                    dest: '.tmp/css/',
+                    dest: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css/',
                     ext: '.css'
                 }]
             }

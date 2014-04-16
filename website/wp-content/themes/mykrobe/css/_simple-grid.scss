@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+}
+
+/* __________________________________________________________________________________________ 1140
+*/
+
+$grid-margin: 24;
+$grid-gutter: 24;
+$grid-columns: 10;
+$grid-content-width: 976;
+$gutter-width-percent: 100 * $grid-gutter / $grid-content-width;
+$column-width: ($grid-content-width - $grid-gutter * ($grid-columns - 1) ) / $grid-columns;
+$column-width-percent: 100 * $column-width / $grid-content-width;
+
+// from 1..$grid-columns
+@mixin column-width ($column-index) {
+    width: ($column-index * $column-width-percent + ($column-index - 1) * $gutter-width-percent) * 1%;
+}
+
+.container {
+    padding-left: $grid-margin;
+    padding-right: $grid-margin;
+}
+
+.row {
+    width: 100%;
+    max-width: 896px;
+    min-width: 720px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 1280px) {
+    .row {
+        max-width: 1080px;
+        min-width: 896px;
+    }
+}
+
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol {
+    margin-right:$gutter-width-percent * 1%;
+    float: left;
+    min-height: 1px;
+}
+.row {
+    .onecol {
+        @include column-width(1);
+    }
+    .twocol {
+        @include column-width(2);
+    }
+    .threecol {
+        @include column-width(3);
+    }
+    .fourcol {
+        @include column-width(4);
+    }
+    .fivecol {
+        @include column-width(5);
+    }
+    .sixcol {
+        @include column-width(6);
+    }
+    .sevencol {
+        @include column-width(7);
+    }
+    .eightcol {
+        @include column-width(8);
+    }
+    .ninecol {
+        @include column-width(9);
+    }
+    .tencol {
+        @include column-width(10);
+    }
+}
+.last {
+    margin-right: 0;
+}
+
+img, object, embed {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+@media only screen and (max-width: 767px) {
+
+    body, .container {
+        width: 100%;
+        min-width: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .row {
+        min-width: 0;
+        width: 90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    .row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+        width: auto;
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+/* __________________________________________________________________________________________ main
+*/
+
+
+.container {
+    position:relative;
+}
+
+#map {
+    z-index:0;
+	position: fixed;
+    top:0;
+    width:100%;
+    height:100%;
+}
+
+#grid {
+    position:absolute;
+    top:0;
+    width:1024px;
+    height:768px;
+    background: url('../images/grid-dummy.png') no-repeat left top;
+}
+
+#left {
+    z-index:1;
+    width:200px;
+    padding:12px;
+    height:2000px;
+    position:relative;
+    background: url('../images/left-dummy.png') no-repeat 12px 8px;
+}
+
+#left.expanded {
+    background: url('../images/left-dummy-toggle.png') no-repeat 12px 8px;
+}
+
+#left.grid {
+    background: url('../images/left-dummy-grid.png') no-repeat 12px 8px;
+}
+
+#left.grid.expanded {
+    background: url('../images/left-dummy-toggle-grid.png') no-repeat 12px 8px;
+}
+
+#map-button, #grid-button, #toggle-button {
+    display: block;
+    // background-color:red;
+    height: 40px;
+    position: absolute;
+    cursor:pointer;
+}
+
+#map-button, #grid-button {
+    width: 56px;
+    top:108px + 8px;
+}
+
+#toggle-button {
+    top:228px+8px;
+    left:12px + 12px;
+    width:176px;
+}
+
+#map-button {
+    left:12px + 12px;
+}
+
+#grid-button {
+    left:72px + 12px;
+}
+
+.leaflet-left {
+    left:212px;
+}

@@ -59,78 +59,6 @@ textarea {
 /* __________________________________________________________________________________________ 1140
 */
 
-.container {
-    padding-left: 16px;
-    padding-right: 16px;
-}
-
-.row {
-    width: 100%;
-    max-width: 896px;
-    min-width: 720px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-@media only screen and (min-width: 1280px) {
-    .row {
-        max-width: 1080px;
-        min-width: 896px;
-    }
-}
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-    .container  {
-        /*width:976px;*/
-    }
-}
-
-.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
-    margin-right:1.7857142857142858%;
-    float: left;
-    min-height: 1px;
-}
-.row .onecol {
- width:6.696428571428571%;
-}
-.row .twocol {
-    width:15.178571428571429%;
-}
-.row .threecol {
-    width:23.660714285714285%;
-}
-.row .fourcol {
- width:32.142857142857146%;
-}
-.row .fivecol {
-    width:40.625%;
-}
-.row .sixcol {
-    width:49.107142857142854%;
-}
-.row .sevencol {
-    width:57.589285714285715%;
-}
-.row .eightcol {
- width:66.07142857142857%;
-}
-.row .ninecol {
-    width:74.55357142857143%;
-}
-.row .tencol {
-    width:83.03571428571429%;
-}
-.row .elevencol {
- width:91.51785714285714%;
-}
-.row .twelvecol {
-    width:100%;
-}
-
-.last {
-    margin-right: 0;
-}
-
 img, object, embed {
     max-width: 100%;
 }
@@ -140,35 +68,6 @@ img {
 }
 
 
-
-@media only screen and (max-width: 767px) {
-
-    body, .container {
-        width: 100%;
-        min-width: 0;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .row {
-        min-width: 0;
-        width: 90%;
-        margin-left:5%;
-        margin-right:5%;
-    }
-
-    .row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
-        width: auto;
-        float: none;
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-}
 
 /* __________________________________________________________________________________________ main
 */
@@ -845,333 +744,75 @@ img.avatar {
 /* __________________________________________________________________________________________ blog archive
 */
 
-/* __________________________________________________________________________________________ mobile
+/* __________________________________________________________________________________________ responsive
 */
 
-body {
-    /*font-size:77.7778%;*/
-    /*font-size:88.8889%;*/
-    font-size: 100%;
+$margin-small: 12px;
+$gutter-small: 12px;
+$column-small: 65px;
+$flexible-small: true;
+
+$margin-intermediate: 16px;
+$gutter-intermediate: 16px;
+$column-intermediate: 80px;
+$flexible-intermediate: true;
+
+$margin-regular: 24px;
+$gutter-regular: 16px;
+$column-regular: 80px;
+$flexible-regular: false;
+
+$min-width-with-sidebar-columns: 8;
+$min-width-with-sidebar-column-width: $column-regular;
+$min-width-with-sidebar-gutter: $gutter-regular;
+$min-width-with-sidebar-margin: $margin-regular;
+
+$min-width-with-sidebar: width-with-grid-settings(
+  $min-width-with-sidebar-columns,
+  $min-width-with-sidebar-column-width,
+  $min-width-with-sidebar-gutter,
+  $min-width-with-sidebar-margin
+);
+
+img, object, embed {
+    max-width: 100%;
 }
 
-@media only screen and (max-width: 767px) {
-
-    .top-header {
-        position: relative;
-        z-index: 4;
-    }
-
-    header .menu-button {
-        width: 2em;
-        height: 2em;
-        position: fixed;
-        z-index:5;
-        background-color: red;
-        right: 5%;
-        top:1em;
-        background: url(../img/burger-button.png) right top no-repeat;
-    }
-
-    header .menu-header-menu-container {
-        position: fixed;
-        z-index:4;
-        top:0;
-        left:0;
-        right:0;
-        background: url(../img/menu-background.png);
-        padding: 0.5em 5%;
-        display: none;
-    }
-
-    header .menu-header-menu-container li {
-        position: absolute;
-        visibility: hidden;
-    }
-
-    header .menu-header-menu-container li a {
-        display: block;
-        padding:0.5em 0;
-    }
-
-    header ul.menu li.current_page_item a:after {
-        content: '';
-        display: block;
-        width: 1.25em;
-        height: 0.0625em;
-        background-color: #fc3f2c;
-        position: relative;
-        top:0.125em;
-    }
-
-    header .menu-header-menu-container.expanded li {
-        position: static;
-        visibility: visible;
-    }
-
-    header .menu-header-menu-container li.current_page_item {
-        position: static;
-        visibility: visible;
-    }
-
-    header .menu {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-transform: uppercase;
-    }
-
-
-    h1 {
-        margin-bottom: 2.5em;
-    }
-
-    h1.logo {
-        margin-top: 1em;
-        /*margin-bottom: 1.25em;*/
-    }
-
-     .what-is-helix.container .question {
-        margin-bottom: 1em;
-     }
-
-    .what-is-helix.container .answer {
-        margin-bottom: 2em;
-    }
-
-    .what-is-helix.container .statement {
-        font-size: 1.5em;
-        line-height: 1.25;
-        letter-spacing: -0.5px;
-        color:#adaeb0;
-        margin-bottom: 2em;
-    }
-
-    .team.container .fourcol, .partners.container .fourcol {
-        margin-bottom: 2.5em;
-    }
-
-    #map-canvas {
-        width:auto;
-        height:16em;
-    }
-}
-
-@media only screen and (min-width: 480px) {
-
-/* __________________________________________________________________________________________ intermediate
-*/
-
-    body {
-        /*font-size:88.8889%;*/
-    }
-
-}
-
-@media only screen and (min-width: 768px) {
-
-/* __________________________________________________________________________________________ regular
-*/
-
-    body {
-        font-size:100%;
-    }
-
-    p a, .blog-article-list footer li a {
-        display: inline-block;
-        position: relative;
-        text-decoration: none;
-        color:#477275;
-    }
-    
-    p a::after, .blog-article-list footer li a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      display: inline-block;
-      height: 1em;
-      width: 100%;
-      border-bottom: 1px dotted;
-      margin-top: 0.25em;
-    }
-
-    p a:hover:after, .blog-article-list footer li a:hover:after {
-        border-bottom: 1px solid;
-    }
-
-    header {
-        margin-bottom: 6.25em; /* 100px */
-    }
-
-    header .menu-button {
-        display: none;
-    }
-
-    /* 36px top */
-    header ul.menu {
-        margin: 2.25em 0 0 0;
-        padding: 0;
-        list-style-type: none;
-        /*overflow: hidden;*/
-        /*float:right;*/
-        text-transform: uppercase;
-    }
-
-    header ul.menu li {
-        float:left;
-        margin-right: 1em;
-    }
-
-    header ul.menu li.current_page_item a:after,
-    header ul.menu li.current_page_parent a:after {
-        content: '';
-        display: block;
-        width: 1.25em;
-        height: 0.0625em;
-        background-color: #fc3f2c;
-        position: relative;
-        top:2.6875em;
-    }
-
-
-    /* 39px top */
-    .logo {
-        margin: 2.4375em 0 0 0;
-    }
-
-    /* -4px top */
-    /* 80px height */
-    h1 {
-        /*position: relative;*/
-        /*top: -0.25em;*/
-        min-height: 5em;
-    }
-
-
-    .home .top-header {
-        z-index:3;
-        position: relative;
-        /*width:100%;*/
-    }
-
-    .what-is-helix.container .answer {
-        font-size: 1.75em;
-        line-height: 1.42857;
-        letter-spacing: -0.5px;
-        color:#adaeb0;
-        position: relative;
-        top:-0.2143em;
-        /* 1em = 28px */
-    }
-
-    .what-is-helix.container .statement {
-        font-size: 3.5em;
-        line-height: 1.0714;
-        color:#adaeb0;
-        letter-spacing: -1px;
-    }
-
-    .what-is-helix.container .answer-last .mc-field-group, .what-is-helix.container .answer-last a {
-        /*font-size: 0.66em;*/
-    }
-
-    .what-is-helix.container .answer-last .mc-field-group > * {
-        width:auto;
-    }
-
-    .what-is-helix.container .answer-last .mc-field-group > input {
-        padding:0 0.5em;
-    }
-
-    .team.container .fourcol, .partners.container .fourcol {
-        margin-bottom: 3.75em;
-    }
-
-    footer h1 {
-        position: static;
-        top:inherit;
-        min-height: inherit;
-    }
-
-    .footer.container p {
-        margin: 0;
-    }
-    .monogram {
-        margin: 0;
-    }
-
-    
-}
-
-@media only screen and (min-width: 1280px) {
-
-/* __________________________________________________________________________________________ maximal
-*/
-
-    body {
-        font-size:125%;
-    }
-
-}
-
-
-
-/* __________________________________________________________________________________________ helpers
-*/
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
+img {
     height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+}
+//
+// small
+//
+
+@include with-grid-settings(4, $column-small, $gutter-small, $margin-small, $margin-small, false, $flexible-small) {
+  @include base-grid;
 }
 
-.invisible {
-    visibility: hidden;
+@media only screen and (min-width: width-with-grid-settings(6, $column-small, $gutter-small, $margin-small)) {
+  @include with-grid-settings(6, $column-small, $gutter-small, $margin-small, $margin-small, false, $flexible-small) {
+    @include base-grid;
+  }
 }
 
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
+//
+// intermediate
+//
+
+@media only screen and (min-width: width-with-grid-settings(6, $column-intermediate, $gutter-intermediate, $margin-intermediate)) {
+  @include with-grid-settings(6, $column-intermediate, $gutter-intermediate, $margin-intermediate, $margin-intermediate, false, $flexible-intermediate) {
+    @include base-grid;
+  }
 }
 
-.clearfix:after {
-    clear: both;
-}
+//
+// regular
+//
 
-.clearfix {
-    *zoom: 1;
+@each $columns in 8, 10, 12, 14, 16, 18, 20 {
+  @media only screen and (min-width: width-with-grid-settings($columns, $column-regular, $gutter-regular, $margin-regular)) {
+    @include with-grid-settings($columns, $column-regular, $gutter-regular, $margin-regular, $margin-regular, true, $flexible-regular) {
+      @include base-grid;
+    }
+  }
 }
