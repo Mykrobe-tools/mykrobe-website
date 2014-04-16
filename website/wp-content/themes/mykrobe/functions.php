@@ -29,8 +29,7 @@ add_action( 'widgets_init', 'helixcentre_widgets_init' );
 function register_my_menus() {
   register_nav_menus(
     array(
-      'header-menu' => __( 'Header Menu' ),
-      'footer-menu' => __( 'Footer Menu' )
+      'header-menu' => __( 'Header Menu' )
     )
   );
 }
@@ -105,7 +104,7 @@ function helixcentre_comment( $comment, $args, $depth ) {
 function my_acf_options_page_settings( $settings )
 {
 	$settings['title'] = 'Options';
-	$settings['pages'] = array('Mailing list', 'Footer', 'SEO');
+	$settings['pages'] = array('Footer', 'SEO');
 	return $settings;
 }
 

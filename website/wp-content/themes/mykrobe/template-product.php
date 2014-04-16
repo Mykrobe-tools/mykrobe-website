@@ -1,20 +1,21 @@
 <?php
 /*
- * Template Name: Partners
+ * Template Name: Product
  */
 ?>
 <?php get_header(); ?>
-	<div class="partners container">
+	<div class="product container">
 		<div class="row">
 			<h1><?php the_title(); ?></h1>
+			<?php echo get_field('description'); ?>
 		</div>
 <?php
-if( get_field('partners') ) {
+if( get_field('species') ) {
 	$counter = 0;
 	$row_open = false;
-	while( has_sub_field('partners') ) {
+	while( has_sub_field('species') ) {
 		$image_id = get_sub_field('image');
-		$body = get_sub_field('body');
+		$description = get_sub_field('description');
 
 		$image_attributes = wp_get_attachment_image_src($image_id, 'medium');
 		$url = $image_attributes[0];
@@ -30,7 +31,7 @@ if( get_field('partners') ) {
 ?>
 			<div class="fourcol<?php if ( 2 == $counter % 3) { echo ' last'; } ?>">
 				<img class="logo" src="<?php echo $url ?>" />
-				<?php echo $body; ?>
+				<?php echo $description; ?>
 			</div>
 <?php
 		if ( $row_open && 2 == $counter % 3) {
