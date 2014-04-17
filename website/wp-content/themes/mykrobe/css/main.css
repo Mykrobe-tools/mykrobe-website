@@ -643,8 +643,8 @@ img {
   height: auto; }
 
 .container {
-  padding-left: 3.75%;
-  padding-right: 3.75%; }
+  padding-left: 3.84615%;
+  padding-right: 3.84615%; }
 
 .row {
   width: 100%;
@@ -654,159 +654,32 @@ img {
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
   float: left;
   min-height: 1px;
-  margin-right: 3.75%; }
+  margin-right: 3.84615%; }
 
 .row .onecol {
-  width: 20.3125%; }
+  width: 7.69231%; }
 .row .twocol {
-  width: 44.375%; }
+  width: 19.23077%; }
 .row .threecol {
-  width: 68.4375%; }
+  width: 30.76923%; }
 .row .fourcol {
-  width: 92.5%; }
+  width: 42.30769%; }
 .row .fivecol {
-  width: 116.5625%; }
+  width: 53.84615%; }
 .row .sixcol {
-  width: 140.625%; }
+  width: 65.38462%; }
 .row .sevencol {
-  width: 164.6875%; }
+  width: 76.92308%; }
 .row .eightcol {
-  width: 188.75%; }
+  width: 88.46154%; }
 .row .ninecol {
-  width: 212.8125%; }
+  width: 100%; }
 .row .tencol {
-  width: 236.875%; }
+  width: 111.53846%; }
 .row .elevencol {
-  width: 260.9375%; }
+  width: 123.07692%; }
 .row .twelvecol {
-  width: 285%; }
+  width: 134.61538%; }
 
 .last {
   margin-right: 0; }
-
-@media only screen and (min-width: 474px) {
-  .container {
-    padding-left: 2.53165%;
-    padding-right: 2.53165%; }
-
-  .row {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden; }
-
-  .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
-    float: left;
-    min-height: 1px;
-    margin-right: 2.53165%; }
-
-  .row .onecol {
-    width: 13.71308%; }
-  .row .twocol {
-    width: 29.95781%; }
-  .row .threecol {
-    width: 46.20253%; }
-  .row .fourcol {
-    width: 62.44726%; }
-  .row .fivecol {
-    width: 78.69198%; }
-  .row .sixcol {
-    width: 94.93671%; }
-  .row .sevencol {
-    width: 111.18143%; }
-  .row .eightcol {
-    width: 127.42616%; }
-  .row .ninecol {
-    width: 143.67089%; }
-  .row .tencol {
-    width: 159.91561%; }
-  .row .elevencol {
-    width: 176.16034%; }
-  .row .twelvecol {
-    width: 192.40506%; }
-
-  .last {
-    margin-right: 0; } }
-@media only screen and (min-width: 1168px) {
-  .container {
-    padding-left: 1.81818%;
-    padding-right: 1.81818%; }
-
-  .row {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden; }
-
-  .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
-    float: left;
-    min-height: 1px;
-    margin-right: 1.81818%; }
-
-  .row .onecol {
-    width: 9.09091%; }
-  .row .twocol {
-    width: 20%; }
-  .row .threecol {
-    width: 30.90909%; }
-  .row .fourcol {
-    width: 41.81818%; }
-  .row .fivecol {
-    width: 52.72727%; }
-  .row .sixcol {
-    width: 63.63636%; }
-  .row .sevencol {
-    width: 74.54545%; }
-  .row .eightcol {
-    width: 85.45455%; }
-  .row .ninecol {
-    width: 96.36364%; }
-  .row .tencol {
-    width: 107.27273%; }
-  .row .elevencol {
-    width: 118.18182%; }
-  .row .twelvecol {
-    width: 129.09091%; }
-
-  .last {
-    margin-right: 0; } }
-@media only screen and (min-width: 1008px) {
-  .container {
-    padding-left: 3.57143%;
-    padding-right: 3.57143%; }
-
-  .row {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden; }
-
-  .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
-    float: left;
-    min-height: 1px;
-    margin-right: 3.57143%; }
-
-  .row .onecol {
-    width: 7.14286%; }
-  .row .twocol {
-    width: 17.85714%; }
-  .row .threecol {
-    width: 28.57143%; }
-  .row .fourcol {
-    width: 39.28571%; }
-  .row .fivecol {
-    width: 50%; }
-  .row .sixcol {
-    width: 60.71429%; }
-  .row .sevencol {
-    width: 71.42857%; }
-  .row .eightcol {
-    width: 82.14286%; }
-  .row .ninecol {
-    width: 92.85714%; }
-  .row .tencol {
-    width: 103.57143%; }
-  .row .elevencol {
-    width: 114.28571%; }
-  .row .twelvecol {
-    width: 125%; }
-
-  .last {
-    margin-right: 0; } }

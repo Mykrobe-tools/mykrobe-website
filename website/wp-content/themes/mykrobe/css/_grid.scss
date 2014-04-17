@@ -78,7 +78,8 @@ $use-percentages: false;
 
 @function width-total() {
   $_container-width:($total-columns * ($column-width + $gutter-width)) - $gutter-width;
-  @return $_container-width + $margin-left-width + $margin-right-width;
+  // @return $_container-width + $margin-left-width + $margin-right-width;
+  @return $_container-width;
 }
  
 @function width-for-columns-gutters-margins($columns:1, $gutters:0, $include-margin-left: true, $include-margin-right: true) {

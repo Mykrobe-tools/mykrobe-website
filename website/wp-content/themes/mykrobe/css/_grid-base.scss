@@ -6,7 +6,12 @@
     padding-right: margin-right();    
   }
   .row {
-    width: 100%;
+    @if $use-percentages {
+      width: 100%;
+    } 
+    @else {
+      width:width-for-columns-gutters($total-columns,$total-columns - 1);
+    }
     margin: 0 auto;
     overflow: hidden;
   }

@@ -779,12 +779,12 @@ img.avatar {
 $margin-small: 12px;
 $gutter-small: 12px;
 $column-small: 65px;
-$flexible-small: true;
+$flexible-small: false;
 
 $margin-intermediate: 16px;
 $gutter-intermediate: 16px;
 $column-intermediate: 80px;
-$flexible-intermediate: true;
+$flexible-intermediate: false;
 
 $margin-regular: 36px;
 $gutter-regular: 36px;
@@ -802,32 +802,32 @@ img {
 // small
 //
 
-@include with-grid-settings(4, $column-small, $gutter-small, $margin-small, $margin-small, $flexible-small) {
-  @include grid-base;
-}
+// @include with-grid-settings(4, $column-small, $gutter-small, $margin-small, $margin-small, $flexible-small) {
+//   @include grid-base;
+// }
 
-@media only screen and (min-width: width-with-grid-settings(6, $column-small, $gutter-small, $margin-small)) {
-  @include with-grid-settings(6, $column-small, $gutter-small, $margin-small, $margin-small, $flexible-small) {
-    @include grid-base;
-  }
-}
+// @media only screen and (min-width: width-with-grid-settings(6, $column-small, $gutter-small, $margin-small)) {
+//   @include with-grid-settings(6, $column-small, $gutter-small, $margin-small, $margin-small, $flexible-small) {
+//     @include grid-base;
+//   }
+// }
 
 //
 // intermediate
 //
 
-@media only screen and (min-width: width-with-grid-settings(12, $column-intermediate, $gutter-intermediate, $margin-intermediate)) {
-  @include with-grid-settings(9, $column-intermediate, $gutter-intermediate, $margin-intermediate, $margin-intermediate, $flexible-intermediate) {
-    @include grid-base;
-  }
-}
+// @media only screen and (min-width: width-with-grid-settings(9, $column-intermediate, $gutter-intermediate, $margin-intermediate)) {
+//   @include with-grid-settings(9, $column-intermediate, $gutter-intermediate, $margin-intermediate, $margin-intermediate, $flexible-intermediate) {
+//     @include grid-base;
+//   }
+// }
 
 //
 // regular
 //
 
-@media only screen and (min-width: width-with-grid-settings(9, $column-regular, $gutter-regular, $margin-regular)) {
+// @media only screen and (min-width: width-with-grid-settings(9, $column-regular, $gutter-regular, $margin-regular)) {
   @include with-grid-settings(9, $column-regular, $gutter-regular, $margin-regular, $margin-regular, $flexible-regular) {
     @include grid-base;
   }
-}
+// }
