@@ -86,7 +86,7 @@ $page_title = str_replace('&#8217;', '’', $page_title);
 			<div class="container">
 				<div class="row menu-row">
 					<div class="logo-container">
-						<a href="<?php echo get_option('home');?>/" rel="home"><h1 class="ir logo"><?php bloginfo('name');?></h1></a>
+						<a href="<?php echo get_option('home');?>/" rel="home"><h1 class="logo"><?php bloginfo('name');?></h1></a>
 					</div>
 					<div class="nav-container">
 						<div class="menu-button"></div>

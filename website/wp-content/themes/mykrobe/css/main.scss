@@ -1,5 +1,6 @@
 @import "reset";
 @import "hidpi";
+@import "mixins";
 @import "grid-base";
 
 $color-base-text: #676561;
@@ -166,6 +167,7 @@ header.top-header {
     height:4em;
     min-height: inherit;
     position: static;
+    @include hide-text;
   }
 
   .logo-container {
