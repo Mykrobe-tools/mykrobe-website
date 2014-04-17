@@ -4,11 +4,17 @@
  */
 ?>
 <?php get_header(); ?>
-	<div class="product container">
+	<div class="product-overview container">
 		<div class="row">
-			<h1><?php the_title(); ?></h1>
-			<?php echo get_field('description'); ?>
+			<div class="threecol">
+				<h1><?php the_title(); ?></h1>
+				<?php echo get_field('description'); ?>
+			</div>
+			<div class="sixcol last">
+			</div>
 		</div>
+	</div>
+	<div class="product-species container">
 <?php
 if( get_field('species') ) {
 	$counter = 0;
@@ -29,7 +35,7 @@ if( get_field('species') ) {
 			$row_open = true;
 		}
 ?>
-			<div class="fourcol<?php if ( 2 == $counter % 3) { echo ' last'; } ?>">
+			<div class="threecol<?php if ( 2 == $counter % 3) { echo ' last'; } ?>">
 				<img class="logo" src="<?php echo $url ?>" />
 				<?php echo $description; ?>
 			</div>

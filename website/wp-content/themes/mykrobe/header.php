@@ -95,4 +95,4 @@ $page_title = str_replace('&#8217;', '’', $page_title);
 				</div>
 			</div>
 		</header>
-		<div role="main">
+		<div class="main">
