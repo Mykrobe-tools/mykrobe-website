@@ -43,6 +43,10 @@ module.exports = function(grunt) {
             gruntfile: {
                 files: ['Gruntfile.js']
             },
+            svg: {
+                files: ['<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/img/{,*/}*.svg'],
+                tasks: ['svg2png']
+            },
             styles: {
                 files: ['<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css/{,*/}*.css'],
                 tasks: ['copy:styles', 'autoprefixer']
@@ -184,22 +188,31 @@ module.exports = function(grunt) {
                 }]
             }
         },
-        imagemin: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/img',
-                    src: '{,*/}*.{png,jpg,jpeg}',
-                    dest: '<%= yeomanConfig.dist %>/img'
-                }]
-            }
-        },
         svgmin: {
             dist: {
                 files: [{
                     expand: true,
                     cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/img',
                     src: '{,*/}*.svg',
+                    dest: '<%= yeomanConfig.dist %>/img'
+                }]
+            }
+        },
+        svg2png: {
+            all: {
+                files: [
+                    { 
+                        src: ['<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/img/**/*.svg'] 
+                    }
+                ]
+            }
+        },        
+        imagemin: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/img',
+                    src: '{,*/}*.{png,jpg,jpeg}',
                     dest: '<%= yeomanConfig.dist %>/img'
                 }]
             }
@@ -312,7 +325,7 @@ module.exports = function(grunt) {
         // },
         concurrent: {
             server: ['sass', 'copy:styles'],
-            dist: ['sass', 'copy:styles', 'imagemin', 'svgmin']
+            dist: ['sass', 'copy:styles', 'svg2png', 'imagemin', 'svgmin']
         },
         bower: {
             options: {
