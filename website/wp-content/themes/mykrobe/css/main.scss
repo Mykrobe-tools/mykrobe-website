@@ -1,6 +1,6 @@
 @import "reset";
 @import "hidpi";
-@import "grid";
+@import "grid-base";
 
 html,
 button,
@@ -757,22 +757,10 @@ $gutter-intermediate: 16px;
 $column-intermediate: 80px;
 $flexible-intermediate: true;
 
-$margin-regular: 24px;
-$gutter-regular: 16px;
-$column-regular: 80px;
-$flexible-regular: false;
-
-$min-width-with-sidebar-columns: 8;
-$min-width-with-sidebar-column-width: $column-regular;
-$min-width-with-sidebar-gutter: $gutter-regular;
-$min-width-with-sidebar-margin: $margin-regular;
-
-$min-width-with-sidebar: width-with-grid-settings(
-  $min-width-with-sidebar-columns,
-  $min-width-with-sidebar-column-width,
-  $min-width-with-sidebar-gutter,
-  $min-width-with-sidebar-margin
-);
+$margin-regular: 36px;
+$gutter-regular: 36px;
+$column-regular: 72px;
+$flexible-regular: true;
 
 img, object, embed {
     max-width: 100%;
@@ -785,13 +773,13 @@ img {
 // small
 //
 
-@include with-grid-settings(4, $column-small, $gutter-small, $margin-small, $margin-small, false, $flexible-small) {
-  @include base-grid;
+@include with-grid-settings(4, $column-small, $gutter-small, $margin-small, $margin-small, $flexible-small) {
+  @include grid-base;
 }
 
 @media only screen and (min-width: width-with-grid-settings(6, $column-small, $gutter-small, $margin-small)) {
-  @include with-grid-settings(6, $column-small, $gutter-small, $margin-small, $margin-small, false, $flexible-small) {
-    @include base-grid;
+  @include with-grid-settings(6, $column-small, $gutter-small, $margin-small, $margin-small, $flexible-small) {
+    @include grid-base;
   }
 }
 
@@ -799,9 +787,9 @@ img {
 // intermediate
 //
 
-@media only screen and (min-width: width-with-grid-settings(6, $column-intermediate, $gutter-intermediate, $margin-intermediate)) {
-  @include with-grid-settings(6, $column-intermediate, $gutter-intermediate, $margin-intermediate, $margin-intermediate, false, $flexible-intermediate) {
-    @include base-grid;
+@media only screen and (min-width: width-with-grid-settings(12, $column-intermediate, $gutter-intermediate, $margin-intermediate)) {
+  @include with-grid-settings(9, $column-intermediate, $gutter-intermediate, $margin-intermediate, $margin-intermediate, $flexible-intermediate) {
+    @include grid-base;
   }
 }
 
@@ -809,10 +797,8 @@ img {
 // regular
 //
 
-@each $columns in 8, 10, 12, 14, 16, 18, 20 {
-  @media only screen and (min-width: width-with-grid-settings($columns, $column-regular, $gutter-regular, $margin-regular)) {
-    @include with-grid-settings($columns, $column-regular, $gutter-regular, $margin-regular, $margin-regular, true, $flexible-regular) {
-      @include base-grid;
+@media only screen and (min-width: width-with-grid-settings(9, $column-regular, $gutter-regular, $margin-regular)) {
+    @include with-grid-settings(9, $column-regular, $gutter-regular, $margin-regular, $margin-regular, $flexible-regular) {
+      @include grid-base;
     }
-  }
 }

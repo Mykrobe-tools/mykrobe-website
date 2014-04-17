@@ -1,9 +1,9 @@
-body {
-    margin: 0;
-}
-
-/* __________________________________________________________________________________________ 1140
-*/
+$total-columns: 10;
+$column-width: 100;
+$gutter-width: 10;
+$margin-left-width: 10;
+$margin-right-width: 10;
+$use-percentages: true;
 
 $grid-margin: 24;
 $grid-gutter: 24;
@@ -25,17 +25,10 @@ $column-width-percent: 100 * $column-width / $grid-content-width;
 
 .row {
     width: 100%;
-    max-width: 896px;
-    min-width: 720px;
+    // max-width: 896px;
+    // min-width: 720px;
     margin: 0 auto;
     overflow: hidden;
-}
-
-@media only screen and (min-width: 1280px) {
-    .row {
-        max-width: 1080px;
-        min-width: 896px;
-    }
 }
 
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol {
@@ -113,81 +106,4 @@ img {
         padding-left: 0;
         padding-right: 0;
     }
-
-}
-
-/* __________________________________________________________________________________________ main
-*/
-
-
-.container {
-    position:relative;
-}
-
-#map {
-    z-index:0;
-	position: fixed;
-    top:0;
-    width:100%;
-    height:100%;
-}
-
-#grid {
-    position:absolute;
-    top:0;
-    width:1024px;
-    height:768px;
-    background: url('../images/grid-dummy.png') no-repeat left top;
-}
-
-#left {
-    z-index:1;
-    width:200px;
-    padding:12px;
-    height:2000px;
-    position:relative;
-    background: url('../images/left-dummy.png') no-repeat 12px 8px;
-}
-
-#left.expanded {
-    background: url('../images/left-dummy-toggle.png') no-repeat 12px 8px;
-}
-
-#left.grid {
-    background: url('../images/left-dummy-grid.png') no-repeat 12px 8px;
-}
-
-#left.grid.expanded {
-    background: url('../images/left-dummy-toggle-grid.png') no-repeat 12px 8px;
-}
-
-#map-button, #grid-button, #toggle-button {
-    display: block;
-    // background-color:red;
-    height: 40px;
-    position: absolute;
-    cursor:pointer;
-}
-
-#map-button, #grid-button {
-    width: 56px;
-    top:108px + 8px;
-}
-
-#toggle-button {
-    top:228px+8px;
-    left:12px + 12px;
-    width:176px;
-}
-
-#map-button {
-    left:12px + 12px;
-}
-
-#grid-button {
-    left:72px + 12px;
-}
-
-.leaflet-left {
-    left:212px;
 }

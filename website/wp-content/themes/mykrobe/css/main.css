@@ -642,867 +642,171 @@ img, object, embed {
 img {
   height: auto; }
 
-.sidebar {
-  width: 44.375%; }
-
-.navbar-content {
-  margin-left: -11px;
-  margin-right: -11px; }
-
-.navbar .navbar-content {
+.container {
   padding-left: 3.75%;
   padding-right: 3.75%; }
-.navbar .navbar-rule {
-  left: 3.75%;
-  right: 3.75%; }
 
-.content {
-  overflow: hidden;
-  margin-left: 3.75%;
-  width: 96.25%;
-  padding: 0;
-  min-width: 308px;
-  padding-bottom: pixels-to-ems(24, 13); }
-  .content .promo {
-    overflow: hidden;
-    width: 96.1039%; }
-    .content .promo .promo-title {
-      float: left;
-      min-height: 1px;
-      margin-right: 4.05405%;
-      width: 47.97297%; }
-    .content .promo .promo-content {
-      float: left;
-      min-height: 1px;
-      margin-right: 4.05405%;
-      margin-right: 0;
-      overflow: hidden;
-      width: 47.97297%; }
-      .content .promo .promo-content .promo-content-column {
-        float: left;
-        min-height: 1px;
-        margin-right: 8.4507%;
-        width: 100%; }
-        .content .promo .promo-content .promo-content-column.last {
-          margin-right: 0; }
-  .content .gallery {
-    overflow: hidden;
-    width: 100%; }
-    .content .gallery .gallery-item {
-      float: left;
-      min-height: 1px;
-      margin-right: 3.8961%;
-      width: 46.1039%;
-      margin: 0 3.8961% 3.8961% 0; }
-  .content .list {
-    width: 96.1039%; }
-    .content .list td {
-      padding-right: 3.75%; }
-      .content .list td.list-architect {
-        padding-right: 0; }
-  .content .project {
-    overflow: hidden;
-    width: 96.1039%; }
-    .content .project .project-details {
-      overflow: hidden;
-      width: 100%; }
-      .content .project .project-details .project-details-name {
-        float: left;
-        min-height: 1px;
-        margin-right: 4.05405%;
-        width: 47.97297%; }
-      .content .project .project-details .project-details-content {
-        overflow: hidden; }
-        .content .project .project-details .project-details-content .project-details-description {
-          float: left;
-          min-height: 1px;
-          margin-right: 8.4507%;
-          width: 208.4507%; }
-          .content .project .project-details .project-details-content .project-details-description p {
-            padding-bottom: pixels-to-ems(15, 13); }
-        .content .project .project-details .project-details-content .project-details-details {
-          float: left;
-          min-height: 1px;
-          margin-right: 8.4507%;
-          width: 100%;
-          margin-right: 0; }
+.row {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+  float: left;
+  min-height: 1px;
+  margin-right: 3.75%; }
+
+.row .onecol {
+  width: 20.3125%; }
+.row .twocol {
+  width: 44.375%; }
+.row .threecol {
+  width: 68.4375%; }
+.row .fourcol {
+  width: 92.5%; }
+.row .fivecol {
+  width: 116.5625%; }
+.row .sixcol {
+  width: 140.625%; }
+.row .sevencol {
+  width: 164.6875%; }
+.row .eightcol {
+  width: 188.75%; }
+.row .ninecol {
+  width: 212.8125%; }
+.row .tencol {
+  width: 236.875%; }
+.row .elevencol {
+  width: 260.9375%; }
+.row .twelvecol {
+  width: 285%; }
+
+.last {
+  margin-right: 0; }
 
 @media only screen and (min-width: 474px) {
-  .sidebar {
-    width: 29.95781%; }
-
-  .navbar-content {
-    margin-left: -11px;
-    margin-right: -11px; }
-
-  .navbar .navbar-content {
+  .container {
     padding-left: 2.53165%;
     padding-right: 2.53165%; }
-  .navbar .navbar-rule {
-    left: 2.53165%;
-    right: 2.53165%; }
 
-  .content {
-    overflow: hidden;
-    margin-left: 2.53165%;
-    width: 97.46835%;
-    padding: 0;
-    min-width: 462px;
-    padding-bottom: pixels-to-ems(24, 13); }
-    .content .promo {
-      overflow: hidden;
-      width: 97.4026%; }
-      .content .promo .promo-title {
-        float: left;
-        min-height: 1px;
-        margin-right: 2.66667%;
-        width: 31.55556%; }
-      .content .promo .promo-content {
-        float: left;
-        min-height: 1px;
-        margin-right: 2.66667%;
-        margin-right: 0;
-        overflow: hidden;
-        width: 65.77778%; }
-        .content .promo .promo-content .promo-content-column {
-          float: left;
-          min-height: 1px;
-          margin-right: 4.05405%;
-          width: 47.97297%; }
-          .content .promo .promo-content .promo-content-column.last {
-            margin-right: 0; }
-    .content .gallery {
-      overflow: hidden;
-      width: 100%; }
-      .content .gallery .gallery-item {
-        float: left;
-        min-height: 1px;
-        margin-right: 2.5974%;
-        width: 30.73593%;
-        margin: 0 2.5974% 2.5974% 0; }
-    .content .list {
-      width: 97.4026%; }
-      .content .list td {
-        padding-right: 2.53165%; }
-        .content .list td.list-architect {
-          padding-right: 0; }
-    .content .project {
-      overflow: hidden;
-      width: 97.4026%; }
-      .content .project .project-details {
-        overflow: hidden;
-        width: 100%; }
-        .content .project .project-details .project-details-name {
-          float: left;
-          min-height: 1px;
-          margin-right: 2.66667%;
-          width: 31.55556%; }
-        .content .project .project-details .project-details-content {
-          overflow: hidden; }
-          .content .project .project-details .project-details-content .project-details-description {
-            float: left;
-            min-height: 1px;
-            margin-right: 4.05405%;
-            width: 100%; }
-            .content .project .project-details .project-details-content .project-details-description p {
-              padding-bottom: pixels-to-ems(15, 13); }
-          .content .project .project-details .project-details-content .project-details-details {
-            float: left;
-            min-height: 1px;
-            margin-right: 4.05405%;
-            width: 47.97297%;
-            margin-right: 0; } }
-@media only screen and (min-width: 592px) {
-  .sidebar {
-    width: 29.72973%; }
+  .row {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; }
 
-  .navbar-content {
-    margin-left: -11px;
-    margin-right: -11px; }
+  .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+    float: left;
+    min-height: 1px;
+    margin-right: 2.53165%; }
 
-  .navbar .navbar-content {
-    padding-left: 2.7027%;
-    padding-right: 2.7027%; }
-  .navbar .navbar-rule {
-    left: 2.7027%;
-    right: 2.7027%; }
+  .row .onecol {
+    width: 13.71308%; }
+  .row .twocol {
+    width: 29.95781%; }
+  .row .threecol {
+    width: 46.20253%; }
+  .row .fourcol {
+    width: 62.44726%; }
+  .row .fivecol {
+    width: 78.69198%; }
+  .row .sixcol {
+    width: 94.93671%; }
+  .row .sevencol {
+    width: 111.18143%; }
+  .row .eightcol {
+    width: 127.42616%; }
+  .row .ninecol {
+    width: 143.67089%; }
+  .row .tencol {
+    width: 159.91561%; }
+  .row .elevencol {
+    width: 176.16034%; }
+  .row .twelvecol {
+    width: 192.40506%; }
 
-  .content {
-    overflow: hidden;
-    margin-left: 2.7027%;
-    width: 97.2973%;
-    padding: 0;
-    min-width: 576px;
-    padding-bottom: pixels-to-ems(24, 13); }
-    .content .promo {
-      overflow: hidden;
-      width: 97.22222%; }
-      .content .promo .promo-title {
-        float: left;
-        min-height: 1px;
-        margin-right: 2.85714%;
-        width: 31.42857%; }
-      .content .promo .promo-content {
-        float: left;
-        min-height: 1px;
-        margin-right: 2.85714%;
-        margin-right: 0;
-        overflow: hidden;
-        width: 65.71429%; }
-        .content .promo .promo-content .promo-content-column {
-          float: left;
-          min-height: 1px;
-          margin-right: 4.34783%;
-          width: 47.82609%; }
-          .content .promo .promo-content .promo-content-column.last {
-            margin-right: 0; }
-    .content .gallery {
-      overflow: hidden;
-      width: 100%; }
-      .content .gallery .gallery-item {
-        float: left;
-        min-height: 1px;
-        margin-right: 2.77778%;
-        width: 30.55556%;
-        margin: 0 2.77778% 2.77778% 0; }
-    .content .list {
-      width: 97.22222%; }
-      .content .list td {
-        padding-right: 2.7027%; }
-        .content .list td.list-architect {
-          padding-right: 0; }
-    .content .project {
-      overflow: hidden;
-      width: 97.22222%; }
-      .content .project .project-details {
-        overflow: hidden;
-        width: 100%; }
-        .content .project .project-details .project-details-name {
-          float: left;
-          min-height: 1px;
-          margin-right: 2.85714%;
-          width: 31.42857%; }
-        .content .project .project-details .project-details-content {
-          overflow: hidden; }
-          .content .project .project-details .project-details-content .project-details-description {
-            float: left;
-            min-height: 1px;
-            margin-right: 4.34783%;
-            width: 100%; }
-            .content .project .project-details .project-details-content .project-details-description p {
-              padding-bottom: pixels-to-ems(15, 13); }
-          .content .project .project-details .project-details-content .project-details-details {
-            float: left;
-            min-height: 1px;
-            margin-right: 4.34783%;
-            width: 47.82609%;
-            margin-right: 0; } }
-@media only screen and (min-width: 800px) {
-  .sidebar {
-    width: 176px;
-    left: 24px; }
+  .last {
+    margin-right: 0; } }
+@media only screen and (min-width: 1168px) {
+  .container {
+    padding-left: 1.81818%;
+    padding-right: 1.81818%; }
 
-  .navbar-content {
-    margin-left: -11px;
-    margin-right: -11px; }
+  .row {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; }
 
-  .navbar .navbar-content {
-    padding-left: 24px;
-    padding-right: 24px; }
-  .navbar .navbar-rule {
-    left: 24px;
-    right: 24px; }
+  .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+    float: left;
+    min-height: 1px;
+    margin-right: 1.81818%; }
 
-  .content {
-    overflow: hidden;
-    margin-left: 216px;
-    width: 584px;
-    min-width: 584px;
-    padding-bottom: pixels-to-ems(24, 13); }
-    .content .promo {
-      overflow: hidden;
-      width: 560px; }
-      .content .promo .promo-title {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px; }
-      .content .promo .promo-content {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        margin-right: 0;
-        overflow: hidden;
-        width: 368px; }
-        .content .promo .promo-content .promo-content-column {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-          .content .promo .promo-content .promo-content-column.last {
-            margin-right: 0; }
-    .content .gallery {
-      overflow: hidden;
-      width: 584px; }
-      .content .gallery .gallery-item {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px;
-        margin: 0 16px 16px 0; }
-    .content .list {
-      width: 560px; }
-      .content .list td {
-        padding-right: 16px; }
-        .content .list td.list-architect {
-          padding-right: 0; }
-    .content .project {
-      overflow: hidden;
-      width: 560px; }
-      .content .project .project-image img {
-        max-height: 373.33333px; }
-      .content .project .project-details {
-        overflow: hidden;
-        width: 560px; }
-        .content .project .project-details .project-details-name {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-        .content .project .project-details .project-details-content {
-          overflow: hidden; }
-          .content .project .project-details .project-details-content .project-details-description {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 368px; }
-            .content .project .project-details .project-details-content .project-details-description p {
-              padding-bottom: pixels-to-ems(15, 13); }
-          .content .project .project-details .project-details-content .project-details-details {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 176px;
-            margin-right: 0; } }
-@media only screen and (min-width: 992px) {
-  .sidebar {
-    width: 176px;
-    left: 24px; }
+  .row .onecol {
+    width: 9.09091%; }
+  .row .twocol {
+    width: 20%; }
+  .row .threecol {
+    width: 30.90909%; }
+  .row .fourcol {
+    width: 41.81818%; }
+  .row .fivecol {
+    width: 52.72727%; }
+  .row .sixcol {
+    width: 63.63636%; }
+  .row .sevencol {
+    width: 74.54545%; }
+  .row .eightcol {
+    width: 85.45455%; }
+  .row .ninecol {
+    width: 96.36364%; }
+  .row .tencol {
+    width: 107.27273%; }
+  .row .elevencol {
+    width: 118.18182%; }
+  .row .twelvecol {
+    width: 129.09091%; }
 
-  .navbar-content {
-    margin-left: -11px;
-    margin-right: -11px; }
+  .last {
+    margin-right: 0; } }
+@media only screen and (min-width: 1008px) {
+  .container {
+    padding-left: 3.57143%;
+    padding-right: 3.57143%; }
 
-  .navbar .navbar-content {
-    padding-left: 24px;
-    padding-right: 24px; }
-  .navbar .navbar-rule {
-    left: 24px;
-    right: 24px; }
+  .row {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; }
 
-  .content {
-    overflow: hidden;
-    margin-left: 216px;
-    width: 776px;
-    min-width: 776px;
-    padding-bottom: pixels-to-ems(24, 13); }
-    .content .promo {
-      overflow: hidden;
-      width: 752px; }
-      .content .promo .promo-title {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px; }
-      .content .promo .promo-content {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        margin-right: 0;
-        overflow: hidden;
-        width: 560px; }
-        .content .promo .promo-content .promo-content-column {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-          .content .promo .promo-content .promo-content-column.last {
-            margin-right: 0; }
-    .content .gallery {
-      overflow: hidden;
-      width: 776px; }
-      .content .gallery .gallery-item {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px;
-        margin: 0 16px 16px 0; }
-    .content .list {
-      width: 752px; }
-      .content .list td {
-        padding-right: 16px; }
-        .content .list td.list-architect {
-          padding-right: 0; }
-    .content .project {
-      overflow: hidden;
-      width: 752px; }
-      .content .project .project-image img {
-        max-height: 501.33333px; }
-      .content .project .project-details {
-        overflow: hidden;
-        width: 752px; }
-        .content .project .project-details .project-details-name {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-        .content .project .project-details .project-details-content {
-          overflow: hidden; }
-          .content .project .project-details .project-details-content .project-details-description {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 368px; }
-            .content .project .project-details .project-details-content .project-details-description p {
-              padding-bottom: pixels-to-ems(15, 13); }
-          .content .project .project-details .project-details-content .project-details-details {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 176px;
-            margin-right: 0; } }
-@media only screen and (min-width: 1184px) {
-  .sidebar {
-    width: 176px;
-    left: 24px; }
+  .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+    float: left;
+    min-height: 1px;
+    margin-right: 3.57143%; }
 
-  .navbar-content {
-    margin-left: -11px;
-    margin-right: -11px; }
+  .row .onecol {
+    width: 7.14286%; }
+  .row .twocol {
+    width: 17.85714%; }
+  .row .threecol {
+    width: 28.57143%; }
+  .row .fourcol {
+    width: 39.28571%; }
+  .row .fivecol {
+    width: 50%; }
+  .row .sixcol {
+    width: 60.71429%; }
+  .row .sevencol {
+    width: 71.42857%; }
+  .row .eightcol {
+    width: 82.14286%; }
+  .row .ninecol {
+    width: 92.85714%; }
+  .row .tencol {
+    width: 103.57143%; }
+  .row .elevencol {
+    width: 114.28571%; }
+  .row .twelvecol {
+    width: 125%; }
 
-  .navbar .navbar-content {
-    padding-left: 24px;
-    padding-right: 24px; }
-  .navbar .navbar-rule {
-    left: 24px;
-    right: 24px; }
-
-  .content {
-    overflow: hidden;
-    margin-left: 216px;
-    width: 968px;
-    min-width: 968px;
-    padding-bottom: pixels-to-ems(24, 13); }
-    .content .promo {
-      overflow: hidden;
-      width: 944px; }
-      .content .promo .promo-title {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px; }
-      .content .promo .promo-content {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        margin-right: 0;
-        overflow: hidden;
-        width: 752px; }
-        .content .promo .promo-content .promo-content-column {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-          .content .promo .promo-content .promo-content-column.last {
-            margin-right: 0; }
-    .content .gallery {
-      overflow: hidden;
-      width: 968px; }
-      .content .gallery .gallery-item {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px;
-        margin: 0 16px 16px 0; }
-    .content .list {
-      width: 944px; }
-      .content .list td {
-        padding-right: 16px; }
-        .content .list td.list-architect {
-          padding-right: 0; }
-    .content .project {
-      overflow: hidden;
-      width: 944px; }
-      .content .project .project-image img {
-        max-height: 629.33333px; }
-      .content .project .project-details {
-        overflow: hidden;
-        width: 944px; }
-        .content .project .project-details .project-details-name {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-        .content .project .project-details .project-details-content {
-          overflow: hidden; }
-          .content .project .project-details .project-details-content .project-details-description {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 368px; }
-            .content .project .project-details .project-details-content .project-details-description p {
-              padding-bottom: pixels-to-ems(15, 13); }
-          .content .project .project-details .project-details-content .project-details-details {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 176px;
-            margin-right: 0; } }
-@media only screen and (min-width: 1376px) {
-  .sidebar {
-    width: 176px;
-    left: 24px; }
-
-  .navbar-content {
-    margin-left: -11px;
-    margin-right: -11px; }
-
-  .navbar .navbar-content {
-    padding-left: 24px;
-    padding-right: 24px; }
-  .navbar .navbar-rule {
-    left: 24px;
-    right: 24px; }
-
-  .content {
-    overflow: hidden;
-    margin-left: 216px;
-    width: 1160px;
-    min-width: 1160px;
-    padding-bottom: pixels-to-ems(24, 13); }
-    .content .promo {
-      overflow: hidden;
-      width: 1136px; }
-      .content .promo .promo-title {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px; }
-      .content .promo .promo-content {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        margin-right: 0;
-        overflow: hidden;
-        width: 944px; }
-        .content .promo .promo-content .promo-content-column {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-          .content .promo .promo-content .promo-content-column.last {
-            margin-right: 0; }
-    .content .gallery {
-      overflow: hidden;
-      width: 1160px; }
-      .content .gallery .gallery-item {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px;
-        margin: 0 16px 16px 0; }
-    .content .list {
-      width: 1136px; }
-      .content .list td {
-        padding-right: 16px; }
-        .content .list td.list-architect {
-          padding-right: 0; }
-    .content .project {
-      overflow: hidden;
-      width: 1136px; }
-      .content .project .project-image img {
-        max-height: 757.33333px; }
-      .content .project .project-details {
-        overflow: hidden;
-        width: 1136px; }
-        .content .project .project-details .project-details-name {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-        .content .project .project-details .project-details-content {
-          overflow: hidden; }
-          .content .project .project-details .project-details-content .project-details-description {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 368px; }
-            .content .project .project-details .project-details-content .project-details-description p {
-              padding-bottom: pixels-to-ems(15, 13); }
-          .content .project .project-details .project-details-content .project-details-details {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 176px;
-            margin-right: 0; } }
-@media only screen and (min-width: 1568px) {
-  .sidebar {
-    width: 176px;
-    left: 24px; }
-
-  .navbar-content {
-    margin-left: -11px;
-    margin-right: -11px; }
-
-  .navbar .navbar-content {
-    padding-left: 24px;
-    padding-right: 24px; }
-  .navbar .navbar-rule {
-    left: 24px;
-    right: 24px; }
-
-  .content {
-    overflow: hidden;
-    margin-left: 216px;
-    width: 1352px;
-    min-width: 1352px;
-    padding-bottom: pixels-to-ems(24, 13); }
-    .content .promo {
-      overflow: hidden;
-      width: 1328px; }
-      .content .promo .promo-title {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px; }
-      .content .promo .promo-content {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        margin-right: 0;
-        overflow: hidden;
-        width: 1136px; }
-        .content .promo .promo-content .promo-content-column {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-          .content .promo .promo-content .promo-content-column.last {
-            margin-right: 0; }
-    .content .gallery {
-      overflow: hidden;
-      width: 1352px; }
-      .content .gallery .gallery-item {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px;
-        margin: 0 16px 16px 0; }
-    .content .list {
-      width: 1328px; }
-      .content .list td {
-        padding-right: 16px; }
-        .content .list td.list-architect {
-          padding-right: 0; }
-    .content .project {
-      overflow: hidden;
-      width: 1328px; }
-      .content .project .project-image img {
-        max-height: 885.33333px; }
-      .content .project .project-details {
-        overflow: hidden;
-        width: 1328px; }
-        .content .project .project-details .project-details-name {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-        .content .project .project-details .project-details-content {
-          overflow: hidden; }
-          .content .project .project-details .project-details-content .project-details-description {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 368px; }
-            .content .project .project-details .project-details-content .project-details-description p {
-              padding-bottom: pixels-to-ems(15, 13); }
-          .content .project .project-details .project-details-content .project-details-details {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 176px;
-            margin-right: 0; } }
-@media only screen and (min-width: 1760px) {
-  .sidebar {
-    width: 176px;
-    left: 24px; }
-
-  .navbar-content {
-    margin-left: -11px;
-    margin-right: -11px; }
-
-  .navbar .navbar-content {
-    padding-left: 24px;
-    padding-right: 24px; }
-  .navbar .navbar-rule {
-    left: 24px;
-    right: 24px; }
-
-  .content {
-    overflow: hidden;
-    margin-left: 216px;
-    width: 1544px;
-    min-width: 1544px;
-    padding-bottom: pixels-to-ems(24, 13); }
-    .content .promo {
-      overflow: hidden;
-      width: 1520px; }
-      .content .promo .promo-title {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px; }
-      .content .promo .promo-content {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        margin-right: 0;
-        overflow: hidden;
-        width: 1328px; }
-        .content .promo .promo-content .promo-content-column {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-          .content .promo .promo-content .promo-content-column.last {
-            margin-right: 0; }
-    .content .gallery {
-      overflow: hidden;
-      width: 1544px; }
-      .content .gallery .gallery-item {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px;
-        margin: 0 16px 16px 0; }
-    .content .list {
-      width: 1520px; }
-      .content .list td {
-        padding-right: 16px; }
-        .content .list td.list-architect {
-          padding-right: 0; }
-    .content .project {
-      overflow: hidden;
-      width: 1520px; }
-      .content .project .project-image img {
-        max-height: 1013.33333px; }
-      .content .project .project-details {
-        overflow: hidden;
-        width: 1520px; }
-        .content .project .project-details .project-details-name {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-        .content .project .project-details .project-details-content {
-          overflow: hidden; }
-          .content .project .project-details .project-details-content .project-details-description {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 368px; }
-            .content .project .project-details .project-details-content .project-details-description p {
-              padding-bottom: pixels-to-ems(15, 13); }
-          .content .project .project-details .project-details-content .project-details-details {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 176px;
-            margin-right: 0; } }
-@media only screen and (min-width: 1952px) {
-  .sidebar {
-    width: 176px;
-    left: 24px; }
-
-  .navbar-content {
-    margin-left: -11px;
-    margin-right: -11px; }
-
-  .navbar .navbar-content {
-    padding-left: 24px;
-    padding-right: 24px; }
-  .navbar .navbar-rule {
-    left: 24px;
-    right: 24px; }
-
-  .content {
-    overflow: hidden;
-    margin-left: 216px;
-    width: 1736px;
-    min-width: 1736px;
-    padding-bottom: pixels-to-ems(24, 13); }
-    .content .promo {
-      overflow: hidden;
-      width: 1712px; }
-      .content .promo .promo-title {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px; }
-      .content .promo .promo-content {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        margin-right: 0;
-        overflow: hidden;
-        width: 1520px; }
-        .content .promo .promo-content .promo-content-column {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-          .content .promo .promo-content .promo-content-column.last {
-            margin-right: 0; }
-    .content .gallery {
-      overflow: hidden;
-      width: 1736px; }
-      .content .gallery .gallery-item {
-        float: left;
-        min-height: 1px;
-        margin-right: 16px;
-        width: 176px;
-        margin: 0 16px 16px 0; }
-    .content .list {
-      width: 1712px; }
-      .content .list td {
-        padding-right: 16px; }
-        .content .list td.list-architect {
-          padding-right: 0; }
-    .content .project {
-      overflow: hidden;
-      width: 1712px; }
-      .content .project .project-image img {
-        max-height: 1141.33333px; }
-      .content .project .project-details {
-        overflow: hidden;
-        width: 1712px; }
-        .content .project .project-details .project-details-name {
-          float: left;
-          min-height: 1px;
-          margin-right: 16px;
-          width: 176px; }
-        .content .project .project-details .project-details-content {
-          overflow: hidden; }
-          .content .project .project-details .project-details-content .project-details-description {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 368px; }
-            .content .project .project-details .project-details-content .project-details-description p {
-              padding-bottom: pixels-to-ems(15, 13); }
-          .content .project .project-details .project-details-content .project-details-details {
-            float: left;
-            min-height: 1px;
-            margin-right: 16px;
-            width: 176px;
-            margin-right: 0; } }
+  .last {
+    margin-right: 0; } }
