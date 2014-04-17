@@ -51,7 +51,7 @@ module.exports = function(grunt) {
                 options: {
                     livereload: '<%= connect.options.livereload %>'
                 },
-                files: ['<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/*.php', '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/*.css', '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/*.js', '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/images/*']
+                files: ['<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/*.php', '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css/*.css', '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/*.js', '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/img/*']
             }
         },
         connect: {

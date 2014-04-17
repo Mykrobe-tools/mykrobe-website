@@ -4,11 +4,19 @@
  */
 ?>
 <?php get_header(); ?>
+<?php
+		$image_id = get_field('image');
+		$description = get_field('description');
+		$image_attributes = wp_get_attachment_image_src($image_id, 'medium');
+		$url = $image_attributes[0];
+		$width = $image_attributes[1];
+		$height = $image_attributes[2];
+?>
 	<div class="product-overview container">
 		<div class="row">
 			<div class="threecol">
 				<h1><?php the_title(); ?></h1>
-				<?php echo get_field('description'); ?>
+				<?php echo $description; ?>
 			</div>
 			<div class="sixcol last">
 			</div>
@@ -20,42 +28,28 @@ if( get_field('species') ) {
 	$counter = 0;
 	$row_open = false;
 	while( has_sub_field('species') ) {
-		$image_id = get_sub_field('image');
+		$title = get_sub_field('title');
 		$description = get_sub_field('description');
-
+		$small_print = get_sub_field('small_print');
+		$image_id = get_sub_field('image');
 		$image_attributes = wp_get_attachment_image_src($image_id, 'medium');
 		$url = $image_attributes[0];
 		$width = $image_attributes[1];
 		$height = $image_attributes[2];
-
-		if ( 0 == $counter % 3) {
-			echo '
-		<div class="row">
-			';
-			$row_open = true;
-		}
 ?>
-			<div class="threecol<?php if ( 2 == $counter % 3) { echo ' last'; } ?>">
-				<img class="logo" src="<?php echo $url ?>" />
+		<div class="product-single-species row">
+			<div class="sixcol">
+				<?php echo $title; ?>
 				<?php echo $description; ?>
 			</div>
+			<div class="threecol last">
+				<h3>Technical specs</h3>
+				<?php echo $small_print; ?>
+			</div>
+		</div>
 <?php
-		if ( $row_open && 2 == $counter % 3) {
-			echo '
-		</div>
-			';
-			$row_open = false;
-		}
-		$counter++;
-	}
-	if ( $row_open ) {
-		echo '
-		</div>
-		';
-		$row_open = false;
 	}
 }
-
 ?>
 	</div>
 <?php get_footer(); ?>

@@ -1,54 +1,30 @@
 		</div>
 		<footer>
-<?php
-if ( is_page_template('template-home.php') ) {
-}
-else {
-	echo '
-			<div class="mailing-list container">
-				<div class="row">
-					<div class="fourcol">
-						<h1>'.get_field('mailing-list-title', 'option').'</h1>
-					</div>
-					<div class="fourcol">
-						'.get_field('mailing-list-body', 'option').'
-					</div>
-					<div class="fourcol last">
-						'.get_field('mailing-list-html', 'option').'
-						'.get_field('twitter-html', 'option').'
-					</div>
-				</div>
-			</div>
-	';
-}
-?>
+			<a name="contact" id="contact"></a>
 			<div class="footer container">
 				<div class="row">
-					<div class="fourcol">
+					<div class="threecol">
 						<a href="<?php echo get_option('home');?>/" rel="home"><div class="ir monogram"><?php bloginfo('name');?></div></a>
 					</div>
-					<div class="fourcol">
-						<p><?php the_field('contact', 'option'); ?></p>
+					<div class="threecol">
+						<h3>Newsletter</h3>
+						<?php the_field('newsletter', 'option'); ?>
+						<?php the_field('newsletter-html', 'option'); ?>
 					</div>
-					<div class="fourcol last">
-						<p><?php the_field('address', 'option'); ?></p>
+					<div class="threecol last">
+						<h3>Trials</h3>
+						<?php the_field('trials', 'option'); ?>
+						<h3>Contact</h3>
+						<?php the_field('contact', 'option'); ?>
 					</div>
 				</div>
 			</div>
 			<div class="copyright container">
 				<div class="row">
-					<div class="twelvecol last">
-						<ul>
-							<li><?php the_field('copyright', 'option'); ?></li>
-						<?php
-						$params = array(
-							'theme_location' => 'footer-menu',
-							'items_wrap' => '%3$s',
-						    'container' => false
-						);
-						wp_nav_menu( $params );
-						?>
-						</ul>
+					<div class="sixcol">
+					</div>
+					<div class="threecol last">
+						<?php the_field('copyright', 'option'); ?>
 					</div>
 				</div>
 			</div>
