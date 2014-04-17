@@ -91,7 +91,12 @@ else {
 		<script src="<?php bloginfo('template_directory'); ?>/js/helixcentre/behaviour/HelixDiagonalBehaviour.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
 		<?php
-
+	}
+	?>
+	<?php if (isLocalServer()) {
+		?>
+		<script src="//localhost:35729/livereload.js"></script>
+		<?php
 	}
 	?>
 	</body>

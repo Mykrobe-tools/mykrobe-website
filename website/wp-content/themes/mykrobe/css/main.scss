@@ -2,6 +2,10 @@
 @import "hidpi";
 @import "grid-base";
 
+$color-base-text: #676561;
+$color-light-green: #86c9b9;
+$color-dark-green: #3b9da7;
+
 html,
 button,
 input,
@@ -74,10 +78,8 @@ img {
 
 /*
 1em = 32px
-
-base font size 16px
+base font size 24px
 */
-
 
 * {
     -webkit-tap-highlight-color:rgba(0,0,0,0);
@@ -87,21 +89,23 @@ html {
     background-color: #adaeb0;
 }
 
+/*
+font-family: 'Minion Regular'
+font-family: 'Minion Bold'
+font-family: 'Minion Semibold'
+*/
 body {
-    font-family: "HelveticaNeue-Regular", "Helvetica Neue Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /*font-weight: 300;*/
-    font-size:88.88888888888889%;
+    font-family: "Minion Regular", serif;
+    // font-weight: 100;
+    // font-size:88.88888888888889%;
+    font-size:150%;
     line-height:1.25;
-    color:#929190;
-    background-color: #fcfcfc;
+    color:$color-base-text;
+    background-color: white;
 }
 
-/*p, li {
-    font-size:1.125em;
-}*/
-
 a {
-    color:#929190;
+    color:$color-light-green;
     text-decoration: none;
     transition: color 0.1s;
     -webkit-transition: color 0.1s;
@@ -110,7 +114,7 @@ a {
 }
 
 a:hover, a:visited:hover  {
-    color:#696a6c;
+    color:$color-dark-green;
 }
 
 a:focus {
@@ -152,36 +156,65 @@ p {
     margin:0;
 }*/
 
-h1.logo {
-    background: url(../img/helix-horizontal.png) no-repeat;
-    background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    width:14em;
-    height:4em;
-    min-height: inherit;
-    position: static;
+//
+// header
+//
+
+header.top-header {
+    h1.logo {
+        background: url(../img/helix-horizontal.png) no-repeat;
+        background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        -webkit-background-size: 100% 100%;
+        width:14em;
+        height:4em;
+        min-height: inherit;
+        position: static;
+    }
+
+    .svg .logo {
+        background: url(../img/helix-horizontal.svg) no-repeat;
+        background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        -webkit-background-size: 100% 100%;
+    }
+
+    .logo-container {
+        float:left;
+    }
+
+    ul.menu {
+        float:right;
+        overflow:hidden;
+        li {
+            float:left;
+            margin-left:1em;
+            &.current_page_item, .current_page_parent {
+                a, a:visited {
+                    color:$color-dark-green;
+                }
+            }
+        }
+        a {
+            &:hover, :visited:hover {
+                color:$color-dark-green;
+            }
+        }
+    }
 }
 
-.svg .logo {
-    background: url(../img/helix-horizontal.svg) no-repeat;
-    background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-}
+// header ul.menu a {
+//     color:#adaeb0;
+// }
 
-header ul.menu a {
-    color:#adaeb0;
-}
+// header ul.menu a:hover, header ul.menu a:visited:hover {
+//     color:#696a6c;
+// }
 
-header ul.menu a:hover, header ul.menu a:visited:hover {
-    color:#696a6c;
-}
-
-header ul.menu li.current_page_item a, header ul.menu li.current_page_item a:visited,
-header ul.menu li.current_page_parent a, header ul.menu li.current_page_parent a:visited {
-    color:#fc3f2c;
-}
+// header ul.menu li.current_page_item a, header ul.menu li.current_page_item a:visited,
+// header ul.menu li.current_page_parent a, header ul.menu li.current_page_parent a:visited {
+//     color:#fc3f2c;
+// }
 
 .mailing-list.container {
     background-color:#eeeeed;

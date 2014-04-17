@@ -41,7 +41,11 @@ add_action( 'init', 'register_my_menus' );
 // use minified on live site
 function useMinified() {
 	// return true;
-	return !strstr($_SERVER['SERVER_NAME'],'.local');
+	return !isLocalServer();
+}
+
+function isLocalServer() {
+	return strstr($_SERVER['SERVER_NAME'],'.local');
 }
 
 // __________________________________________________________________________________________ comments

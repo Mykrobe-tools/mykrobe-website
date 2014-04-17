@@ -54,6 +54,18 @@ $page_title = str_replace('&#8217;', '’', $page_title);
 		<link rel="apple-touch-icon-precomposed" sizes="76x76" href="<?php bloginfo('template_directory');?>/img/AppIcon76.png">
 		<link rel="apple-touch-icon-precomposed" sizes="152x152" href="<?php bloginfo('template_directory');?>/img/AppIcon76@2x.png">
         <script src="<?php bloginfo('template_directory');?>/js/vendor/modernizr.custom.62260.js"></script>
+        <script type="text/javascript">
+		    (function() {
+		        var path = '//easy.myfonts.net/v2/js?sid=10894(font-family=Minion+Regular)&sid=10897(font-family=Minion+Bold)&sid=10901(font-family=Minion+Semibold)&key=KKQz0fVk7i',
+		            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+		            trial = document.createElement('script');
+		        trial.type = 'text/javascript';
+		        trial.async = true;
+		        trial.src = protocol + path;
+		        var head = document.getElementsByTagName("head")[0];
+		        head.appendChild(trial);
+		    })();
+		</script>
 	<?php if (useMinified()) {
 		?>
       	<link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/main.min.css">
@@ -73,10 +85,10 @@ $page_title = str_replace('&#8217;', '’', $page_title);
 		<header class="top-header">
 			<div class="container">
 				<div class="row menu-row">
-					<div class="fourcol">
+					<div class="logo-container">
 						<a href="<?php echo get_option('home');?>/" rel="home"><h1 class="ir logo"><?php bloginfo('name');?></h1></a>
 					</div>
-					<div class="eightcol last">
+					<div class="nav-container">
 						<div class="menu-button"></div>
 						<?php wp_nav_menu( array( 'Header Menu' => 'header-menu' ) ); ?>
 					</div>
