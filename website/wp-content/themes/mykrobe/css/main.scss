@@ -168,13 +168,6 @@ header.top-header {
     position: static;
   }
 
-  .svg .logo {
-    background: url(../img/helix-horizontal.svg) no-repeat;
-    background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-  }
-
   .logo-container {
     float:left;
   }
@@ -197,6 +190,13 @@ header.top-header {
       }
     }
   }
+}
+
+.svg header.top-header h1.logo {
+    background: url(../img/mykrobe-logotype.svg) no-repeat;
+    background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;  
 }
 
 //

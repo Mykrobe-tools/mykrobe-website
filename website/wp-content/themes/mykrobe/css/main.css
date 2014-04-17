@@ -161,11 +161,6 @@ header.top-header h1.logo {
   height: 4em;
   min-height: inherit;
   position: static; }
-header.top-header .svg .logo {
-  background: url(../img/helix-horizontal.svg) no-repeat;
-  background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%; }
 header.top-header .logo-container {
   float: left; }
 header.top-header ul.menu {
@@ -178,6 +173,12 @@ header.top-header ul.menu {
       color: #3b9da7; }
   header.top-header ul.menu a:hover, header.top-header ul.menu a :visited:hover {
     color: #3b9da7; }
+
+.svg header.top-header h1.logo {
+  background: url(../img/mykrobe-logotype.svg) no-repeat;
+  background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%; }
 
 .main h1 {
   color: #3b9da7; }
