@@ -67,6 +67,7 @@ $page_title = str_replace('&#8217;', '’', $page_title);
 		    })();
 		</script>
 		<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<!-- <link href='http://fonts.googleapis.com/css?family=Buenard' rel='stylesheet' type='text/css'> -->
 	<?php if (useMinified()) {
 		?>
       	<link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/main.min.css">

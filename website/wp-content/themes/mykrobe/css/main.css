@@ -135,7 +135,6 @@ h1, h2, h3 {
   margin: 0;
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
-  font-weight: bold;
   font-size: 0.6667em;
   line-height: 1.875em; }
 
@@ -175,7 +174,6 @@ header.top-header ul.menu {
   overflow: hidden;
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
-  font-weight: bold;
   font-size: 0.6667em;
   line-height: 1.875em; }
   header.top-header ul.menu li {
