@@ -8,6 +8,12 @@ $color-light-green: #86c9b9;
 $color-dark-green: #3b9da7;
 $color-buff: #f7f6f1;
 
+@mixin font-heading {
+  font-family: 'Varela Round', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 html,
 button,
 input,
@@ -95,6 +101,8 @@ html {
 font-family: 'Minion Regular'
 font-family: 'Minion Bold'
 font-family: 'Minion Semibold'
+
+font-family: 'Varela Round', sans-serif;
 */
 body {
   font-family: "Minion Regular", serif;
@@ -126,9 +134,8 @@ body {
 
   h1, h2, h3 {
     margin: 0;
-    text-transform: uppercase;
-    font-weight: normal;
     font-size: 1em;
+    @include font-heading;
   }
 
   h1 {
@@ -177,6 +184,7 @@ header.top-header {
   ul.menu {
     float:right;
     overflow:hidden;
+    @include font-heading;
     li {
       float:left;
       margin-left:1em;

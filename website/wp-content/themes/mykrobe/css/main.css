@@ -106,6 +106,8 @@ html {
 font-family: 'Minion Regular'
 font-family: 'Minion Bold'
 font-family: 'Minion Semibold'
+
+font-family: 'Varela Round', sans-serif;
 */
 body {
   font-family: "Minion Regular", serif;
@@ -131,9 +133,10 @@ a:focus {
 
 h1, h2, h3 {
   margin: 0;
+  font-size: 1em;
+  font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
-  font-weight: normal;
-  font-size: 1em; }
+  font-weight: bold; }
 
 h1 {
   color: #fc3f2c; }
@@ -168,7 +171,10 @@ header.top-header .logo-container {
   float: left; }
 header.top-header ul.menu {
   float: right;
-  overflow: hidden; }
+  overflow: hidden;
+  font-family: 'Varela Round', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold; }
   header.top-header ul.menu li {
     float: left;
     margin-left: 1em; }
