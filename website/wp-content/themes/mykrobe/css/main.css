@@ -133,10 +133,11 @@ a:focus {
 
 h1, h2, h3 {
   margin: 0;
-  font-size: 1em;
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 0.6667em;
+  line-height: 1.875em; }
 
 h1 {
   color: #fc3f2c; }
@@ -174,7 +175,9 @@ header.top-header ul.menu {
   overflow: hidden;
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 0.6667em;
+  line-height: 1.875em; }
   header.top-header ul.menu li {
     float: left;
     margin-left: 1em; }
