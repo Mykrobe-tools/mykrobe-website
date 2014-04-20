@@ -145,8 +145,9 @@ h2 {
 h3 {
   color: #3b9da7;
   display: block;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #ceccc6;
   font-size: 0.58333em;
+  min-height: 1.71429em;
   line-height: 1; }
 
 p {

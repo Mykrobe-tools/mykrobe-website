@@ -7,6 +7,7 @@ $color-base-text: #676561;
 $color-light-green: #86c9b9;
 $color-dark-green: #3b9da7;
 $color-buff: #f7f6f1;
+$color-rule: #ceccc6;
 
 @mixin font-heading {
   font-family: 'Varela Round', sans-serif;
@@ -145,8 +146,9 @@ body {
   h3 {
     color:$color-dark-green;
     display: block;
-    border-bottom:1px solid red;
+    border-bottom:1px solid $color-rule;
     font-size: 1em * (14 / 24);
+    min-height: 1em * (24/ 14);
     line-height: 1;
   }
 
