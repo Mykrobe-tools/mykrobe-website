@@ -43,13 +43,19 @@ if( get_field('species') ) {
 		$height = $image_attributes[2];
 ?>
 		<div class="product-single-species row">
-			<div class="sixcol">
+			<div class="sixcol product-single-species-overview">
 				<?php echo $title; ?>
-				<?php echo $description; ?>
+				<article>
+					<?php echo $description; ?>
+				</article>
+				<a class="button download">Download</a>
 			</div>
-			<div class="threecol last">
+			<div class="threecol last product-single-species-small-print">
 				<h3>Technical specs</h3>
-				<?php echo $small_print; ?>
+				<article>
+					<?php echo $small_print; ?>
+				</article>
+				<a class="button download secondary">Download</a>
 			</div>
 		</div>
 <?php

@@ -386,13 +386,11 @@ body > footer .mc-field-group {
 */
 a.button {
   display: inline-block;
-  background-color: #3b9da7;
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
   font-size: 0.6667em;
   line-height: 1.875em;
   line-height: 3em;
-  color: white;
   text-align: center;
   padding: 0 1.5em;
   min-height: 3em;
@@ -402,8 +400,17 @@ a.button {
   -o-border-radius: 1.5em;
   border-radius: 1.5em;
   cursor: pointer; }
-  a.button:hover {
-    background-color: #2e7a81; }
+  a.button.download {
+    background-color: #3b9da7;
+    color: white; }
+    a.button.download:hover {
+      background-color: #2e7a81; }
+    a.button.download.secondary {
+      background-color: white;
+      color: #3b9da7;
+      -webkit-box-shadow: inset 0 0 1px #3b9da7;
+      -moz-box-shadow: inset 0 0 1px #3b9da7;
+      box-shadow: inset 0 0 1px #3b9da7; }
 
 /* __________________________________________________________________________________________ product
 */
@@ -422,6 +429,13 @@ a.button {
     padding-top: 1.14286em;
     font-size: 0.875em;
     line-height: 1.14286em; }
+    .main .product-overview article p {
+      margin-bottom: 1.14286em; }
+.main .product-single-species-small-print article {
+  font-size: 0.58333em;
+  line-height: 1.14286em; }
+  .main .product-single-species-small-print article p {
+    margin-bottom: 1.14286em; }
 
 /* __________________________________________________________________________________________ partners
 */

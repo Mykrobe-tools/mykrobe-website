@@ -16,6 +16,21 @@
       padding-top:1em * (24 / 21);
       font-size: 1em * (21 / 24);
       line-height: 1em * (24 / 21);
+      p {
+        margin-bottom: 1em * (24 / 21); 
+      }
+    }
+  }
+  .product-single-species-overview {
+
+  }
+  .product-single-species-small-print {
+    article {
+      font-size: 1em * (14 / 24);
+      line-height: 1em * (16 / 14);
+      p {
+        margin-bottom: 1em * (16 / 14); 
+      }
     }
   }
 }

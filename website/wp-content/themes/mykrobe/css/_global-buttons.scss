@@ -1,15 +1,23 @@
 a.button {
 	display:inline-block;
-	background-color: $color-dark-green;
 	@include font-heading;
 	line-height: 1em * (48 / 16);
-	color:white;
 	text-align: center;
 	padding: 0 1em * (24 / 16);
 	min-height: 1em * (48 / 16);
 	@include border-radius(1em * (24 / 16));
 	cursor:pointer;
-	&:hover {
-		background-color: darken($color-dark-green, 10%);
+	&.download {
+		background-color: $color-dark-green;
+		color:white;
+		&:hover {
+			background-color: darken($color-dark-green, 10%);
+		}
+		&.secondary {
+			//@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+			background-color: white;
+			color: $color-dark-green;
+			@include box-shadow(0, 0, 1px, $color-dark-green, true);
+		}
 	}
 }
