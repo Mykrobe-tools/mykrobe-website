@@ -228,12 +228,6 @@ header.top-header {
   float: left;
   margin-right: 1em; }
 
-.footer.container a {
-  color: white; }
-
-.footer.container a:hover, .footer.container a:visited:hover {
-  color: #eeeeed; }
-
 .monogram {
   width: 4em;
   height: 4em;

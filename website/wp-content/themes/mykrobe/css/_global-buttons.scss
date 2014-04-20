@@ -14,15 +14,15 @@ a.button {
 		background-color: $color-dark-green;
 		color:white;
 		&:hover {
-			background-color: darken($color-dark-green, 10%);
+			background-color: $color-dark-green-hover;
 		}
 		&.secondary {
 			background-color: white;
 			color: $color-dark-green;
 			border:1px solid  $color-dark-green;
 			&:hover {
-				color: darken($color-dark-green, 10%);
-				border-color: darken($color-dark-green, 10%);
+				color: $color-dark-green-hover;
+				border-color: $color-dark-green-hover;
 			}
 		}
 	}

@@ -9,6 +9,8 @@ $color-dark-green: #3b9da7;
 $color-buff: #f7f6f1;
 $color-rule: #ceccc6;
 
+$color-dark-green-hover: darken($color-dark-green, 10%);
+
 @mixin font-heading {
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
@@ -269,13 +271,13 @@ header.top-header {
 
 
 
-    .footer.container a {
-      color:white;
-    }
+    // .footer.container a {
+    //   color:white;
+    // }
 
-    .footer.container a:hover, .footer.container a:visited:hover {
-      color:#eeeeed;
-    }
+    // .footer.container a:hover, .footer.container a:visited:hover {
+    //   color:#eeeeed;
+    // }
 
     .monogram {
       width:4em;
