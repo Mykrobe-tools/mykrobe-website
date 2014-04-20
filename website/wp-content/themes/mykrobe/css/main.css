@@ -434,13 +434,24 @@ a.button {
   .main .product-single-species-small-print article p {
     margin-bottom: 1.14286em; }
 
-/* __________________________________________________________________________________________ partners
+/* __________________________________________________________________________________________ about
 */
-.partners .logo {
-  max-height: 3.75em;
-  width: auto;
-  background: none;
-  margin: 0 0 1.25em 0; }
+.main .about {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  min-height: 20em;
+  background: #f7f6f1; }
+  .main .about header {
+    min-height: 5em; }
+    .main .about header h1 {
+      font-size: 2.08333em;
+      letter-spacing: -0.05em;
+      line-height: 1; }
+  .main .about article ol {
+    list-style-type: decimal; }
+    .main .about article ol li {
+      margin-left: 1.25em;
+      padding-bottom: 1.25em; }
 
 /* __________________________________________________________________________________________ contact
 */

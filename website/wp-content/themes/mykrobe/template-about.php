@@ -8,10 +8,14 @@
 		<div class="about container">
 			<div class="row">
 				<div class="threecol">
-					<h1><?php the_title(); ?></h1>
+					<header>
+						<h1><?php the_title(); ?></h1>
+					</header>
 				</div>
 				<div class="sixcol last">
-					<?php the_content(); ?>
+					<article>
+						<?php the_content(); ?>
+					</article>
 					<?php edit_post_link('Edit this page', '<p>', '</p>'); ?>
 				</div>
 			</div>
