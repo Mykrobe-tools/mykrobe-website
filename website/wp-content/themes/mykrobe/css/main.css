@@ -117,10 +117,10 @@ body {
 a {
   color: #86c9b9;
   text-decoration: none;
-  transition: color 0.1s;
-  -webkit-transition: color 0.1s;
-  -moz-transition: color 0.1s;
-  -o-transition: color 0.1s; }
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s; }
 
 a:hover, a:visited:hover {
   color: #3b9da7; }
@@ -408,6 +408,9 @@ a.button {
       background-color: white;
       color: #3b9da7;
       border: 1px solid #3b9da7; }
+      a.button.download.secondary:hover {
+        color: #2e7a81;
+        border-color: #2e7a81; }
 
 /* __________________________________________________________________________________________ product
 */

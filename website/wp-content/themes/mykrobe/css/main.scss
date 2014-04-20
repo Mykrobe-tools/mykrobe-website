@@ -115,10 +115,10 @@ body {
   a {
     color:$color-light-green;
     text-decoration: none;
-    transition: color 0.1s;
-    -webkit-transition: color 0.1s;
-    -moz-transition: color 0.1s;
-    -o-transition: color 0.1s;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -o-transition: all 0.1s;
   }
 
   a:hover, a:visited:hover  {
