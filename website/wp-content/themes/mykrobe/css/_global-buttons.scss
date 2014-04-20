@@ -1,0 +1,15 @@
+a.button {
+	display:inline-block;
+	background-color: $color-dark-green;
+	@include font-heading;
+	line-height: 1em * (48 / 16);
+	color:white;
+	text-align: center;
+	padding: 0 1em * (24 / 16);
+	min-height: 1em * (48 / 16);
+	@include border-radius(1em * (24 / 16));
+	cursor:pointer;
+	&:hover {
+		background-color: darken($color-dark-green, 10%);
+	}
+}

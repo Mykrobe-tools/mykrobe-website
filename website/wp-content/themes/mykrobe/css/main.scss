@@ -69,9 +69,6 @@ textarea {
   padding: 0.2em 0;
 }
 
-/* __________________________________________________________________________________________ 1140
-*/
-
 img, object, embed {
   max-width: 100%;
 }
@@ -79,8 +76,6 @@ img, object, embed {
 img {
   height: auto;
 }
-
-
 
 /* __________________________________________________________________________________________ main
 */
@@ -220,8 +215,6 @@ header.top-header {
     color:$color-dark-green;
   }
 }
-
-
 
 .mailing-list.container {
   background-color:#eeeeed;
@@ -458,30 +451,15 @@ body>footer .mc-field-group {
       margin-bottom: 1.25em;
     }
 
+/* __________________________________________________________________________________________ global: buttons
+*/
+
+@import "global-buttons";
+
 /* __________________________________________________________________________________________ product
 */
 
-.main {
-  .product-overview {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    min-height: 1em * (480 / 24);
-    background:$color-buff;
-    header {
-      min-height: 1em * (120 / 24);
-      h1 {
-        font-size:1em * (50 / 24);
-        letter-spacing: -0.05em;
-        line-height: 1;
-      }
-    }
-    article {
-      padding-top:1em * (24 / 21);
-      font-size: 1em * (21 / 24);
-      line-height: 1em * (24 / 21);
-    }
-  }
-}
+@import "template-product";
 
 /* __________________________________________________________________________________________ partners
 */

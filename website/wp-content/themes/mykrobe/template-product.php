@@ -21,6 +21,7 @@
 				<article>
 					<?php echo $description; ?>
 				</article>
+				<a class="button download">Download</a>
 			</div>
 			<div class="sixcol last">
 			</div>
