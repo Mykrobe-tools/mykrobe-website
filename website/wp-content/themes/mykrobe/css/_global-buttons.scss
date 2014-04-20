@@ -1,11 +1,13 @@
 a.button {
+	box-sizing: border-box;
 	display:inline-block;
 	@include font-heading;
-	line-height: 1em * (48 / 16);
+	font-size: 1em * (14 / 24);
+	line-height: 1.0001em * (48 / 14);
 	text-align: center;
-	padding: 0 1em * (24 / 16);
-	min-height: 1em * (48 / 16);
-	@include border-radius(1em * (24 / 16));
+	padding: 0 1.0001em * (24 / 14);
+	height: 1.0001em * (48 / 14);
+	@include border-radius(1.0001em * (24 / 14));
 	cursor:pointer;
 	&.download {
 		background-color: $color-dark-green;
@@ -17,7 +19,8 @@ a.button {
 			//@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
 			background-color: white;
 			color: $color-dark-green;
-			@include box-shadow(0, 0, 1px, $color-dark-green, true);
+			// @include box-shadow(0, 0, 1px, $color-dark-green, true);
+			border:1px solid  $color-dark-green;
 		}
 	}
 }

@@ -11,7 +11,7 @@ $color-buff: #f7f6f1;
 @mixin font-heading {
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
-  font-size: 0.6667em;
+  font-size: 1em * (16 / 24);
   line-height: (30 / 16) * 1em;
 }
 
@@ -146,6 +146,8 @@ body {
     color:$color-dark-green;
     display: block;
     border-bottom:1px solid red;
+    font-size: 1em * (14 / 24);
+    line-height: 1;
   }
 
   p {
@@ -231,10 +233,10 @@ header.top-header {
     }*/
 
     .footer.container, .copyright.container {
-      font-size: 0.875em;
-      line-height: 1.42857;
-      padding-top:1.25em;
-      padding-bottom:3.75em;
+      // font-size: 0.875em;
+      // line-height: 1.42857;
+      // padding-top:1.25em;
+      // padding-bottom:3.75em;
     }
 
     .copyright.container {
