@@ -125,14 +125,11 @@ font-family: 'Varela Round', sans-serif;
 */
 body {
   font-family: "Minion-Regular", serif;
-    // font-family: 'Buenard', serif;
-    // font-weight: 100;
-    // font-size:88.88888888888889%;
-    font-size: 150%;
-    line-height: 1.25;
-    color: $color-base-text;
-    background-color: white;
-  }
+  font-size: 150%;
+  line-height: 1.25;
+  color: $color-base-text;
+  background-color: white;
+}
 
   a {
     color: $color-light-green;
@@ -841,11 +838,14 @@ img {
 // intermediate
 //
 
-// @media only screen and (min-width: width-with-grid-settings(9, $column-intermediate, $gutter-intermediate, $margin-intermediate)) {
-//   @include with-grid-settings(9, $column-intermediate, $gutter-intermediate, $margin-intermediate, $margin-intermediate, $flexible-intermediate) {
-//     @include grid-base;
-//   }
-// }
+@media only screen and (min-width: width-with-grid-settings(6, $column-regular, $gutter-regular, $margin-regular)) {
+  @include with-grid-settings(9, $column-regular, $gutter-regular, $margin-regular, $margin-regular, $flexible-regular) {
+    @include grid-base;
+    body {
+      font-size: 120%;
+    }
+  }
+}
 
 //
 // regular
@@ -854,5 +854,8 @@ img {
 @media only screen and (min-width: width-with-grid-settings(9, $column-regular, $gutter-regular, $margin-regular)) {
   @include with-grid-settings(9, $column-regular, $gutter-regular, $margin-regular, $margin-regular, $flexible-regular) {
     @include grid-base;
+    body {
+      font-size: 150%;
+    }  
   }
 }

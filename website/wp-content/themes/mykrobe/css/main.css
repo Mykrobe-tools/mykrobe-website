@@ -721,6 +721,51 @@ img, object, embed {
 img {
   height: auto; }
 
+@media only screen and (min-width: 684px) {
+  .container {
+    padding-left: 3.84615%;
+    padding-right: 3.84615%; }
+
+  .row {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; }
+
+  .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol, .twelvecol {
+    float: left;
+    min-height: 1px;
+    margin-right: 3.84615%; }
+
+  .row .onecol {
+    width: 7.69231%; }
+  .row .twocol {
+    width: 19.23077%; }
+  .row .threecol {
+    width: 30.76923%; }
+  .row .fourcol {
+    width: 42.30769%; }
+  .row .fivecol {
+    width: 53.84615%; }
+  .row .sixcol {
+    width: 65.38462%; }
+  .row .sevencol {
+    width: 76.92308%; }
+  .row .eightcol {
+    width: 88.46154%; }
+  .row .ninecol {
+    width: 100%; }
+  .row .tencol {
+    width: 111.53846%; }
+  .row .elevencol {
+    width: 123.07692%; }
+  .row .twelvecol {
+    width: 134.61538%; }
+
+  .last {
+    margin-right: 0; }
+
+  body {
+    font-size: 120%; } }
 @media only screen and (min-width: 1008px) {
   .container {
     padding-left: 3.84615%;
@@ -762,4 +807,7 @@ img {
     width: 134.61538%; }
 
   .last {
-    margin-right: 0; } }
+    margin-right: 0; }
+
+  body {
+    font-size: 150%; } }
