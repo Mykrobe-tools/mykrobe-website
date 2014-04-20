@@ -4,18 +4,26 @@
 			<div class="footer container">
 				<div class="row">
 					<div class="threecol">
-						<a href="<?php echo get_option('home');?>/" rel="home"><div class="ir monogram"><?php bloginfo('name');?></div></a>
+						<h3>Products</h3>
+						<article>
+						</article>
 					</div>
 					<div class="threecol">
 						<h3>Newsletter</h3>
-						<?php the_field('newsletter', 'option'); ?>
-						<?php the_field('newsletter-html', 'option'); ?>
+						<article>
+							<?php the_field('newsletter', 'option'); ?>
+							<?php the_field('newsletter-html', 'option'); ?>
+						</article>
 					</div>
 					<div class="threecol last">
 						<h3>Trials</h3>
-						<?php the_field('trials', 'option'); ?>
+						<article>
+							<?php the_field('trials', 'option'); ?>
+						</article>
 						<h3>Contact</h3>
-						<?php the_field('contact', 'option'); ?>
+						<article>
+							<?php the_field('contact', 'option'); ?>
+						</article>
 					</div>
 				</div>
 			</div>

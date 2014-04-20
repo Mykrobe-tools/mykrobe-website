@@ -30,6 +30,14 @@ $color-dark-green-hover: darken($color-dark-green, 5%);
   line-height: 30 / 16 * 1em;
 }
 
+@mixin font-format($font-size:16, $line-height:24, $base-em-size:24) {
+  font-size: 1em * ($font-size / $base-em-size);
+  line-height: 1em * ($line-height / $font-size);
+  p {
+    margin-bottom: 1em * ($line-height / $font-size); 
+  }
+}
+
 html,
 button,
 input,
@@ -253,9 +261,16 @@ header.top-header {
     // padding-bottom:3.75em;
   }
 
+  .footer.container {
+    article {
+      @include font-format(18,20);
+    }
+  }
+
   .copyright.container {
     color: white;
     background-color: #9a9893;
+    @include font-format(14, 16);
   }
 
   .copyright.container a, .copyright.container a:visited {
