@@ -15,8 +15,12 @@
 	<div class="product-overview container">
 		<div class="row">
 			<div class="threecol">
-				<h1><?php the_title(); ?></h1>
-				<?php echo $description; ?>
+				<header>
+					<h1><?php the_title(); ?></h1>
+				</header>
+				<article>
+					<?php echo $description; ?>
+				</article>
 			</div>
 			<div class="sixcol last">
 			</div>
