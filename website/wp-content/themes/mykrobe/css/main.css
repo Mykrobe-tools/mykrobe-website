@@ -155,8 +155,8 @@ h3 {
   color: #3b9da7;
   display: block;
   border-bottom: 1px solid #ceccc6;
-  font-size: 0.58333em;
-  min-height: 1.71429em;
+  font-size: 0.66667em;
+  min-height: 1.5em;
   line-height: 1; }
 
 p {
@@ -391,29 +391,29 @@ a.button {
   text-transform: uppercase;
   font-size: 0.66667em;
   line-height: 1.875em;
-  font-size: 0.58333em;
-  line-height: 3.42891em;
+  font-size: 0.66667em;
+  line-height: 3em;
   text-align: center;
-  padding: 0 1.71446em;
-  height: 3.42891em;
-  -webkit-border-radius: 1.71446em;
-  -moz-border-radius: 1.71446em;
-  -ms-border-radius: 1.71446em;
-  -o-border-radius: 1.71446em;
-  border-radius: 1.71446em;
+  padding: 0 1.5em;
+  height: 3em;
+  -webkit-border-radius: 1.5em;
+  -moz-border-radius: 1.5em;
+  -ms-border-radius: 1.5em;
+  -o-border-radius: 1.5em;
+  border-radius: 1.5em;
   cursor: pointer; }
   a.button.download {
     background-color: #3b9da7;
     color: white; }
     a.button.download:hover {
-      background-color: #2e7a81; }
+      background-color: #348b94; }
     a.button.download.secondary {
       background-color: white;
       color: #3b9da7;
       border: 1px solid #3b9da7; }
       a.button.download.secondary:hover {
-        color: #2e7a81;
-        border-color: #2e7a81; }
+        color: #348b94;
+        border-color: #348b94; }
 
 /* __________________________________________________________________________________________ product
 */
