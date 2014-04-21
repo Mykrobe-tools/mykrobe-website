@@ -35,13 +35,13 @@ $products = new Products;
 					<div class="sixcol">
 						<ul class="copyright-logos">
 							<li>
-								<a class="logo-the-royal-society" href="">The Royal Society</a>
+								<a class="logo-the-royal-society" href="http://royalsociety.org/">The Royal Society</a>
 							</li>
 							<li>
-								<a class="logo-the-wellcome-trust" href="">The Wellcome Trust</a>
+								<a class="logo-the-wellcome-trust" href="http://www.wellcome.ac.uk/">The Wellcome Trust</a>
 							</li>
 							<li>
-								<a class="logo-oxford-university" href="">Oxford University</a>
+								<a class="logo-oxford-university" href="http://www.ox.ac.uk/">Unviersity of Oxford</a>
 							</li>
 						</ul>
 					</div>
