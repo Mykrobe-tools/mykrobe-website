@@ -6,7 +6,7 @@
   padding-bottom:pixels-to-ems(24,24);
   .footer-products-species-logo {
     width:auto;
-    height:pixels-to-ems(84,24);
+    max-height:pixels-to-ems(84,24);
     margin:pixels-to-ems(12,24) 0 pixels-to-ems(20,24) 0;
   }
 }
