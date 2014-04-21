@@ -9,9 +9,7 @@ $products = new Products;
 				<div class="row">
 					<div class="threecol">
 						<h3>Products</h3>
-						<article>
-							<?php $products->writeFooterProducts(); ?>
-						</article>
+						<?php $products->writeFooterProducts(); ?>
 					</div>
 					<div class="threecol">
 						<h3>Newsletter</h3>

@@ -32,7 +32,7 @@
 .copyright.container {
   @include font-format(14, 16);
   color: white;
-  background-color: #9a9893;
+  background-color: $color-footer-background;
   padding-top:pixels-to-ems(24,14);
   padding-bottom:pixels-to-ems(48,14);
   ul.copyright-logos {

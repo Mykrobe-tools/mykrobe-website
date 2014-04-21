@@ -9,6 +9,8 @@ $color-dark-green: #3b9da7;
 $color-buff: #f7f6f1;
 $color-rule: #ceccc6;
 
+$color-footer-background: #9a9893;
+
 $color-dark-green-hover: darken($color-dark-green, 5%);
 
 @font-face {
@@ -117,7 +119,7 @@ base font size 24px
 }
 
 html {
-  background-color: #adaeb0;
+  background-color: $color-footer-background;
 }
 
 /*
