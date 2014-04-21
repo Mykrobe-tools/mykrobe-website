@@ -230,22 +230,96 @@ header.top-header {
   line-height: 1.14286em; }
   .copyright.container p {
     margin-bottom: 1.14286em; }
+  .copyright.container ul.copyright-logos {
+    overflow: hidden; }
+    .copyright.container ul.copyright-logos li {
+      float: left;
+      margin-left: 2.57143em; }
+      .copyright.container ul.copyright-logos li a {
+        display: block; }
+      .copyright.container ul.copyright-logos li:first-child {
+        margin-left: 0; }
 
-.copyright.container a, .copyright.container a:visited {
-  color: #dad9d7; }
-
-.copyright.container a:hover, .copyright.container a:visited:hover {
-  color: white; }
-
-.copyright.container ul {
-  list-style-type: none;
+.svg .logo-the-royal-society {
+  background-image: url("../img/logo-the-royal-society.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  text-indent: -119988px;
   overflow: hidden;
-  margin: 0;
-  padding: 0; }
+  text-align: left; }
 
-.copyright.container ul li {
-  float: left;
-  margin-right: 1em; }
+.no-svg .logo-the-royal-society {
+  background-image: url("../img/logo-the-royal-society.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left; }
+
+.lt-ie9.no-svg .logo-the-royal-society {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/logo-the-royal-society.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/logo-the-royal-society.png',sizingMethod='scale')"; }
+
+.logo-the-royal-society {
+  width: 8.21429em;
+  height: 1.71429em; }
+
+.svg .logo-the-wellcome-trust {
+  background-image: url("../img/logo-the-wellcome-trust.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left; }
+
+.no-svg .logo-the-wellcome-trust {
+  background-image: url("../img/logo-the-wellcome-trust.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left; }
+
+.lt-ie9.no-svg .logo-the-wellcome-trust {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/logo-the-wellcome-trust.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/logo-the-wellcome-trust.png',sizingMethod='scale')"; }
+
+.logo-the-wellcome-trust {
+  width: 10.07143em;
+  height: 1.28571em; }
+
+.svg .logo-oxford-university {
+  background-image: url("../img/logo-oxford-university.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left; }
+
+.no-svg .logo-oxford-university {
+  background-image: url("../img/logo-oxford-university.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left; }
+
+.lt-ie9.no-svg .logo-oxford-university {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/logo-oxford-university.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/logo-oxford-university.png',sizingMethod='scale')"; }
+
+.logo-oxford-university {
+  width: 5.85714em;
+  height: 1.71429em; }
 
 .monogram {
   width: 4em;

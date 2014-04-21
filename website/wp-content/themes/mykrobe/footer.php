@@ -30,6 +30,17 @@
 			<div class="copyright container">
 				<div class="row">
 					<div class="sixcol">
+						<ul class="copyright-logos">
+							<li>
+								<a class="logo-the-royal-society" href="">The Royal Society</a>
+							</li>
+							<li>
+								<a class="logo-the-wellcome-trust" href="">The Wellcome Trust</a>
+							</li>
+							<li>
+								<a class="logo-oxford-university" href="">Oxford University</a>
+							</li>
+						</ul>
 					</div>
 					<div class="threecol last">
 						<?php the_field('copyright', 'option'); ?>
