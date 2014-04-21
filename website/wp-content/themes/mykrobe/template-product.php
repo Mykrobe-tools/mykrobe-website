@@ -38,6 +38,7 @@ $all_species = $products->getProductSpecies($post);
 
 if ( count($all_species) > 1 ) {
 	// draw tabs here
+	echo 'Tabs in here';
 }
 
 foreach($all_species as $species) {
