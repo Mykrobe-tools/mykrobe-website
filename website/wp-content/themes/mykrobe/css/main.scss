@@ -17,6 +17,11 @@ $color-dark-green-hover: darken($color-dark-green, 5%);
 $color-light-green-hover: darken($color-light-green, 5%);
 $color-light-green-hover-text: darken($color-light-green, 15%);
 
+$margin-regular: 36px;
+$gutter-regular: 36px;
+$column-regular: 72px;
+$flexible-regular: true;
+
 @font-face {
   font-family: 'Minion-Regular';
   src: url("webfonts/2AB146_0_0.eot");
@@ -190,34 +195,7 @@ body {
     margin:0;
     }*/
 
-//
-// header
-//
 
-header.top-header {
-  padding: 1em * 24 / 24 0;
-  min-height: 1em * 96 / 24;
-  .logo-container {
-    float: left;
-  }
-  ul.menu {
-    float: right;
-    overflow: hidden;
-    @include font-heading;
-    line-height: 1;
-    li {
-      float: left;
-      margin-left: 1em;
-      &.current_page_item, .current_page_parent {
-        a, a:visited {
-          color: $color-dark-green;
-        }
-      }
-    }
-  }
-}
-
-@include svg-image-with-fallback('header.top-header h1.logo','mykrobe-logotype',1.5em * 755 / 110,1.5em);
 
 //
 // main
@@ -228,6 +206,11 @@ header.top-header {
     color: $color-dark-green;
   }
 }
+
+/* __________________________________________________________________________________________ global: header
+*/
+
+@import "global-header";
 
 /* __________________________________________________________________________________________ global: footer
 */
@@ -612,20 +595,6 @@ img.avatar {
 /* __________________________________________________________________________________________ responsive
 */
 
-$margin-small: 12px;
-$gutter-small: 12px;
-$column-small: 65px;
-$flexible-small: false;
-
-$margin-intermediate: 16px;
-$gutter-intermediate: 16px;
-$column-intermediate: 80px;
-$flexible-intermediate: false;
-
-$margin-regular: 36px;
-$gutter-regular: 36px;
-$column-regular: 72px;
-$flexible-regular: true;
 
 img, object, embed {
   max-width: 100%;
@@ -639,15 +608,16 @@ img {
 // small
 //
 
-// @include with-grid-settings(4, $column-small, $gutter-small, $margin-small, $margin-small, $flexible-small) {
-//   @include grid-base;
-// }
-
-// @media only screen and (min-width: width-with-grid-settings(6, $column-small, $gutter-small, $margin-small)) {
-//   @include with-grid-settings(6, $column-small, $gutter-small, $margin-small, $margin-small, $flexible-small) {
-//     @include grid-base;
-//   }
-// }
+@media only screen and (max-width: width-with-grid-settings(5, $column-regular, $gutter-regular, $margin-regular)) {
+  body {
+    font-size: 120%;
+  }
+  .container {
+    padding-left:3%;
+    padding-right:3%;
+  }
+  @include header-mobile;
+}
 
 //
 // intermediate

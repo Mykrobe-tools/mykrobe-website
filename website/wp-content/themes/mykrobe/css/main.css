@@ -166,6 +166,11 @@ p {
 /*p:first-child {
     margin:0;
     }*/
+.main h1 {
+  color: #3b9da7; }
+
+/* __________________________________________________________________________________________ global: header
+*/
 header.top-header {
   padding: 1em 0;
   min-height: 4em; }
@@ -211,9 +216,6 @@ header.top-header {
 header.top-header h1.logo {
   width: 10.29545em;
   height: 1.5em; }
-
-.main h1 {
-  color: #3b9da7; }
 
 /* __________________________________________________________________________________________ global: footer
 */
@@ -807,6 +809,68 @@ img, object, embed {
 img {
   height: auto; }
 
+@media only screen and (max-width: 576px) {
+  body {
+    font-size: 120%; }
+
+  .container {
+    padding-left: 3%;
+    padding-right: 3%; }
+
+  .top-header {
+    position: relative;
+    z-index: 4; }
+
+  header .menu-button {
+    width: 2em;
+    height: 2em;
+    position: fixed;
+    z-index: 5;
+    background-color: red;
+    right: 5%;
+    top: 1em;
+    background: url(../img/burger-button.png) right top no-repeat; }
+
+  header .menu-header-menu-container {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: url(../img/menu-background.png);
+    padding: 0.5em 5%;
+    display: none; }
+
+  header .menu-header-menu-container li {
+    position: absolute;
+    visibility: hidden; }
+
+  header .menu-header-menu-container li a {
+    display: block;
+    padding: 0.5em 0; }
+
+  header ul.menu li.current_page_item a:after {
+    content: '';
+    display: block;
+    width: 1.25em;
+    height: 0.0625em;
+    background-color: #fc3f2c;
+    position: relative;
+    top: 0.125em; }
+
+  header .menu-header-menu-container.expanded li {
+    position: static;
+    visibility: visible; }
+
+  header .menu-header-menu-container li.current_page_item {
+    position: static;
+    visibility: visible; }
+
+  header .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase; } }
 @media only screen and (min-width: 576px) {
   .container {
     padding-left: 3.84615%;

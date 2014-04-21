@@ -60,8 +60,6 @@ $products = new Products;
 				"templateUrl" : "<?php bloginfo('template_directory'); ?>"
 			};
 		</script>
-		<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery-1.7.1.min.js"><\/script>')</script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.9.0/TweenLite.min.js"></script>
