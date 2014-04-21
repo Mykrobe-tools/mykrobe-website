@@ -60,8 +60,8 @@
   .lt-ie9.no-svg {
     #{$class-name} {
       background:none;
-      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/#{$image-name}.png',sizingMethod='scale');
-      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/#{$image-name}.png',sizingMethod='scale')";
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/wp-content/themes/mykrobe/img/#{$image-name}.png',sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/wp-content/themes/mykrobe/img/#{$image-name}.png',sizingMethod='scale')";
     }
   }
 
@@ -70,3 +70,10 @@
     height:#{$image-height};
   }
 }
+
+/*
+_behavior: expression( 
+              this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1],
+              this.style.background = "none",
+              this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ")");
+*/

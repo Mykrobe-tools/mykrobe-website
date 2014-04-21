@@ -55,8 +55,8 @@ $products = new Products;
 		<!-- <div id="overlay"></div> -->
 		<?php wp_footer(); ?>
     	<script type="text/javascript">
-			var HelixCentre = HelixCentre || {};
-			HelixCentre.settings = {
+			var Mykrobe = Mykrobe || {};
+			Mykrobe.settings = {
 				"templateUrl" : "<?php bloginfo('template_directory'); ?>"
 			};
 		</script>
