@@ -11,11 +11,13 @@
       position:absolute;
     }
     .promo-content {
-      @include font-format(21, 24);
       position:absolute;
       text-align:center;
       h1.logo {
         margin: 0 auto;
+      }
+      p {
+        @include font-format(21, 24);
       }
     }
   }

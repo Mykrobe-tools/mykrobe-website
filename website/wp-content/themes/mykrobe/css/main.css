@@ -442,14 +442,15 @@ a.button {
     .promo-container .promo .promo-background {
       position: absolute; }
     .promo-container .promo .promo-content {
-      font-size: 0.875em;
-      line-height: 1.14286em;
       position: absolute;
       text-align: center; }
-      .promo-container .promo .promo-content p {
-        margin-bottom: 1.14286em; }
       .promo-container .promo .promo-content h1.logo {
         margin: 0 auto; }
+      .promo-container .promo .promo-content p {
+        font-size: 0.875em;
+        line-height: 1.14286em; }
+        .promo-container .promo .promo-content p p {
+          margin-bottom: 1.14286em; }
 
 .svg .promo-content h1.logo {
   background-image: url("../img/mykrobe-logotype.svg");
