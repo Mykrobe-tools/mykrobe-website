@@ -235,10 +235,12 @@ header.top-header h1.logo {
     margin-bottom: 1.11111em; }
 
 .copyright.container {
+  font-size: 0.58333em;
+  line-height: 1.14286em;
   color: white;
   background-color: #9a9893;
-  font-size: 0.58333em;
-  line-height: 1.14286em; }
+  padding-top: 1.71429em;
+  padding-bottom: 3.42857em; }
   .copyright.container p {
     margin-bottom: 1.14286em; }
   .copyright.container ul.copyright-logos {
@@ -250,6 +252,8 @@ header.top-header h1.logo {
         display: block; }
       .copyright.container ul.copyright-logos li:first-child {
         margin-left: 0; }
+  .copyright.container p {
+    margin: 0; }
 
 .svg .logo-the-royal-society {
   background-image: url("../img/logo-the-royal-society.svg");

@@ -38,6 +38,10 @@ $color-dark-green-hover: darken($color-dark-green, 5%);
   }
 }
 
+@function pixels-to-ems($pixel-size, $em-base-size: 16) {
+  @return $pixel-size / $em-base-size * 1em;
+}
+
 html,
 button,
 input,

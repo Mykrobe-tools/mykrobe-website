@@ -28,14 +28,16 @@
   }
 
 .copyright.container {
+  @include font-format(14, 16);
   color: white;
   background-color: #9a9893;
-  @include font-format(14, 16);
+  padding-top:pixels-to-ems(24,14);
+  padding-bottom:pixels-to-ems(48,14);
   ul.copyright-logos {
     overflow: hidden;
     li {
       float:left;
-      margin-left:1em * (36 / 14);
+      margin-left:pixels-to-ems(36,14);
       a {
         display: block;
       }
@@ -43,6 +45,9 @@
         margin-left:0;
       }
     }
+  }
+  p {
+    margin:0;
   }
 }
   
