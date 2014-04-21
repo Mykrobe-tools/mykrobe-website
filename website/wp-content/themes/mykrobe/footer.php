@@ -1,5 +1,6 @@
 <?php
 require_once 'php/Products.php';
+$products = new Products;
 ?>
 		</div>
 		<footer>
@@ -9,10 +10,7 @@ require_once 'php/Products.php';
 					<div class="threecol">
 						<h3>Products</h3>
 						<article>
-							<?php
-$products = new Products;
-$products->writeFooterProducts();
-							?>
+							<?php $products->writeFooterProducts(); ?>
 						</article>
 					</div>
 					<div class="threecol">
