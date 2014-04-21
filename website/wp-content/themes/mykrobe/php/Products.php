@@ -47,7 +47,9 @@ class Products {
 					'teaser_description' => $teaser_description,
 					'description' => $description,
 					'small_print' => $small_print,
-					'image_id' => $image_id
+					'image_id' => $image_id,
+					'permalink' => get_permalink($page->ID),
+					'anchor' => sanitize_title_with_dashes($title)
 				);
 				array_push($species,$species_object);
 			}
@@ -58,8 +60,21 @@ class Products {
 	public function writeFooterProducts() {
 		$all_species = $this->getAllSpecies();
 		foreach($all_species as $species) {
-			// $this->writeProductTeaser($page);
-			print_r($species);
+			$image_id = $species['image_id'];
+			$teaser_description = $species['teaser_description'];
+			$permalink = $species['permalink'];
+			$anchor = $species['anchor'];
+			$image_attributes = wp_get_attachment_image_src($image_id, 'medium');
+			$url = $image_attributes[0];
+			echo '
+				<a href="'.$permalink.'#'.$anchor.'">
+					<img class="footer-products-species-logo" src="'.$url.'">
+				</a>
+				<article>
+					'.$teaser_description.'
+				</article>
+				<a href="'.$permalink.'#'.$anchor.'" class="button learn">Learn more</a>
+			';
 		}
 	}
 /*
