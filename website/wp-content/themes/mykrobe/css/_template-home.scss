@@ -1,0 +1,19 @@
+.promo-container {
+  background-color: $color-buff;
+  overflow:hidden;
+
+  .promo {
+    position:relative;
+    margin:pixels-to-ems(96,24) auto;
+    width:pixels-to-ems(480,24);
+    height:pixels-to-ems(480,24);
+    .promo-background {
+      position:absolute;
+    }
+    .promo-content {
+      position:absolute;
+    }
+  }
+}
+
+@include svg-image-with-fallback('.promo-background','circle-480',pixels-to-ems(480,24),pixels-to-ems(480,24));

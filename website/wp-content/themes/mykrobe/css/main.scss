@@ -303,120 +303,15 @@ body>footer .mc-field-group {
   width: 34%;
 }
 
-/* __________________________________________________________________________________________ home
-*/
-
-/*.home {
-    position: relative;
-    }*/
-
-    #overlay, #menu-overlay {
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background-color: white;
-      z-index: 3;
-      display: none;
-    }
-
-    #menu-overlay {
-      background: url(../img/menu-overlay.png);
-    }
-
-    .home [role="main"] {
-      position: relative;
-      z-index: 2;
-    }
-
-    .home footer {
-      position: relative;
-      z-index: 2;
-    }
-
-    .what-is-helix.container {
-      opacity: 0;
-      filter: alpha(opacity = 0);
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    }
-
-    .what-is-helix.container p {
-      margin: 0;
-    }
-
-    .what-is-helix.container ul {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-    }
-
-    .what-is-helix.container .row {
-      position: relative;
-    }
-
-    .what-is-helix.container a[rel="next"] {
-      position: absolute;
-      left: 0;
-      text-transform: uppercase;
-    }
-
-    .what-is-helix.container a[rel="next"]:after {
-      position: relative;
-      top: 1.25em;
-      width: 1.875em;
-      height: 1.875em;
-      display: block;
-      content: '';
-      background: url(../img/arrow-down.png) no-repeat;
-      background-size: 100% 100%;
-      -o-background-size: 100% 100%;
-      -webkit-background-size: 100% 100%;
-    }
-
-    .what-is-helix.container .row-final a[rel="next"]:after {
-      background: url(../img/arrow-up.png) no-repeat;
-      background-size: 100% 100%;
-      -o-background-size: 100% 100%;
-      -webkit-background-size: 100% 100%;
-    }
-
-    .svg .what-is-helix.container a[rel="next"]:after {
-      background: url(../img/arrow-down.svg) no-repeat;
-      background-size: 100% 100%;
-      -o-background-size: 100% 100%;
-      -webkit-background-size: 100% 100%;
-    }
-
-    .svg .what-is-helix.container .row-final a[rel="next"]:after {
-      background: url(../img/arrow-up.svg) no-repeat;
-      background-size: 100% 100%;
-      -o-background-size: 100% 100%;
-      -webkit-background-size: 100% 100%;
-    }
-
-    .what-is-helix.container .question {
-      text-transform: uppercase;
-      color: #fc3f2c;
-    }
-
-    .what-is-helix.container .statement strong {
-      font-weight: normal;
-      color: #fc3f2c;
-    }
-
-    .what-is-helix.container .answer-last p {
-      margin-bottom: 1.25em;
-    }
-
-    .what-is-helix.container .answer-last .mc-field-group {
-      margin-bottom: 1.25em;
-    }
-
 /* __________________________________________________________________________________________ global: buttons
 */
 
 @import "global-buttons";
+
+/* __________________________________________________________________________________________ home
+*/
+
+@import "template-home";
 
 /* __________________________________________________________________________________________ product
 */

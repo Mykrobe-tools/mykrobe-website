@@ -396,97 +396,6 @@ body > footer .mc-field-group {
 .mc-field-group input[type="submit"], .field-group input[type="submit"] {
   width: 34%; }
 
-/* __________________________________________________________________________________________ home
-*/
-/*.home {
-    position: relative;
-    }*/
-#overlay, #menu-overlay {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: white;
-  z-index: 3;
-  display: none; }
-
-#menu-overlay {
-  background: url(../img/menu-overlay.png); }
-
-.home [role="main"] {
-  position: relative;
-  z-index: 2; }
-
-.home footer {
-  position: relative;
-  z-index: 2; }
-
-.what-is-helix.container {
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
-
-.what-is-helix.container p {
-  margin: 0; }
-
-.what-is-helix.container ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
-
-.what-is-helix.container .row {
-  position: relative; }
-
-.what-is-helix.container a[rel="next"] {
-  position: absolute;
-  left: 0;
-  text-transform: uppercase; }
-
-.what-is-helix.container a[rel="next"]:after {
-  position: relative;
-  top: 1.25em;
-  width: 1.875em;
-  height: 1.875em;
-  display: block;
-  content: '';
-  background: url(../img/arrow-down.png) no-repeat;
-  background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%; }
-
-.what-is-helix.container .row-final a[rel="next"]:after {
-  background: url(../img/arrow-up.png) no-repeat;
-  background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%; }
-
-.svg .what-is-helix.container a[rel="next"]:after {
-  background: url(../img/arrow-down.svg) no-repeat;
-  background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%; }
-
-.svg .what-is-helix.container .row-final a[rel="next"]:after {
-  background: url(../img/arrow-up.svg) no-repeat;
-  background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%; }
-
-.what-is-helix.container .question {
-  text-transform: uppercase;
-  color: #fc3f2c; }
-
-.what-is-helix.container .statement strong {
-  font-weight: normal;
-  color: #fc3f2c; }
-
-.what-is-helix.container .answer-last p {
-  margin-bottom: 1.25em; }
-
-.what-is-helix.container .answer-last .mc-field-group {
-  margin-bottom: 1.25em; }
-
 /* __________________________________________________________________________________________ global: buttons
 */
 a.button {
@@ -519,6 +428,48 @@ a.button {
       a.button.download.secondary:hover {
         color: #348b94;
         border-color: #348b94; }
+
+/* __________________________________________________________________________________________ home
+*/
+.promo-container {
+  background-color: #f7f6f1;
+  overflow: hidden; }
+  .promo-container .promo {
+    position: relative;
+    margin: 4em auto;
+    width: 20em;
+    height: 20em; }
+    .promo-container .promo .promo-background {
+      position: absolute; }
+    .promo-container .promo .promo-content {
+      position: absolute; }
+
+.svg .promo-background {
+  background-image: url("../img/circle-480.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left; }
+
+.no-svg .promo-background {
+  background-image: url("../img/circle-480.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left; }
+
+.lt-ie9.no-svg .promo-background {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/circle-480.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/circle-480.png',sizingMethod='scale')"; }
+
+.promo-background {
+  width: 20em;
+  height: 20em; }
 
 /* __________________________________________________________________________________________ product
 */
