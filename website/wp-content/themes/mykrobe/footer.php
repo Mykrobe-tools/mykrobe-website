@@ -77,14 +77,14 @@ $products = new Products;
 		<script src="<?php bloginfo('template_directory'); ?>/js/plugins.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/helixcentre/HelixPrefix.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/helixcentre/HelixMenu.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/helixcentre/WhatIsHelixSlide.js"></script>
+		<!--script src="<?php bloginfo('template_directory'); ?>/js/helixcentre/WhatIsHelixSlide.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/helixcentre/WhatIsHelix.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/helixcentre/HelixInteractiveLine.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/helixcentre/HelixInteractive.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/helixcentre/behaviour/HelixBehaviour.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/helixcentre/behaviour/HelixInitialBehaviour.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/helixcentre/behaviour/HelixLogoBehaviour.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/helixcentre/behaviour/HelixDiagonalBehaviour.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/helixcentre/behaviour/HelixDiagonalBehaviour.js"></script-->
 		<script src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
 		<?php
 	}

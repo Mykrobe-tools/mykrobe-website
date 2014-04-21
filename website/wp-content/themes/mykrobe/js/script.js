@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     // home work teasers and features
     if ( $('body').hasClass('home')) {
-        whatIsHelix = new WhatIsHelix();
+        // whatIsHelix = new WhatIsHelix();
         // smooth scroll
         // $('a:[href^=#]').smoothScroll({
         //     speed:500
@@ -51,51 +51,6 @@ $(document).ready(function() {
 
     that.helixMenu = new HelixMenu();
 
-    if ( $('#map-canvas').length ) {
-        var stylesArray = [
-            {
-                featureType: 'all',
-                elementType: 'all',
-                stylers: [
-                    { saturation: -99 },
-                    { lightness:50 }
-                ]
-            }
-        ];
-        var myLatLng = new google.maps.LatLng(51.518043, -0.174270);
-        var helixMapType = new google.maps.StyledMapType(stylesArray,{name: "HelixCentre"});
-
-        var mapOptions = {
-            zoom: 15,
-            center: myLatLng,
-            panControl: false,
-            streetViewControl: false,
-            mapTypeControl: false
-        };
-
-        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-        map.mapTypes.set('greyscale', helixMapType);
-        map.setMapTypeId('greyscale');
-
-        var image = HelixCentre.settings.templateUrl+'/img/map-marker.png';
-        var helixMarker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            icon: image,
-            clickable: false
-        });
-
-        // var infoWindowOpts = {
-        //     content: $('#map-box').html()
-        // };
-        // var infoWindow = new google.maps.InfoWindow(infoWindowOpts);
-        // google.maps.event.addListener(helixMarker, 'click', function() {
-        //     infoWindow.open(map, helixMarker);
-        // });
-     }
-
-     $('#overlay').fadeOut(250);
 });
 
 function listStyles(width,gutter) {

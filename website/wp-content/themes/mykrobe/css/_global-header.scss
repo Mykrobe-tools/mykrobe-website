@@ -33,62 +33,66 @@ header.top-header {
     z-index: 4;
   }
 
-  header .menu-button {
-    width: 2em;
-    height: 2em;
-    position: fixed;
-    z-index:5;
-    background-color: red;
-    right: 5%;
-    top:1em;
-    background: url(../img/burger-button.png) right top no-repeat;
-  }
+  header.top-header {
+    .menu-button {
+      width: 2em;
+      height: 2em;
+      position: fixed;
+      z-index:5;
+      background-color: red;
+      right: 5%;
+      top:1em;
+      background: url(../img/burger-button.png) right top no-repeat;
+    }
 
-  header .menu-header-menu-container {
-    position: fixed;
-    z-index:4;
-    top:0;
-    left:0;
-    right:0;
-    background: url(../img/menu-background.png);
-    padding: 0.5em 5%;
-    display: none;
-  }
+    .menu-header-menu-container {
+      position: fixed;
+      z-index:4;
+      top:0;
+      left:0;
+      right:0;
+      background: url(../img/menu-background.png);
+      padding: 0.5em 5%;
+      display: none;
+    }
 
-  header .menu-header-menu-container li {
-    position: absolute;
-    visibility: hidden;
-  }
+    .menu-header-menu-container li {
+      position: absolute;
+      visibility: hidden;
+    }
 
-  header .menu-header-menu-container li a {
-    display: block;
-    padding:0.5em 0;
-  }
+    .menu-header-menu-container li a {
+      display: block;
+      padding:0.5em 0;
+    }
 
-  header ul.menu li.current_page_item a:after {
-    content: '';
-    display: block;
-    width: 1.25em;
-    height: 0.0625em;
-    background-color: #fc3f2c;
-    position: relative;
-    top:0.125em;
-  }
+    // ul.menu li.current_page_item a:after {
+    //   content: '';
+    //   display: block;
+    //   width: 1.25em;
+    //   height: 0.0625em;
+    //   background-color: #fc3f2c;
+    //   position: relative;
+    //   top:0.125em;
+    // }
 
-  header .menu-header-menu-container.expanded li {
-    position: static;
-    visibility: visible;
-  }
+    .menu-header-menu-container.expanded li {
+      position: static;
+      visibility: visible;
+      float:none;
+    }
 
-  header .menu-header-menu-container li.current_page_item {
-    position: static;
-    visibility: visible;
-  }
+    .menu-header-menu-container li.current_page_item {
+      position: static;
+      visibility: visible;
+    }
 
-  header .menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
+    ul.menu {
+      float:none;
+      // list-style-type: none;
+      // margin: 0;
+      // padding: 0;
+      // text-transform: uppercase;
+    }
   }
 }

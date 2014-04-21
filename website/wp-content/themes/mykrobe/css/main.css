@@ -833,7 +833,7 @@ img {
     position: relative;
     z-index: 4; }
 
-  header .menu-button {
+  header.top-header .menu-button {
     width: 2em;
     height: 2em;
     position: fixed;
@@ -842,8 +842,7 @@ img {
     right: 5%;
     top: 1em;
     background: url(../img/burger-button.png) right top no-repeat; }
-
-  header .menu-header-menu-container {
+  header.top-header .menu-header-menu-container {
     position: fixed;
     z-index: 4;
     top: 0;
@@ -852,37 +851,21 @@ img {
     background: url(../img/menu-background.png);
     padding: 0.5em 5%;
     display: none; }
-
-  header .menu-header-menu-container li {
+  header.top-header .menu-header-menu-container li {
     position: absolute;
     visibility: hidden; }
-
-  header .menu-header-menu-container li a {
+  header.top-header .menu-header-menu-container li a {
     display: block;
     padding: 0.5em 0; }
-
-  header ul.menu li.current_page_item a:after {
-    content: '';
-    display: block;
-    width: 1.25em;
-    height: 0.0625em;
-    background-color: #fc3f2c;
-    position: relative;
-    top: 0.125em; }
-
-  header .menu-header-menu-container.expanded li {
+  header.top-header .menu-header-menu-container.expanded li {
+    position: static;
+    visibility: visible;
+    float: none; }
+  header.top-header .menu-header-menu-container li.current_page_item {
     position: static;
     visibility: visible; }
-
-  header .menu-header-menu-container li.current_page_item {
-    position: static;
-    visibility: visible; }
-
-  header .menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase; }
+  header.top-header ul.menu {
+    float: none; }
 
   .main .product-overview {
     min-height: 0; }
