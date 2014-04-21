@@ -464,10 +464,11 @@ a.button {
       position: absolute;
       text-align: center; }
       .promo-container .promo .promo-content h1.logo {
-        margin: 0 auto; }
+        margin: 13.5em auto 0 auto; }
       .promo-container .promo .promo-content p {
         font-size: 0.875em;
-        line-height: 1.14286em; }
+        line-height: 1.14286em;
+        margin: 1.14286em 2.28571em; }
         .promo-container .promo .promo-content p p {
           margin-bottom: 1.14286em; }
 

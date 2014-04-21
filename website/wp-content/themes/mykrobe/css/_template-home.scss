@@ -14,10 +14,11 @@
       position:absolute;
       text-align:center;
       h1.logo {
-        margin: 0 auto;
+        margin: pixels-to-ems(216,16) auto 0 auto;
       }
       p {
         @include font-format(21, 24);
+        margin: pixels-to-ems(24,21) pixels-to-ems(48,21);
       }
     }
   }
