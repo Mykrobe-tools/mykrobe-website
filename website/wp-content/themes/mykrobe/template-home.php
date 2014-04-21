@@ -1,6 +1,6 @@
 <?php
 /*
- * Template Name: What is HELIX?
+ * Template Name: Home
  */
 ?>
 <?php get_header(); ?>
