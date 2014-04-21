@@ -65,7 +65,7 @@ echo '
 				<article>
 					'.$small_print.'
 				</article>
-				<a class="button download secondary">Download</a>
+				<a class="button download secondary small">Download</a>
 			</div>
 		</div>
 ';

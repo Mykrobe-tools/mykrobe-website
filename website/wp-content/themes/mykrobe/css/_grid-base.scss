@@ -8,6 +8,9 @@
   .row {
     @if $use-percentages {
       width: 100%;
+      @include with-use-percentages(false) {
+        max-width:width-for-columns-gutters($total-columns,$total-columns - 1);
+      }
     } 
     @else {
       width:width-for-columns-gutters($total-columns,$total-columns - 1);

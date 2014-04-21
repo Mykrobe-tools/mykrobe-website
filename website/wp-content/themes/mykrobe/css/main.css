@@ -835,6 +835,7 @@ img {
 
   .row {
     width: 100%;
+    max-width: 936px;
     margin: 0 auto;
     overflow: hidden; }
 
@@ -880,6 +881,7 @@ img {
 
   .row {
     width: 100%;
+    max-width: 936px;
     margin: 0 auto;
     overflow: hidden; }
 
