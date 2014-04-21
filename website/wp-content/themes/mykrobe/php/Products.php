@@ -73,7 +73,7 @@ class Products {
 				<article>
 					'.$teaser_description.'
 				</article>
-				<a href="'.$permalink.'#'.$anchor.'" class="button learn">Learn more</a>
+				<a href="'.$permalink.'#'.$anchor.'" class="button learn small">Learn more</a>
 			';
 		}
 	}

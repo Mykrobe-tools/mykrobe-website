@@ -3,6 +3,7 @@
 @import "mixins";
 @import "grid-base";
 
+$color-blue: #71c7e6;
 $color-base-text: #676561;
 $color-light-green: #86c9b9;
 $color-dark-green: #3b9da7;
@@ -11,7 +12,10 @@ $color-rule: #ceccc6;
 
 $color-footer-background: #9a9893;
 
+$color-blue-hover: darken($color-blue, 5%);
 $color-dark-green-hover: darken($color-dark-green, 5%);
+$color-light-green-hover: darken($color-light-green, 5%);
+$color-light-green-hover-text: darken($color-light-green, 15%);
 
 @font-face {
   font-family: 'Minion-Regular';
@@ -147,7 +151,7 @@ body {
   }
 
   a:hover, a:visited:hover {
-    color: $color-dark-green;
+    color: $color-light-green-hover-text;
   }
 
   a:focus {
@@ -193,15 +197,6 @@ body {
 header.top-header {
   padding: 1em * 24 / 24 0;
   min-height: 1em * 96 / 24;
-  // h1.logo {
-  //   background: url(../img/helix-horizontal.png) no-repeat;
-  //   background-size: 100% 100%;
-  //   -o-background-size: 100% 100%;
-  //   -webkit-background-size: 100% 100%;
-  //   height: 1.5em;
-  //   width: 1.5em * 755 / 110;
-  //   @include hide-text;
-  // }
   .logo-container {
     float: left;
   }
@@ -219,20 +214,8 @@ header.top-header {
         }
       }
     }
-    a {
-      &:hover, :visited:hover {
-        color: $color-dark-green;
-      }
-    }
   }
 }
-
-// .svg header.top-header h1.logo {
-//   background: url(../img/mykrobe-logotype.svg) no-repeat;
-//   background-size: 100% 100%;
-//   -o-background-size: 100% 100%;
-//   -webkit-background-size: 100% 100%;
-// }
 
 @include svg-image-with-fallback('header.top-header h1.logo','mykrobe-logotype',1.5em * 755 / 110,1.5em);
 

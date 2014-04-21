@@ -3,12 +3,12 @@ a.button {
 	box-sizing: border-box;
 	display:inline-block;
 	@include font-heading;
-	font-size: 1em * (16 / 24);
-	line-height: 1em * (48 / 16);
+	font-size: pixels-to-ems(16, 24);
+	line-height: pixels-to-ems(48, 16);
 	text-align: center;
-	padding: 0 1em * (24 / 16);
-	height: 1em * (48 / 16);
-	@include border-radius(1em * (24 / 16));
+	padding: 0 pixels-to-ems(24, 16);
+	height: pixels-to-ems(48, 16);
+	@include border-radius(pixels-to-ems(24, 16));
 	cursor:pointer;
 	&.download {
 		background-color: $color-dark-green;
@@ -24,6 +24,28 @@ a.button {
 				color: $color-dark-green-hover;
 				border-color: $color-dark-green-hover;
 			}
+		}
+	}
+	&.small {
+		font-size: pixels-to-ems(12, 24);
+		line-height: pixels-to-ems(32, 12);
+		text-align: center;
+		padding: 0 pixels-to-ems(16, 12);
+		height: pixels-to-ems(32, 12);
+		@include border-radius(pixels-to-ems(16, 12));
+	}
+	&.learn, &.light-blue {
+		background-color: $color-blue;
+		color:white;
+		&:hover {
+			background-color: $color-blue-hover;
+		}
+	}
+	&.light-green {
+		background-color: $color-light-green;
+		color:white;
+		&:hover {
+			background-color: $color-light-green-hover;
 		}
 	}
 }

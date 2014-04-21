@@ -132,7 +132,7 @@ a {
   -o-transition: all 0.1s; }
 
 a:hover, a:visited:hover {
-  color: #3b9da7; }
+  color: #51b19a; }
 
 a:focus {
   border: none;
@@ -184,8 +184,6 @@ header.top-header {
       margin-left: 1em; }
       header.top-header ul.menu li.current_page_item a, header.top-header ul.menu li.current_page_item a:visited, header.top-header ul.menu li .current_page_parent a, header.top-header ul.menu li .current_page_parent a:visited {
         color: #3b9da7; }
-    header.top-header ul.menu a:hover, header.top-header ul.menu a :visited:hover {
-      color: #3b9da7; }
 
 .svg header.top-header h1.logo {
   background-image: url("../img/mykrobe-logotype.svg");
@@ -428,6 +426,27 @@ a.button {
       a.button.download.secondary:hover {
         color: #348b94;
         border-color: #348b94; }
+  a.button.small {
+    font-size: 0.5em;
+    line-height: 2.66667em;
+    text-align: center;
+    padding: 0 1.33333em;
+    height: 2.66667em;
+    -webkit-border-radius: 1.33333em;
+    -moz-border-radius: 1.33333em;
+    -ms-border-radius: 1.33333em;
+    -o-border-radius: 1.33333em;
+    border-radius: 1.33333em; }
+  a.button.learn, a.button.light-blue {
+    background-color: #71c7e6;
+    color: white; }
+    a.button.learn:hover, a.button.light-blue:hover {
+      background-color: #5bbee2; }
+  a.button.light-green {
+    background-color: #86c9b9;
+    color: white; }
+    a.button.light-green:hover {
+      background-color: #74c1af; }
 
 /* __________________________________________________________________________________________ home
 */
