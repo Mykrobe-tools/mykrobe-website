@@ -16,9 +16,16 @@
       @include font-format(21, 24);
     }
   }
-  .product-single-species-overview {
 
+  .product-single-species {
+    padding-top:pixels-to-ems(24,24);
+    padding-bottom:pixels-to-ems(24,24);
   }
+
+  .product-single-species-overview {
+    
+  }
+
   .product-single-species-small-print {
     article {
       @include font-format(14, 16);

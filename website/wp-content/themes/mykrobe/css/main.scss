@@ -170,9 +170,10 @@ body {
     color: $color-dark-green;
     display: block;
     border-bottom: 1px solid $color-rule;
-    font-size: 1em * 16 / 24;
-    min-height: 1em * 24 / 16;
+    font-size: pixels-to-ems(16,24);
+    min-height: pixels-to-ems(24,16);
     line-height: 1;
+    margin-bottom: pixels-to-ems(8,16);
   }
 
   p {
@@ -243,7 +244,10 @@ header.top-header {
   }
 }
 
-@import "footer";
+/* __________________________________________________________________________________________ global: footer
+*/
+
+@import "global-footer";
 
 /* __________________________________________________________________________________________ global: navigation
 */

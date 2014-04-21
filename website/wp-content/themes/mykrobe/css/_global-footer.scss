@@ -21,11 +21,13 @@
     // padding-bottom:3.75em;
   }
 
-  .footer.container {
-    article {
-      @include font-format(18,20);
-    }
+.footer.container {
+  article {
+    @include font-format(18,20);
   }
+  padding-top:pixels-to-ems(24,24);
+  padding-bottom:pixels-to-ems(24,24);
+}
 
 .copyright.container {
   @include font-format(14, 16);

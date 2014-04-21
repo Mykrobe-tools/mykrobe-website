@@ -157,7 +157,8 @@ h3 {
   border-bottom: 1px solid #ceccc6;
   font-size: 0.66667em;
   min-height: 1.5em;
-  line-height: 1; }
+  line-height: 1;
+  margin-bottom: 0.5em; }
 
 p {
   margin: 0 0 1.25em 0; }
@@ -216,6 +217,8 @@ header.top-header h1.logo {
 .main h1 {
   color: #3b9da7; }
 
+/* __________________________________________________________________________________________ global: footer
+*/
 .mailing-list.container {
   background-color: #eeeeed;
   padding-top: 1.25em;
@@ -228,11 +231,14 @@ header.top-header h1.logo {
 .mailing-list.container a:hover {
     color:#de392e;
     }*/
-.footer.container article {
-  font-size: 0.75em;
-  line-height: 1.11111em; }
-  .footer.container article p {
-    margin-bottom: 1.11111em; }
+.footer.container {
+  padding-top: 1em;
+  padding-bottom: 1em; }
+  .footer.container article {
+    font-size: 0.75em;
+    line-height: 1.11111em; }
+    .footer.container article p {
+      margin-bottom: 1.11111em; }
 
 .copyright.container {
   font-size: 0.58333em;
@@ -532,6 +538,9 @@ a.button {
     line-height: 1.14286em; }
     .main .product-overview article p {
       margin-bottom: 1.14286em; }
+.main .product-single-species {
+  padding-top: 1em;
+  padding-bottom: 1em; }
 .main .product-single-species-small-print article {
   font-size: 0.58333em;
   line-height: 1.14286em; }
