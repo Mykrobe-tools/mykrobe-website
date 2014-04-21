@@ -108,7 +108,7 @@ function helixcentre_comment( $comment, $args, $depth ) {
 function my_acf_options_page_settings( $settings )
 {
 	$settings['title'] = 'Options';
-	$settings['pages'] = array('Footer', 'SEO');
+	$settings['pages'] = array('Footer', 'SEO', 'Relationships');
 	return $settings;
 }
 
