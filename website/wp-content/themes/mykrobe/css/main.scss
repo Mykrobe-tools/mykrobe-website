@@ -617,6 +617,8 @@ img {
     padding-right:3%;
   }
   @include header-mobile;
+  @include products-mobile;
+  @include about-mobile;
 }
 
 //

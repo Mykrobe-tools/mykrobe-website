@@ -38,3 +38,14 @@
     }
   }
 }
+
+@mixin products-mobile {
+  .main {
+    .product-overview {
+      min-height:0;
+      header {
+        min-height:pixels-to-ems(72,24);
+      }
+    }
+  }
+}

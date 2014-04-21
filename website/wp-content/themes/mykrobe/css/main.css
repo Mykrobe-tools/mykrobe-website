@@ -543,7 +543,7 @@ a.button {
   padding-top: 1em;
   padding-bottom: 1em;
   min-height: 20em;
-  background: #f7f6f1; }
+  background-color: #f7f6f1; }
   .main .about header {
     min-height: 5em; }
     .main .about header h1 {
@@ -870,7 +870,17 @@ img {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-transform: uppercase; } }
+    text-transform: uppercase; }
+
+  .main .product-overview {
+    min-height: 0; }
+    .main .product-overview header {
+      min-height: 3em; }
+
+  .main .about {
+    min-height: 0; }
+    .main .about header {
+      min-height: 3em; } }
 @media only screen and (min-width: 576px) {
   .container {
     padding-left: 3.84615%;

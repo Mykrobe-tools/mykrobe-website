@@ -2,10 +2,10 @@
   .about {
     padding-top: 1em;
     padding-bottom: 1em;
-    min-height: 1em * (480 / 24);
-    background:$color-buff;
+    min-height: pixels-to-ems(480,24);
+    background-color:$color-buff;
     header {
-      min-height: 1em * (120 / 24);
+      min-height: pixels-to-ems(120,24);
       h1 {
         font-size:1em * (50 / 24);
         letter-spacing: -0.05em;
@@ -25,6 +25,17 @@
           margin-left: 1.25em;
           padding-bottom: 1.25em;
         }
+      }
+    }
+  }
+}
+
+@mixin about-mobile {
+  .main {
+    .about {
+      min-height:0;
+      header {
+        min-height:pixels-to-ems(72,24);
       }
     }
   }
