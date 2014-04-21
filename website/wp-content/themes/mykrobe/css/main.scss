@@ -186,15 +186,15 @@ body {
 header.top-header {
   padding: 1em * 24 / 24 0;
   min-height: 1em * 96 / 24;
-  h1.logo {
-    background: url(../img/helix-horizontal.png) no-repeat;
-    background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    height: 1.5em;
-    width: 1.5em * 755 / 110;
-    @include hide-text;
-  }
+  // h1.logo {
+  //   background: url(../img/helix-horizontal.png) no-repeat;
+  //   background-size: 100% 100%;
+  //   -o-background-size: 100% 100%;
+  //   -webkit-background-size: 100% 100%;
+  //   height: 1.5em;
+  //   width: 1.5em * 755 / 110;
+  //   @include hide-text;
+  // }
   .logo-container {
     float: left;
   }
@@ -220,12 +220,14 @@ header.top-header {
   }
 }
 
-.svg header.top-header h1.logo {
-  background: url(../img/mykrobe-logotype.svg) no-repeat;
-  background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%;
-}
+// .svg header.top-header h1.logo {
+//   background: url(../img/mykrobe-logotype.svg) no-repeat;
+//   background-size: 100% 100%;
+//   -o-background-size: 100% 100%;
+//   -webkit-background-size: 100% 100%;
+// }
+
+@include svg-image-with-fallback('header.top-header h1.logo','mykrobe-logotype',1.5em * 755 / 110,1.5em);
 
 //
 // main

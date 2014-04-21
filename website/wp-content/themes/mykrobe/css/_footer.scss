@@ -4,45 +4,7 @@
   padding-bottom: 2.5em;
 }
 
-@mixin svg-image-with-fallback($class-name:"",$image-name:"",$image-width:0,$image-height:0) {
-  
-  .svg {
-    .#{$class-name} {
-      background: {
-        image: url('../img/#{$image-name}.svg');
-        repeat: no-repeat;
-        position: top left;
-      };
-      background-size:100% 100%;
-      @include hide-text;
-    }
-  }
 
-  .no-svg {
-    .#{$class-name} {
-      background: {
-        image: url('../img/#{$image-name}.png');
-        repeat: no-repeat;
-        position: top left;
-      };
-      background-size:100% 100%;
-      @include hide-text;
-    }
-  }
-
-  .lt-ie9.no-svg {
-    .#{$class-name} {
-      background:none;
-      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/#{$image-name}.png',sizingMethod='scale');
-      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/#{$image-name}.png',sizingMethod='scale')";
-    }
-  }
-
-  .#{$class-name} {
-    width:#{$image-width};
-    height:#{$image-height};
-  }
-}
 
 /*.mailing-list.container a {
     color:#f73f33;
@@ -84,9 +46,9 @@
   }
 }
   
-@include svg-image-with-fallback('logo-the-royal-society','logo-the-royal-society',1em * (115 / 14),1em * (24 / 14));
-@include svg-image-with-fallback('logo-the-wellcome-trust','logo-the-wellcome-trust',1em * (141 / 14),1em * (18 / 14));
-@include svg-image-with-fallback('logo-oxford-university','logo-oxford-university',1em * (82 / 14),1em * (24 / 14));
+@include svg-image-with-fallback('.logo-the-royal-society','logo-the-royal-society',1em * (115 / 14),1em * (24 / 14));
+@include svg-image-with-fallback('.logo-the-wellcome-trust','logo-the-wellcome-trust',1em * (141 / 14),1em * (18 / 14));
+@include svg-image-with-fallback('.logo-oxford-university','logo-oxford-university',1em * (82 / 14),1em * (24 / 14));
 
 
 .monogram {
