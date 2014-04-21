@@ -1,3 +1,6 @@
+<?php
+require_once 'php/Products.php';
+?>
 		</div>
 		<footer>
 			<a name="contact" id="contact"></a>
@@ -6,6 +9,16 @@
 					<div class="threecol">
 						<h3>Products</h3>
 						<article>
+							<?php
+
+
+$products = new Products;
+$products->writeFooterProducts();
+$products_root = get_field('products_root', 'option');
+echo $products_root->ID;
+
+
+							?>
 						</article>
 					</div>
 					<div class="threecol">
