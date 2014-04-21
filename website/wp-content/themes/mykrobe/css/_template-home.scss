@@ -11,9 +11,16 @@
       position:absolute;
     }
     .promo-content {
+      @include font-format(21, 24);
       position:absolute;
+      text-align:center;
+      h1.logo {
+        margin: 0 auto;
+      }
     }
   }
 }
+
+@include svg-image-with-fallback('.promo-content h1.logo','mykrobe-logotype',pixels-to-ems(329.3,14),pixels-to-ems(48,14));
 
 @include svg-image-with-fallback('.promo-background','circle-480',pixels-to-ems(480,24),pixels-to-ems(480,24));

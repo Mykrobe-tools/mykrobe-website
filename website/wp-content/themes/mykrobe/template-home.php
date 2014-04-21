@@ -14,7 +14,7 @@ $permalink = get_permalink($link_page->ID);
 			<div class="promo-background"></div>
 			<div class="promo-content">
 				<h1 class="logo"><?php bloginfo('name');?></h1>
-				<?php echo $description; ?>
+				<p><?php echo $description; ?></p>
 				<a href="<?php echo $permalink; ?>" class="button learn">Learn more</a>
 			</div>
 		</div>

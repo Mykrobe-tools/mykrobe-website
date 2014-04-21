@@ -442,7 +442,41 @@ a.button {
     .promo-container .promo .promo-background {
       position: absolute; }
     .promo-container .promo .promo-content {
-      position: absolute; }
+      font-size: 0.875em;
+      line-height: 1.14286em;
+      position: absolute;
+      text-align: center; }
+      .promo-container .promo .promo-content p {
+        margin-bottom: 1.14286em; }
+      .promo-container .promo .promo-content h1.logo {
+        margin: 0 auto; }
+
+.svg .promo-content h1.logo {
+  background-image: url("../img/mykrobe-logotype.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left; }
+
+.no-svg .promo-content h1.logo {
+  background-image: url("../img/mykrobe-logotype.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left; }
+
+.lt-ie9.no-svg .promo-content h1.logo {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/mykrobe-logotype.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/mykrobe-logotype.png',sizingMethod='scale')"; }
+
+.promo-content h1.logo {
+  width: 23.52143em;
+  height: 3.42857em; }
 
 .svg .promo-background {
   background-image: url("../img/circle-480.svg");
