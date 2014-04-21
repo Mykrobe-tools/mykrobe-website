@@ -217,18 +217,6 @@ header.top-header h1.logo {
 
 /* __________________________________________________________________________________________ global: footer
 */
-.mailing-list.container {
-  background-color: #eeeeed;
-  padding-top: 1.25em;
-  padding-bottom: 2.5em; }
-
-/*.mailing-list.container a {
-    color:#f73f33;
-}
-
-.mailing-list.container a:hover {
-    color:#de392e;
-    }*/
 .footer.container {
   padding-top: 1em;
   padding-bottom: 1em; }
@@ -237,6 +225,10 @@ header.top-header h1.logo {
     line-height: 1.11111em; }
     .footer.container article p {
       margin-bottom: 1.11111em; }
+  .footer.container .footer-products-species-logo {
+    width: auto;
+    height: 3.5em;
+    margin: 0.5em 0 0.83333em 0; }
 
 .copyright.container {
   font-size: 0.58333em;
@@ -339,20 +331,6 @@ header.top-header h1.logo {
 .logo-oxford-university {
   width: 5.85714em;
   height: 1.71429em; }
-
-.monogram {
-  width: 4em;
-  height: 4em;
-  background: url(../img/helix-monogram.png) no-repeat;
-  background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%; }
-
-.svg .monogram {
-  background: url(../img/helix-monogram.svg) no-repeat;
-  background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%; }
 
 /* __________________________________________________________________________________________ global: navigation
 */

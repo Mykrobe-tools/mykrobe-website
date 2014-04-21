@@ -1,32 +1,14 @@
-.mailing-list.container {
-  background-color: #eeeeed;
-  padding-top: 1.25em;
-  padding-bottom: 2.5em;
-}
-
-
-
-/*.mailing-list.container a {
-    color:#f73f33;
-}
-
-.mailing-list.container a:hover {
-    color:#de392e;
-    }*/
-
-    .footer.container, .copyright.container {
-    // font-size: 0.875em;
-    // line-height: 1.42857;
-    // padding-top:1.25em;
-    // padding-bottom:3.75em;
-  }
-
 .footer.container {
   article {
     @include font-format(18,20);
   }
   padding-top:pixels-to-ems(24,24);
   padding-bottom:pixels-to-ems(24,24);
+  .footer-products-species-logo {
+    width:auto;
+    height:pixels-to-ems(84,24);
+    margin:pixels-to-ems(12,24) 0 pixels-to-ems(20,24) 0;
+  }
 }
 
 .copyright.container {
@@ -56,20 +38,3 @@
 @include svg-image-with-fallback('.logo-the-royal-society','logo-the-royal-society',1em * (115 / 14),1em * (24 / 14));
 @include svg-image-with-fallback('.logo-the-wellcome-trust','logo-the-wellcome-trust',1em * (141 / 14),1em * (18 / 14));
 @include svg-image-with-fallback('.logo-oxford-university','logo-oxford-university',1em * (82 / 14),1em * (24 / 14));
-
-
-.monogram {
-  width: 4em;
-  height: 4em;
-  background: url(../img/helix-monogram.png) no-repeat;
-  background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%;
-}
-
-.svg .monogram {
-  background: url(../img/helix-monogram.svg) no-repeat;
-  background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%;
-}
