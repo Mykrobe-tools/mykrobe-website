@@ -36,7 +36,7 @@ if( get_field('species') ) {
 		$title = get_sub_field('title');
 		$description = get_sub_field('description');
 		$small_print = get_sub_field('small_print');
-		$image_id = get_sub_field('image');
+		$image_id = get_sub_field('logo');
 		$image_attributes = wp_get_attachment_image_src($image_id, 'medium');
 		$url = $image_attributes[0];
 		$width = $image_attributes[1];
@@ -44,7 +44,8 @@ if( get_field('species') ) {
 ?>
 		<div class="product-single-species row">
 			<div class="sixcol product-single-species-overview">
-				<?php echo $title; ?>
+				<?php /* echo $title; */ ?>
+				<img class="product-single-species-overview-logo" src="<?php echo $url; ?>">
 				<article>
 					<?php echo $description; ?>
 				</article>

@@ -26,6 +26,12 @@
     
   }
 
+  .product-single-species-overview-logo {
+    width:auto;
+    height:pixels-to-ems(96,24);
+    margin-bottom:pixels-to-ems(24,24);
+  }
+
   .product-single-species-small-print {
     article {
       @include font-format(14, 16);

@@ -541,6 +541,10 @@ a.button {
 .main .product-single-species {
   padding-top: 1em;
   padding-bottom: 1em; }
+.main .product-single-species-overview-logo {
+  width: auto;
+  height: 4em;
+  margin-bottom: 1em; }
 .main .product-single-species-small-print article {
   font-size: 0.58333em;
   line-height: 1.14286em; }
