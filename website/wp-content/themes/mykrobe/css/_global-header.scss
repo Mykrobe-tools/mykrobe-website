@@ -25,7 +25,7 @@ header.top-header {
   }
 }
 
-@include svg-image-with-fallback('header.top-header h1.logo','mykrobe-logotype',pixels-to-ems(164.655,24),pixels-to-ems(24,24));
+@include svg-image-with-fallback('header.top-header h1.logo','mykrobe-logotype',pixels-to-ems(164.655,16),pixels-to-ems(24,16));
 
 @mixin header-mobile {
   .top-header {

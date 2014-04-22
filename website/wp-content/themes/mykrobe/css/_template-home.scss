@@ -1,15 +1,17 @@
 .promo-container {
   background-color: $color-buff;
-  overflow:hidden;
+  // overflow:hidden;
+  position:relative;
 
   .promo {
     position:relative;
-    margin:pixels-to-ems(96,24) auto;
+    margin:0 auto;
     width:pixels-to-ems(480,24);
     height:pixels-to-ems(480,24);
     .promo-background {
       position:absolute;
     }
+
     .promo-content {
       position:absolute;
       text-align:center;
@@ -21,6 +23,11 @@
         margin: pixels-to-ems(24,21) pixels-to-ems(48,21);
       }
     }
+  }
+  .promo-container-background {
+    position:absolute;
+    width:100%;
+    height:100%;
   }
 }
 

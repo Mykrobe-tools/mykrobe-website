@@ -10,6 +10,7 @@ $link_page = get_field('link');
 $permalink = get_permalink($link_page->ID);
 ?>
 	<div class="promo-container">
+		<div class="promo-container-background"></div>
 		<div class="promo">
 			<div class="promo-background"></div>
 			<div class="promo-content">

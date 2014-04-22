@@ -231,8 +231,8 @@ header.top-header {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/wp-content/themes/mykrobe/img/mykrobe-logotype.png',sizingMethod='scale')"; }
 
 header.top-header h1.logo {
-  width: 6.86063em;
-  height: 1em; }
+  width: 10.29094em;
+  height: 1.5em; }
 
 /* __________________________________________________________________________________________ global: footer
 */
@@ -531,10 +531,10 @@ a.button {
 */
 .promo-container {
   background-color: #f7f6f1;
-  overflow: hidden; }
+  position: relative; }
   .promo-container .promo {
     position: relative;
-    margin: 4em auto;
+    margin: 0 auto;
     width: 20em;
     height: 20em; }
     .promo-container .promo .promo-background {
@@ -550,6 +550,10 @@ a.button {
         margin: 1.14286em 2.28571em; }
         .promo-container .promo .promo-content p p {
           margin-bottom: 1.14286em; }
+  .promo-container .promo-container-background {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
 
 .svg .promo-content h1.logo {
   background-image: url("../img/mykrobe-logotype.svg");
