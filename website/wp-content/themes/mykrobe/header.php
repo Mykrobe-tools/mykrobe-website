@@ -65,7 +65,6 @@ $page_title = str_replace('&#8217;', '’', $page_title);
 		<?php
 	}
 	?>
-		<link rel="stylesheet" href="<?php bloginfo('template_directory');?>/css/font-awesome/css/font-awesome.min.css">
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/respond.min.js"></script>
 		<?php wp_head();?>
 	</head>

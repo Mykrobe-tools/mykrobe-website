@@ -174,7 +174,7 @@ module.exports = function(grunt) {
                     // src: '{,*/}*.scss',
                     src: 'main.scss',
                     dest: '<%= yeomanConfig.dist %>/css/',
-                    ext: '.css'
+                    ext: '.min.css'
                 }]
             },
             server: {
@@ -256,14 +256,13 @@ module.exports = function(grunt) {
             //
             //     <!-- build:css({.tmp,app}) styles/main.css -->
             //
-            // dist: {
-            //     files: {
-            //         '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/style.css': [
-            //             '.tmp/css/{,*/}*.css',
-            //             '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/css/{,*/}*.css'
-            //         ]
-            //     }
-            // }
+            dist: {
+                files: {
+                    '<%= yeomanConfig.dist %>/css/main.min.css': [
+                        '<%= yeomanConfig.dist %>/css/main.min.css'
+                    ]
+                }
+            }
         },
         htmlmin: {
             // dist: {
@@ -304,6 +303,8 @@ module.exports = function(grunt) {
                         'css/font-awesome/{,*/}*.*',
                         'api/**',
                         'scripts/**',
+                        'js/vendor/modernizr.custom.62260.js',
+                        'js/vendor/respond.min.js'
                     ]
                 }]
             },
@@ -341,7 +342,7 @@ module.exports = function(grunt) {
         grunt.task.run(['clean:server', 'concurrent:server', 'autoprefixer', 'connect:livereload', 'watch']);
     });
     grunt.registerTask('test', ['clean:server', 'concurrent:test', 'autoprefixer', 'connect:test', 'mocha']);
-    grunt.registerTask('build', ['clean:dist', 'concurrent:dist', 'autoprefixer', 'concat', 'uglify', 'copy:dist']);
+    grunt.registerTask('build', ['clean:dist', 'concurrent:dist', 'autoprefixer', 'concat', 'uglify', 'cssmin', 'copy:dist']);
     grunt.registerTask('default', ['build']);
     grunt.registerTask('backup-local-db', ['exec:backup-local-db']);
     grunt.registerTask('import-local-db', ['exec:import-local-db']);

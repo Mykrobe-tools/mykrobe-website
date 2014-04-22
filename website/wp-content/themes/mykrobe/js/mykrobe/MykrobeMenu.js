@@ -73,5 +73,6 @@ MykrobeMenu.prototype = {
 			}
 			$('#menu-overlay').fadeOut(150);
 		}
+		return that;
 	}
 };
