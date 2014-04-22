@@ -40,20 +40,30 @@ class Products {
 		$species = array();
 		if( get_field('species', $page->ID) ) {
 			while( has_sub_field('species', $page->ID) ) {
+				$full_title = get_sub_field('full_title');
 				$title = get_sub_field('title');
 				$teaser_description = get_sub_field('teaser_description');
 				$description = get_sub_field('description');
 				$small_print = get_sub_field('small_print');
 				$small_print_attachment_url = get_sub_field('small_print_attachment');
 				$small_print_attachment_title = get_sub_field('small_print_attachment_title');
+				$license_agreement = get_sub_field('license_agreement');
+				$download_windows_url = get_sub_field('download_for_windows');
+				$download_mac_url = get_sub_field('download_for_mac');
+				$download_linux_url = get_sub_field('download_for_linux');
 				$image_id = get_sub_field('logo');
 				$species_object = array(
+					'full_title' => $full_title,
 					'title' => $title,
 					'teaser_description' => $teaser_description,
 					'description' => $description,
 					'small_print' => $small_print,
 					'small_print_attachment_url' => $small_print_attachment_url,
 					'small_print_attachment_title' => $small_print_attachment_title,
+					'license_agreement' => $license_agreement,
+					'download_windows_url' => $download_windows_url,
+					'download_mac_url' => $download_mac_url,
+					'download_linux_url' => $download_linux_url,
 					'image_id' => $image_id,
 					'permalink' => get_permalink($page->ID),
 					'anchor' => sanitize_title_with_dashes($title)
@@ -84,52 +94,6 @@ class Products {
 			';
 		}
 	}
-/*
-	public function writeWorkFeature($page) {
-		$link = get_permalink($page -> ID);
-		$title = get_the_title($page -> ID);
-		$subtitle = get_post_meta($page->ID, 'subtitle', true);
-		$description = get_post_meta($page->ID, 'description', true);
-		$description = apply_filters('the_content', $description);
-
-		echo '
-			<div class="feature container" data-work-id="'.$page->ID.'">
-				<div class="row dotted-rule-top">
-					<div class="sixcol description">
-						<div class="close upper">
-							<a href="#"><i class="large up"></i></a>
-						</div>
-						<h1>'.$title.'</h1>
-						'.$description.'
-					</div>
-					<div class="sixcol last">
-		';
-
-		if( get_field('slideshow_images', $page->ID) ) {
-			while( has_sub_field('slideshow_images', $page->ID) ) {
-				$image_id = get_sub_field('image');
-
-				$image_attributes = wp_get_attachment_image_src($image_id, 'large');
-				$url = $image_attributes[0];
-				$width = $image_attributes[1];
-				$height = $image_attributes[2];
-
-				echo '<img class="slideshow rounded" src="'. $url .'" />';
-			}
-		}
-		echo '
-					</div>
-					<div class="close">
-						<a href="#"><i class="large up"></i></a>
-					</div>
-				</div>
-
-				<div class="row dotted-rule-top">
-				</div>
-			</div>
-		';
-	}
-	*/
 }
 
 ?>

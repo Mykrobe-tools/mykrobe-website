@@ -15,28 +15,10 @@ $url = $image_attributes[0];
 $width = $image_attributes[1];
 $height = $image_attributes[2];
 
+$all_species = $products->getProductSpecies($post);
+
+$first_species = reset($all_species);
 ?>
-	<div id="download-license-agreement" style="display:none;" class="download-license-agreement container">
-		<div class="row">
-			<div class="onecol"></div>
-			<div class="sevencol download-license-agreement-content">
-				<h3><?php the_field('license_agreement_title',$products->productsPageId()); ?></h3>
-				<article>
-					<?php the_field('license_agreement',$products->productsPageId()); ?>
-				</article>
-				<h3>Download</h3>
-				<article>
-					<label><input type="checkbox" /> <?php the_field('checkbox_text',$products->productsPageId()); ?></label>
-				</article>
-				<ul class="download-buttons">
-					<li><a href="#" class="button download">Download for Windows</a></li>
-					<li><a href="#" class="button download secondary">Download for Mac</a></li>
-					<li><a href="#" class="button download secondary">Download for Linux</a></li>
-				</ul>
-			</div>
-			<div class="onecol"></div>
-		</div>
-	</div>
 	<div class="product-overview container">
 		<div class="row">
 			<div class="threecol">
@@ -46,7 +28,7 @@ $height = $image_attributes[2];
 				<article>
 					<?php echo $description; ?>
 				</article>
-				<a href="#download-license-agreement" rel="modal:open" class="button download">Download</a>
+				<a href="#download-license-agreement-<?php echo $first_species['anchor']; ?>" rel="modal:open" class="button download">Download</a>
 			</div>
 			<div class="sixcol last">
 			</div>
@@ -55,14 +37,14 @@ $height = $image_attributes[2];
 	<div class="product-species container">
 <?php
 
-$all_species = $products->getProductSpecies($post);
 
 if ( count($all_species) > 1 ) {
 	// draw tabs here
-	echo 'Tabs in here';
+	echo '<!-- Tabs in here -->';
 }
 
 foreach($all_species as $species) {
+	$full_title = $species['full_title'];
 	$title = $species['title'];
 	$description = $species['description'];
 	$small_print = $species['small_print'];
@@ -73,7 +55,48 @@ foreach($all_species as $species) {
 	$small_print_attachment_title = $species['small_print_attachment_title'];
 	$image_attributes = wp_get_attachment_image_src($image_id, 'medium');
 	$url = $image_attributes[0];
+	$license_agreement = $species['license_agreement'];
+	$download_windows_url = $species['download_windows_url'];
+	$download_mac_url = $species['download_mac_url'];
+	$download_linux_url = $species['download_linux_url'];
+
+	$user_agent = getenv("HTTP_USER_AGENT");
+
+	$os = "Windows";
+	if (strpos($user_agent, "Linux") !== FALSE) {
+		$os = "Linux";
+	}
+	else if(strpos($user_agent, "Mac") !== FALSE) {
+		$os = "Mac";
+	}
 	echo '
+		<div id="download-license-agreement-'.$anchor.'" style="display:none;" class="download-license-agreement container">
+			<div class="row">
+				<div class="onecol"></div>
+				<div class="sevencol download-license-agreement-content">
+					<h3>'.$full_title.' License Agreement</h3>
+					<article>
+						'.$license_agreement.'
+					</article>
+					<h3>Download</h3>
+					<article>
+						<label><input type="checkbox" /> I have read, understood, and agree to the License Agreement</label>
+					</article>
+					<ul class="download-buttons">
+	';
+	if ( "Windows" == $os ) {
+		echo '
+						<li><a href="'.$download_windows_url.'" class="button download download-windows">Download for Windows</a></li>
+						<li><a href="'.$download_mac_url.'" class="button download secondary download-mac">Download for Mac</a></li>
+						<li><a href="'.$download_linux_url.'" class="button download secondary download-linux">Download for Linux</a></li>		
+		';	
+	}
+	echo '
+					</ul>
+				</div>
+				<div class="onecol"></div>
+			</div>
+		</div>
 		<div class="product-single-species row">
 			<a name="'.$anchor.'" id="'.$anchor.'"></a>
 			<div class="sixcol product-single-species-overview">
@@ -81,7 +104,7 @@ foreach($all_species as $species) {
 				<article>
 					'.$description.'
 				</article>
-				<a href="#download-license-agreement" rel="modal:open" class="button download">Download</a>
+				<a href="#download-license-agreement-'.$anchor.'" rel="modal:open" class="button download">Download</a>
 			</div>
 			<div class="threecol last product-single-species-small-print">
 				<h3>Technical specs</h3>
