@@ -439,6 +439,7 @@ a.button {
     font-size: 0.66667em;
     line-height: 1.875em;
     line-height: 2.5em;
+    height: 2.66667em;
     margin: 0;
     padding: 0 1.33333em;
     -webkit-border-bottom-left-radius: 1.33333em;
@@ -455,7 +456,8 @@ a.button {
     text-transform: uppercase;
     font-size: 0.66667em;
     line-height: 1.875em;
-    line-height: 2.66667em;
+    line-height: 2.5em;
+    height: 2.66667em;
     -webkit-border-bottom-right-radius: 1.33333em;
     border-bottom-right-radius: 1.33333em;
     -webkit-border-top-right-radius: 1.33333em;
