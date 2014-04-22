@@ -28,6 +28,17 @@ $(document).ready(function() {
     }
 
     that.mykrobeMenu = new MykrobeMenu();
+
+    $('.download-license-agreement').each(function() {
+        var blocker = $('.download-buttons-blocker',this);
+        $(':checkbox',this).click(function() {
+            if ($(this).is(':checked')) {
+                blocker.hide();
+            } else {
+                blocker.show();
+            }
+        });
+    });
 });
 
 $.modal.defaults = {

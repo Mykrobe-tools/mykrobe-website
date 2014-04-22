@@ -34,14 +34,20 @@ header.top-header {
   }
 
   header.top-header {
+    padding-top:pixels-to-ems(16,24);
+    padding-bottom:pixels-to-ems(16,24);
+    min-height: 0;
+    .logo-container {
+      float:none;
+    }
     .menu-button {
       width: 2em;
       height: 2em;
       position: fixed;
       z-index:5;
       background-color: red;
-      right: 5%;
-      top:1em;
+      right: 3%;
+      top:pixels-to-ems(16,24);
       background: url(../img/burger-button.png) right top no-repeat;
     }
 
@@ -89,10 +95,9 @@ header.top-header {
 
     ul.menu {
       float:none;
-      // list-style-type: none;
-      // margin: 0;
-      // padding: 0;
-      // text-transform: uppercase;
+      li {
+        margin: 0;
+      }
     }
   }
 }

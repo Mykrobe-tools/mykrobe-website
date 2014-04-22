@@ -651,10 +651,18 @@ a.button {
     line-height: 1.14286em; }
     .main .download-license-agreement-content article p {
       margin-bottom: 1.14286em; }
+  .main .download-license-agreement-content .download-buttons-wrapper {
+    position: relative; }
   .main .download-license-agreement-content .download-buttons {
     margin-top: 0.5em; }
     .main .download-license-agreement-content .download-buttons .button {
       margin-top: 0.5em; }
+  .main .download-license-agreement-content .download-buttons-blocker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: url(../img/blocker.png); }
 .main .close-modal {
   position: absolute;
   right: 0.66667em;
@@ -951,44 +959,54 @@ img {
     position: relative;
     z-index: 4; }
 
-  header.top-header .menu-button {
-    width: 2em;
-    height: 2em;
-    position: fixed;
-    z-index: 5;
-    background-color: red;
-    right: 5%;
-    top: 1em;
-    background: url(../img/burger-button.png) right top no-repeat; }
-  header.top-header .menu-header-menu-container {
-    position: fixed;
-    z-index: 4;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: url(../img/menu-background.png);
-    padding: 0.5em 5%;
-    display: none; }
-  header.top-header .menu-header-menu-container li {
-    position: absolute;
-    visibility: hidden; }
-  header.top-header .menu-header-menu-container li a {
-    display: block;
-    padding: 0.5em 0; }
-  header.top-header .menu-header-menu-container.expanded li {
-    position: static;
-    visibility: visible;
-    float: none; }
-  header.top-header .menu-header-menu-container li.current_page_item {
-    position: static;
-    visibility: visible; }
-  header.top-header ul.menu {
-    float: none; }
+  header.top-header {
+    padding-top: 0.66667em;
+    padding-bottom: 0.66667em;
+    min-height: 0; }
+    header.top-header .logo-container {
+      float: none; }
+    header.top-header .menu-button {
+      width: 2em;
+      height: 2em;
+      position: fixed;
+      z-index: 5;
+      background-color: red;
+      right: 3%;
+      top: 0.66667em;
+      background: url(../img/burger-button.png) right top no-repeat; }
+    header.top-header .menu-header-menu-container {
+      position: fixed;
+      z-index: 4;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: url(../img/menu-background.png);
+      padding: 0.5em 5%;
+      display: none; }
+    header.top-header .menu-header-menu-container li {
+      position: absolute;
+      visibility: hidden; }
+    header.top-header .menu-header-menu-container li a {
+      display: block;
+      padding: 0.5em 0; }
+    header.top-header .menu-header-menu-container.expanded li {
+      position: static;
+      visibility: visible;
+      float: none; }
+    header.top-header .menu-header-menu-container li.current_page_item {
+      position: static;
+      visibility: visible; }
+    header.top-header ul.menu {
+      float: none; }
+      header.top-header ul.menu li {
+        margin: 0; }
 
   .main .product-overview {
     min-height: 0; }
     .main .product-overview header {
       min-height: 3em; }
+  .main .product-overview-screenshots {
+    margin-top: 1em; }
   .main .product-single-species-overview {
     margin-bottom: 2em; }
 
@@ -997,7 +1015,7 @@ img {
     .main .about header {
       min-height: 3em; }
 
-  h3 {
+  .footer.container h3 {
     margin-top: 2em; }
 
   .copyright.container ul.copyright-logos li {

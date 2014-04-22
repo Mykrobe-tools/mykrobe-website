@@ -55,11 +55,23 @@
     article {
       @include font-format(21, 24);
     }
+    .download-buttons-wrapper {
+      position:relative;
+    }
     .download-buttons {
+      // position:absolute;
       margin-top:pixels-to-ems(12,24);
       .button {
         margin-top:pixels-to-ems(12,24);
       }
+    }
+
+    .download-buttons-blocker {
+      position:absolute;
+      width:100%;
+      height:100%;
+      top:0;
+      background:url(../img/blocker.png);
     }
   }
 
@@ -79,6 +91,9 @@
       header {
         min-height:pixels-to-ems(72,24);
       }
+    }
+    .product-overview-screenshots {
+      margin-top:pixels-to-ems(24,24);
     }
     .product-single-species-overview {
       margin-bottom:pixels-to-ems(48,24);

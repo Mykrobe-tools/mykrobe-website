@@ -46,14 +46,16 @@
 @include svg-image-with-fallback('.logo-oxford-university','logo-oxford-university',1em * (82 / 14),1em * (24 / 14));
 
 @mixin footer-mobile {
-  .threecol {
-    // margin-bottom: pixels-to-ems(48,24);
-    // &.last {
-    //   margin-bottom: 0;
-    // }
-  }
-  h3 {
-    margin-top: pixels-to-ems(48,24);
+  .footer.container {
+    .threecol {
+      // margin-bottom: pixels-to-ems(48,24);
+      // &.last {
+      //   margin-bottom: 0;
+      // }
+    }
+    h3 {
+      margin-top: pixels-to-ems(48,24);
+    }
   }
   .copyright.container {
     ul.copyright-logos {
