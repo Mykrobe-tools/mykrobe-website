@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                command: '/Applications/MAMP/Library/bin/mysqldump -u <%= databaseConfig.local.username %> -p<%= databaseConfig.local.password %> <%= databaseConfig.local.database %> > <%= databaseConfig.localDataRoot %>/<%= databaseConfig.local.database %>.sql'
             },
             'import-local-db': {
-               command: 'echo "/Applications/MAMP/Library/bin/mysql -u <%= databaseConfig.local.username %> -p<%= databaseConfig.local.password %> <%= databaseConfig.local.database %> < <%= databaseConfig.localDataRoot %>/<%= databaseConfig.local.database %>.sql"'
+               command: '/Applications/MAMP/Library/bin/mysql -u <%= databaseConfig.local.username %> -p<%= databaseConfig.local.password %> <%= databaseConfig.local.database %> < <%= databaseConfig.localDataRoot %>/<%= databaseConfig.local.database %>.sql'
             },
         },
         watch: {
