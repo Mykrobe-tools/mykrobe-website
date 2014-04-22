@@ -16,8 +16,22 @@ $width = $image_attributes[1];
 $height = $image_attributes[2];
 
 ?>
-	<div id="download-license-agreement" style="display:none;">
-		<p>Thanks for clicking.  That felt good.  <a href="#" rel="modal:close">Close</a> or press ESC</p>
+	<div id="download-license-agreement" style="display:none;" class="download-license-agreement container">
+		<div class="row">
+			<div class="onecol"></div>
+			<div class="sevencol download-license-agreement-content">
+				<h3><?php the_field('license_agreement_title',$products->productsPageId()); ?></h3>
+				<article>
+					<?php the_field('license_agreement',$products->productsPageId()); ?>
+				</article>
+				<h3>Download</h3>
+				<article>
+					<input type="checkbox">
+					<?php the_field('checkbox_text',$products->productsPageId()); ?>
+				</article>
+			</div>
+			<div class="onecol"></div>
+		</div>
 	</div>
 	<div class="product-overview container">
 		<div class="row">

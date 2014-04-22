@@ -7,13 +7,16 @@ class Products {
 
 /* __________________________________________________________________________________________ products
 */
-
-	public function getAllProducts() {
+	
+	public function productsPageId() {
 		$products_root_object = get_field('products_root', 'option');
 		$products_page_id = $products_root_object->ID;
+		return $products_page_id;
+	}
 
+	public function getAllProducts() {
 		$args = array(
-		    'post_parent' => $products_page_id,
+		    'post_parent' => $this->productsPageId(),
 		    'post_type'   => 'page',
 		    'orderby' => 'menu_order',
 			'order' => 'asc',

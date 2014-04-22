@@ -37,6 +37,14 @@
       @include font-format(14, 16);
     }
   }
+
+  .download-license-agreement-content {
+    background: white;
+    padding:pixels-to-ems(24,24);
+    article {
+      @include font-format(21, 24);
+    }
+  }
 }
 
 @mixin products-mobile {

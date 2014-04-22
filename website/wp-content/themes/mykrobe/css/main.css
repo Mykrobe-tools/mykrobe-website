@@ -633,6 +633,14 @@ a.button {
   line-height: 1.14286em; }
   .main .product-single-species-small-print article p {
     margin-bottom: 1.14286em; }
+.main .download-license-agreement-content {
+  background: white;
+  padding: 1em; }
+  .main .download-license-agreement-content article {
+    font-size: 0.875em;
+    line-height: 1.14286em; }
+    .main .download-license-agreement-content article p {
+      margin-bottom: 1.14286em; }
 
 /* __________________________________________________________________________________________ about
 */
