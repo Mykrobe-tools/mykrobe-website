@@ -44,3 +44,24 @@
 @include svg-image-with-fallback('.logo-the-royal-society','logo-the-royal-society',1em * (115 / 14),1em * (24 / 14));
 @include svg-image-with-fallback('.logo-the-wellcome-trust','logo-the-wellcome-trust',1em * (141 / 14),1em * (18 / 14));
 @include svg-image-with-fallback('.logo-oxford-university','logo-oxford-university',1em * (82 / 14),1em * (24 / 14));
+
+@mixin footer-mobile {
+  .threecol {
+    // margin-bottom: pixels-to-ems(48,24);
+    // &.last {
+    //   margin-bottom: 0;
+    // }
+  }
+  h3 {
+    margin-top: pixels-to-ems(48,24);
+  }
+  .copyright.container {
+    ul.copyright-logos {
+      li {
+        float:none;
+        margin-left:0;
+        margin-bottom: pixels-to-ems(24,24);
+      }
+    }
+  }
+}

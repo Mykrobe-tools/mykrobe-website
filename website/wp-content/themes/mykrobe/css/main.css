@@ -985,11 +985,21 @@ img {
     min-height: 0; }
     .main .product-overview header {
       min-height: 3em; }
+  .main .product-single-species-overview {
+    margin-bottom: 2em; }
 
   .main .about {
     min-height: 0; }
     .main .about header {
-      min-height: 3em; } }
+      min-height: 3em; }
+
+  h3 {
+    margin-top: 2em; }
+
+  .copyright.container ul.copyright-logos li {
+    float: none;
+    margin-left: 0;
+    margin-bottom: 1em; } }
 @media only screen and (min-width: 684px) {
   .container {
     padding-left: 3.84615%;
