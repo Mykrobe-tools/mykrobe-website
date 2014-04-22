@@ -44,6 +44,13 @@ $flexible-regular: true;
   line-height: 30 / 16 * 1em;
 }
 
+@mixin transition($transition...) {
+  -webkit-transition: $transition;  
+  -moz-transition:    $transition;
+  -ms-transition:     $transition; 
+  -o-transition:      $transition;  
+}
+
 @mixin font-format($font-size:16, $line-height:24, $base-em-size:24) {
   font-size: 1em * ($font-size / $base-em-size);
   line-height: 1em * ($line-height / $font-size);
@@ -159,10 +166,7 @@ body {
   a {
     color: $color-light-green;
     text-decoration: none;
-    transition: all 0.1s;
-    -webkit-transition: all 0.1s;
-    -moz-transition: all 0.1s;
-    -o-transition: all 0.1s;
+    @include transition(color 0.1s, background-color 0.1s, border 0.1s);
   }
 
   a:hover, a:visited:hover {
@@ -430,10 +434,7 @@ input[type="text"],
 input[type="email"],
 textarea,
 input[type="submit"] {
-  transition: color, background-color 0.1s;
-  -webkit-transition: color, background-color 0.1s;
-  -moz-transition: color, background-color 0.1s;
-  -o-transition: color, background-color 0.1s;
+  @include transition(color 0.1s, background-color 0.1s);
 }
 
 input[type="search"],

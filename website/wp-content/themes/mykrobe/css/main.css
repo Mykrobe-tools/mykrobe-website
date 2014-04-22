@@ -138,10 +138,10 @@ body {
 a {
   color: #86c9b9;
   text-decoration: none;
-  transition: all 0.1s;
-  -webkit-transition: all 0.1s;
-  -moz-transition: all 0.1s;
-  -o-transition: all 0.1s; }
+  -webkit-transition: color 0.1s, background-color 0.1s, border 0.1s;
+  -moz-transition: color 0.1s, background-color 0.1s, border 0.1s;
+  -ms-transition: color 0.1s, background-color 0.1s, border 0.1s;
+  -o-transition: color 0.1s, background-color 0.1s, border 0.1s; }
 
 a:hover, a:visited:hover {
   color: #51b19a; }
@@ -826,10 +826,10 @@ input[type="text"],
 input[type="email"],
 textarea,
 input[type="submit"] {
-  transition: color, background-color 0.1s;
-  -webkit-transition: color, background-color 0.1s;
-  -moz-transition: color, background-color 0.1s;
-  -o-transition: color, background-color 0.1s; }
+  -webkit-transition: color 0.1s, background-color 0.1s;
+  -moz-transition: color 0.1s, background-color 0.1s;
+  -ms-transition: color 0.1s, background-color 0.1s;
+  -o-transition: color 0.1s, background-color 0.1s; }
 
 input[type="search"],
 input[type="text"],
