@@ -1,11 +1,11 @@
-var HelixMenu = function() {
+var MykrobeMenu = function() {
 	var that = this,
 		showsTopBar,
 		expanded;
 	return that.init.apply(that, arguments);
 };
 
-HelixMenu.prototype = {
+MykrobeMenu.prototype = {
 	init:function(container_) {
 		var that = this;
 
@@ -16,10 +16,10 @@ HelixMenu.prototype = {
 			e.preventDefault();
 			that.setExpanded(false);
 		});
-		$(window).bind('scroll.HelixMenu',function(e){
+		$(window).bind('scroll.MykrobeMenu',function(e){
 			that.update();
 		});
-		$(window).bind('orientationchange.WhatIsHelix resize.WhatIsHelix', function(e) {
+		$(window).bind('orientationchange.MykrobeMenu resize.MykrobeMenu', function(e) {
             that.update();
         });
 		that.update();
@@ -29,7 +29,7 @@ HelixMenu.prototype = {
 	update:function() {
 		var that = this,
 			scrollTop = $(window).scrollTop();
-		that.setShowsTopBar(!HelixCentre.isMobile() || scrollTop > 100);
+		that.setShowsTopBar(!Mykrobe.isMobile() || scrollTop > 100);
 		return that;
 	},
 
@@ -73,6 +73,5 @@ HelixMenu.prototype = {
 			}
 			$('#menu-overlay').fadeOut(150);
 		}
-
 	}
 };

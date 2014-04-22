@@ -16,7 +16,7 @@
 					<article>
 						<?php the_content(); ?>
 					</article>
-					<?php edit_post_link('Edit this page', '<p>', '</p>'); ?>
+					<?php /* edit_post_link('Edit this page', '<p>', '</p>'); */ ?>
 				</div>
 			</div>
 		</div>

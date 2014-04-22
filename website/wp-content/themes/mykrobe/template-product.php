@@ -16,6 +16,9 @@ $width = $image_attributes[1];
 $height = $image_attributes[2];
 
 ?>
+	<div id="download-license-agreement" style="display:none;">
+		<p>Thanks for clicking.  That felt good.  <a href="#" rel="modal:close">Close</a> or press ESC</p>
+	</div>
 	<div class="product-overview container">
 		<div class="row">
 			<div class="threecol">
@@ -25,7 +28,7 @@ $height = $image_attributes[2];
 				<article>
 					<?php echo $description; ?>
 				</article>
-				<a class="button download">Download</a>
+				<a href="#download-license-agreement" rel="modal:open" class="button download">Download</a>
 			</div>
 			<div class="sixcol last">
 			</div>
@@ -60,7 +63,7 @@ foreach($all_species as $species) {
 				<article>
 					'.$description.'
 				</article>
-				<a class="button download">Download</a>
+				<a href="#download-license-agreement" rel="modal:open" class="button download">Download</a>
 			</div>
 			<div class="threecol last product-single-species-small-print">
 				<h3>Technical specs</h3>

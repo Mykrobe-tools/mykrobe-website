@@ -225,13 +225,11 @@ module.exports = function(grunt) {
                 // the files to concatenate
                 src: [
                     '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/vendor/jquery.smooth-scroll.min.js',
-                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/helixcentre/*.js',
-                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/helixcentre/behaviour/*.js',
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/mykrobe/*.js',
                     '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/script.js',
-                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/vendor/jquery.easing.1.3.js',
                     '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/vendor/fastclick.js',
-                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/plugins.js',
-                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/script.clean.js'
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/vendor/jquery.modal.js',
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/plugins.js'
                 ],
                 // the location of the resulting JS file
                 dest: '<%= yeomanConfig.dist %>/js/script.min.js'
