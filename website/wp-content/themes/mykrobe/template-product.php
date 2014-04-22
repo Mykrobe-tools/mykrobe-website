@@ -26,9 +26,13 @@ $height = $image_attributes[2];
 				</article>
 				<h3>Download</h3>
 				<article>
-					<input type="checkbox">
-					<?php the_field('checkbox_text',$products->productsPageId()); ?>
+					<label><input type="checkbox" /> <?php the_field('checkbox_text',$products->productsPageId()); ?></label>
 				</article>
+				<ul class="download-buttons">
+					<li><a href="#" class="button download">Download for Windows</a></li>
+					<li><a href="#" class="button download secondary">Download for Mac</a></li>
+					<li><a href="#" class="button download secondary">Download for Linux</a></li>
+				</ul>
 			</div>
 			<div class="onecol"></div>
 		</div>
