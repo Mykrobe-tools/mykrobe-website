@@ -5,6 +5,7 @@
 
 $color-blue: #71c7e6;
 $color-base-text: #676561;
+$color-placeholder-text: #ceccc6;
 $color-light-green: #86c9b9;
 $color-dark-green: #3b9da7;
 $color-buff: #f7f6f1;
@@ -239,42 +240,7 @@ header nav li:first-child {
 /* __________________________________________________________________________________________ global: mailing list
 */
 
-body > footer .mc-field-group input[type="email"] {
-  border: 1px solid white;
-}
-
-body > footer .mc-field-group input[type="email"]:focus {
-  border: 1px solid #f73f33;
-}
-
-body>footer .mc-field-group {
-  margin-bottom: 2em;
-}
-
-.mc-field-group, .field-group {
-  overflow: hidden;
-  font-size: 0.875em;
-  line-height: 1;
-}
-
-.mc-field-group > *, .field-group > * {
-  float: left;
-}
-
-.mc-field-group input, .field-group input {
-  height: 2.2857em;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-
-.mc-field-group input[type="email"], .field-group input[type="text"] {
-  width: 66%;
-}
-
-.mc-field-group input[type="submit"], .field-group input[type="submit"] {
-  width: 34%;
-}
+@import "global-mailing-list";
 
 /* __________________________________________________________________________________________ global: buttons
 */
@@ -462,49 +428,50 @@ input[type="submit"] {
 input[type="search"],
 input[type="text"],
 input[type="email"],
+input[type="submit"],
 textarea {
-  color: #696a6c;
-  background-color: white;
-  border: 1px solid #dad9d7;
-  padding: 0 0 0 4px;
+  // color: #696a6c;
+  // background-color: white;
+  // border: 1px solid #dad9d7;
+  // padding: 0 0 0 4px;
   -webkit-appearance: none;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  // -moz-box-sizing: border-box;
+  // -webkit-box-sizing: border-box;
+  // box-sizing: border-box;
 }
 
-input[type="submit"] {
-  color: white;
-  background-color: #f73f33;
-  border: none;
-}
+// input[type="submit"] {
+//   color: white;
+//   background-color: #f73f33;
+//   border: none;
+// }
 
-input[type="submit"]:hover {
-  background-color: #de392e;
-}
+// input[type="submit"]:hover {
+//   background-color: #de392e;
+// }
 
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  border: 1px solid #f73f33;
-  background-color: white;
-}
+// input[type="search"]:focus,
+// input[type="text"]:focus,
+// input[type="email"]:focus,
+// textarea:focus {
+//   border: 1px solid #f73f33;
+//   background-color: white;
+// }
 
 ::-webkit-input-placeholder {
-  color: #adaeb0;
+  color: $color-placeholder-text;
 }
 
 ::-moz-placeholder {
-  color: #929190;
+  color: $color-placeholder-text;
 }
 
 :-moz-placeholder {
-  color: #929190;
+  color: $color-placeholder-text;
 }
 
 :-ms-input-placeholder {
-  color: #929190;
+  color: $color-placeholder-text;
 }
 
 /* __________________________________________________________________________________________ blog comments

@@ -1,6 +1,5 @@
-// 1.0001 pushes the computed height to 48px in chrome working around a rendering issue
 a.button {
-	box-sizing: border-box;
+	@include box-sizing(border-box);
 	display:inline-block;
 	@include font-heading;
 	font-size: pixels-to-ems(16, 24);

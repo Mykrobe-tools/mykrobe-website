@@ -15,7 +15,7 @@ $products = new Products;
 						<h3>Newsletter</h3>
 						<article>
 							<?php the_field('newsletter', 'option'); ?>
-							<?php the_field('newsletter-html', 'option'); ?>
+							<?php the_field('sign_up_html', 'option'); ?>
 						</article>
 					</div>
 					<div class="threecol last">
