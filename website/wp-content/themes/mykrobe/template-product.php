@@ -48,9 +48,11 @@ foreach($all_species as $species) {
 	$image_id = $species['image_id'];
 	$permalink = $species['permalink'];
 	$anchor = $species['anchor'];
+	$small_print_attachment_url = $species['small_print_attachment_url'];
+	$small_print_attachment_title = $species['small_print_attachment_title'];
 	$image_attributes = wp_get_attachment_image_src($image_id, 'medium');
 	$url = $image_attributes[0];
-echo '
+	echo '
 		<div class="product-single-species row">
 			<a name="'.$anchor.'" id="'.$anchor.'"></a>
 			<div class="sixcol product-single-species-overview">
@@ -65,7 +67,13 @@ echo '
 				<article>
 					'.$small_print.'
 				</article>
-				<a class="button download secondary small">Download</a>
+	';
+	if ( $small_print_attachment_url ) {
+		echo '
+				<a href="'.$small_print_attachment_url.'" target="_blank" class="button download secondary small">'.$small_print_attachment_title.'</a>
+		';
+	}
+	echo '			
 			</div>
 		</div>
 ';

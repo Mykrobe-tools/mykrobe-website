@@ -41,12 +41,16 @@ class Products {
 				$teaser_description = get_sub_field('teaser_description');
 				$description = get_sub_field('description');
 				$small_print = get_sub_field('small_print');
+				$small_print_attachment_url = get_sub_field('small_print_attachment');
+				$small_print_attachment_title = get_sub_field('small_print_attachment_title');
 				$image_id = get_sub_field('logo');
 				$species_object = array(
 					'title' => $title,
 					'teaser_description' => $teaser_description,
 					'description' => $description,
 					'small_print' => $small_print,
+					'small_print_attachment_url' => $small_print_attachment_url,
+					'small_print_attachment_title' => $small_print_attachment_title,
 					'image_id' => $image_id,
 					'permalink' => get_permalink($page->ID),
 					'anchor' => sanitize_title_with_dashes($title)
