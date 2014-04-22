@@ -109,6 +109,7 @@ foreach($all_species as $species) {
 	}
 	echo '
 					</ul>
+					<a class="close-modal" href="#close" rel="modal:close">Close window</a>
 				</div>
 				<div class="onecol"></div>
 			</div>

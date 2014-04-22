@@ -636,6 +636,7 @@ a.button {
   .main .product-single-species-small-print article p {
     margin-bottom: 1.14286em; }
 .main .download-license-agreement-content {
+  position: relative;
   background: white;
   padding: 1em; }
   .main .download-license-agreement-content article {
@@ -643,6 +644,41 @@ a.button {
     line-height: 1.14286em; }
     .main .download-license-agreement-content article p {
       margin-bottom: 1.14286em; }
+  .main .download-license-agreement-content .download-buttons {
+    margin-top: 0.5em; }
+    .main .download-license-agreement-content .download-buttons .button {
+      margin-top: 0.5em; }
+.main .close-modal {
+  position: absolute;
+  right: 0.66667em;
+  top: 0.66667em; }
+
+.svg .close-modal {
+  background-image: url("../img/close-modal.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left; }
+
+.no-svg .close-modal {
+  background-image: url("../img/close-modal.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 100%;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left; }
+
+.lt-ie9.no-svg .close-modal {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/wp-content/themes/mykrobe/img/close-modal.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/wp-content/themes/mykrobe/img/close-modal.png',sizingMethod='scale')"; }
+
+.close-modal {
+  width: 0.66667em;
+  height: 0.66667em; }
 
 /* __________________________________________________________________________________________ about
 */
@@ -950,7 +986,7 @@ img {
     min-height: 0; }
     .main .about header {
       min-height: 3em; } }
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 684px) {
   .container {
     padding-left: 3.84615%;
     padding-right: 3.84615%; }
@@ -996,7 +1032,7 @@ img {
 
   body {
     font-size: 120%; } }
-@media only screen and (min-width: 792px) {
+@media only screen and (min-width: 900px) {
   .container {
     padding-left: 3.84615%;
     padding-right: 3.84615%; }

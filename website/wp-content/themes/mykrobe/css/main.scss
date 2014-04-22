@@ -610,7 +610,7 @@ img {
 // intermediate
 //
 
-@media only screen and (min-width: width-with-grid-settings(5, $column-regular, $gutter-regular, $margin-regular)) {
+@media only screen and (min-width: width-with-grid-settings(6, $column-regular, $gutter-regular, $margin-regular)) {
   @include with-grid-settings(9, $column-regular, $gutter-regular, $margin-regular, $margin-regular, $flexible-regular) {
     @include grid-base;
     body {
@@ -623,7 +623,7 @@ img {
 // regular
 //
 
-@media only screen and (min-width: width-with-grid-settings(7, $column-regular, $gutter-regular, $margin-regular)) {
+@media only screen and (min-width: width-with-grid-settings(8, $column-regular, $gutter-regular, $margin-regular)) {
   @include with-grid-settings(9, $column-regular, $gutter-regular, $margin-regular, $margin-regular, $flexible-regular) {
     @include grid-base;
     body {

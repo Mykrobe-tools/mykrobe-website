@@ -49,13 +49,28 @@
   }
 
   .download-license-agreement-content {
+    position:relative;
     background: white;
     padding:pixels-to-ems(24,24);
     article {
       @include font-format(21, 24);
     }
+    .download-buttons {
+      margin-top:pixels-to-ems(12,24);
+      .button {
+        margin-top:pixels-to-ems(12,24);
+      }
+    }
+  }
+
+  .close-modal {
+    position:absolute;
+    right:pixels-to-ems(16,24);
+    top:pixels-to-ems(16,24);
   }
 }
+
+@include svg-image-with-fallback('.close-modal','close-modal',pixels-to-ems(16,24),pixels-to-ems(16,24));
 
 @mixin products-mobile {
   .main {
