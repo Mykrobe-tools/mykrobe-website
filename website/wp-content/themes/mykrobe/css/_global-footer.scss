@@ -3,7 +3,7 @@
     @include font-format(18,20);
   }
   padding-top:pixels-to-ems(24,24);
-  padding-bottom:pixels-to-ems(24,24);
+  padding-bottom:pixels-to-ems(48,24);
   .footer-products-species-logo {
     width:auto;
     max-height:pixels-to-ems(84,24);
@@ -32,6 +32,12 @@
   }
   p {
     margin:0;
+  }
+  a, a:visited {
+    color:white;
+    &:hover {
+      color:darken(white, 15%);
+    }
   }
 }
   

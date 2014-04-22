@@ -238,7 +238,7 @@ header.top-header h1.logo {
 */
 .footer.container {
   padding-top: 1em;
-  padding-bottom: 1em; }
+  padding-bottom: 2em; }
   .footer.container article {
     font-size: 0.75em;
     line-height: 1.11111em; }
@@ -269,6 +269,10 @@ header.top-header h1.logo {
         margin-left: 0; }
   .copyright.container p {
     margin: 0; }
+  .copyright.container a, .copyright.container a:visited {
+    color: white; }
+    .copyright.container a:hover, .copyright.container a:visited:hover {
+      color: #d9d9d9; }
 
 .svg .logo-the-royal-society {
   background-image: url("../img/logo-the-royal-society.svg");
