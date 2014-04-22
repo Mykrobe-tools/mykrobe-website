@@ -15,6 +15,16 @@
     article {
       @include font-format(21, 24);
     }
+    .product-overview-screenshots {
+      // position: absolute;
+      img {
+        // @include box-sizing(border-box);
+        // border:1px solid $color-rule;
+        // @include border-radius(pixels-to-ems(8, 24));
+        //@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+        // @include box-shadow(0,0,4px,$color-base-text,false);
+      }
+    }
   }
 
   .product-single-species {

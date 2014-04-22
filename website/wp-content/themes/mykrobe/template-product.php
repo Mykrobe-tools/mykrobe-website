@@ -8,9 +8,9 @@
 require_once 'php/Products.php';
 $products = new Products;
 
-$image_id = get_field('image');
+$image_id = get_field('screenshot');
 $description = get_field('description');
-$image_attributes = wp_get_attachment_image_src($image_id, 'medium');
+$image_attributes = wp_get_attachment_image_src($image_id, 'full');
 $url = $image_attributes[0];
 $width = $image_attributes[1];
 $height = $image_attributes[2];
@@ -30,7 +30,8 @@ $first_species = reset($all_species);
 				</article>
 				<a href="#download-license-agreement-<?php echo $first_species['anchor']; ?>" rel="modal:open" class="button download">Download</a>
 			</div>
-			<div class="sixcol last">
+			<div class="sixcol last product-overview-screenshots">
+				<img src="<?php echo $url; ?>">
 			</div>
 		</div>
 	</div>
