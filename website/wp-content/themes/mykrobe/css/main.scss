@@ -4,6 +4,7 @@
 @import "grid-base";
 
 $color-blue: #71c7e6;
+$color-blue-text: darken($color-blue, 5%);
 $color-base-text: #676561;
 $color-placeholder-text: #ceccc6;
 $color-light-green: #86c9b9;
@@ -14,6 +15,7 @@ $color-rule: #ceccc6;
 $color-footer-background: #9a9893;
 
 $color-blue-hover: darken($color-blue, 5%);
+$color-blue-hover-text: darken($color-blue, 15%);
 $color-dark-green-hover: darken($color-dark-green, 5%);
 $color-light-green-hover: darken($color-light-green, 5%);
 $color-light-green-hover-text: darken($color-light-green, 15%);
@@ -171,6 +173,15 @@ body {
     border: none;
     outline: none;
   }
+
+article {
+  a, a:visited {
+    color:$color-blue-text;
+    &:hover, a:visited:hover {
+      color:$color-blue-hover-text;
+    }
+  }
+}
 
   h1, h2, h3 {
     margin: 0;

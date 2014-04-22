@@ -150,6 +150,11 @@ a:focus {
   border: none;
   outline: none; }
 
+article a, article a:visited {
+  color: #5bbee2; }
+  article a:hover, article a a:visited:hover, article a:visited:hover, article a:visited a:visited:hover {
+    color: #30addb; }
+
 h1, h2, h3 {
   margin: 0;
   font-family: 'Bryant2-Bold', sans-serif;
