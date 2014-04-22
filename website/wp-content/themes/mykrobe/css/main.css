@@ -605,6 +605,9 @@ a.button {
   width: 20em;
   height: 20em; }
 
+@media only screen and (max-width: 480px) {
+  .promo {
+    font-size: 85.71429%; } }
 /* __________________________________________________________________________________________ product
 */
 .main .product-overview {
@@ -931,9 +934,10 @@ img, object, embed {
 img {
   height: auto; }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 684px) {
   body {
-    font-size: 120%; }
+    font-size: 120%;
+    min-width: 320px; }
 
   .container {
     padding-left: 3%;

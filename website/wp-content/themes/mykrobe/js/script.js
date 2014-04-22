@@ -24,6 +24,7 @@ $(document).ready(function() {
     }
 
     if ( $('body').hasClass('home')) {
+      that.mykrobeHome = new MykrobeHome();
     }
 
     that.mykrobeMenu = new MykrobeMenu();

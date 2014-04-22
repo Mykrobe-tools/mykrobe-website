@@ -594,9 +594,10 @@ img {
 // small
 //
 
-@media only screen and (max-width: width-with-grid-settings(5, $column-regular, $gutter-regular, $margin-regular)) {
+@media only screen and (max-width: width-with-grid-settings(6, $column-regular, $gutter-regular, $margin-regular)) {
   body {
     font-size: 120%;
+    min-width: 320px;
   }
   .container {
     padding-left:3%;

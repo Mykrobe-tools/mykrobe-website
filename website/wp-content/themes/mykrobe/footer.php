@@ -77,6 +77,7 @@ $products = new Products;
 		<script src="<?php bloginfo('template_directory'); ?>/js/plugins.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/mykrobe/MykrobePrefix.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/mykrobe/MykrobeMenu.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/mykrobe/MykrobeHome.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
 		<?php
 	}

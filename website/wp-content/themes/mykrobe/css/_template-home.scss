@@ -27,3 +27,9 @@
 @include svg-image-with-fallback('.promo-content h1.logo','mykrobe-logotype',pixels-to-ems(329.3,14),pixels-to-ems(48,14));
 
 @include svg-image-with-fallback('.promo-background','circle-480',pixels-to-ems(480,24),pixels-to-ems(480,24));
+
+@media only screen and (max-width: 480px) {
+  .promo {
+    font-size:(12 / 14) * 100%;
+  }
+}
