@@ -84,11 +84,26 @@ foreach($all_species as $species) {
 					</article>
 					<ul class="download-buttons">
 	';
+	// TODO: refactor this
 	if ( "Windows" == $os ) {
 		echo '
-						<li><a href="'.$download_windows_url.'" class="button download download-windows">Download for Windows</a></li>
-						<li><a href="'.$download_mac_url.'" class="button download secondary download-mac">Download for Mac</a></li>
-						<li><a href="'.$download_linux_url.'" class="button download secondary download-linux">Download for Linux</a></li>		
+						<li><a href="'.$download_windows_url.'" class="button download">Download for Windows</a></li>
+						<li><a href="'.$download_mac_url.'" class="button download secondary">Download for Mac</a></li>
+						<li><a href="'.$download_linux_url.'" class="button download secondary">Download for Linux</a></li>		
+		';	
+	}
+	else if ( "Mac" == $os ) {
+		echo '
+						<li><a href="'.$download_mac_url.'" class="button download">Download for Mac</a></li>
+						<li><a href="'.$download_windows_url.'" class="button download secondary">Download for Windows</a></li>
+						<li><a href="'.$download_linux_url.'" class="button download secondary">Download for Linux</a></li>		
+		';	
+	}
+	else if ( "Linux" == $os ) {
+		echo '
+						<li><a href="'.$download_linux_url.'" class="button download">Download for Linux</a></li>		
+						<li><a href="'.$download_windows_url.'" class="button download secondary">Download for Windows</a></li>
+						<li><a href="'.$download_mac_url.'" class="button download secondary">Download for Mac</a></li>
 		';	
 	}
 	echo '
