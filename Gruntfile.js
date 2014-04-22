@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     var yeomanConfig = {
         themeRoot: 'website/wp-content/themes',
         themeName: 'mykrobe',
-        dist: 'dist'
+        dist: 'dist/wp-content/themes/mykrobe'
     };
     var databaseConfig = {
         localDataRoot: 'data/sql',
@@ -225,11 +225,11 @@ module.exports = function(grunt) {
                 // the files to concatenate
                 src: [
                     '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/vendor/jquery.smooth-scroll.min.js',
-                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/mykrobe/*.js',
-                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/script.js',
                     '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/vendor/fastclick.js',
                     '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/vendor/jquery.modal.js',
-                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/plugins.js'
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/mykrobe/*.js',
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/plugins.js',
+                    '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/js/script.js'
                 ],
                 // the location of the resulting JS file
                 dest: '<%= yeomanConfig.dist %>/js/script.min.js'
@@ -299,8 +299,7 @@ module.exports = function(grunt) {
                         'images/{,*/}*.{webp,gif}',
                         '{,*/}*.html',
                         '{,*/}*.php',
-                        'css/fonts/{,*/}*.*',
-                        'css/font-awesome/{,*/}*.*',
+                        'css/webfonts/{,*/}*.*',
                         'api/**',
                         'scripts/**',
                         'js/vendor/modernizr.custom.62260.js',
@@ -326,12 +325,22 @@ module.exports = function(grunt) {
             server: ['sass', 'copy:styles'],
             dist: ['sass', 'copy:styles', 'svg2png', 'imagemin', 'svgmin']
         },
-        bower: {
-            options: {
-                exclude: ['modernizr']
+        rsync: {
+            'deploy-stage-theme': {
+                options: {
+                    src: '<%= yeomanConfig.dist %>/',
+                    dest: '~/clients.simonheys.com/mykrobe/wp-content/themes/mykrobe',
+                    host: 'simonheys@spica.dreamhost.com',
+                    args: ['-arvuz', '--delete', '-e "ssh"', '--exclude=.DS_Store', '--exclude=.htaccess']
+                }
             },
-            all: {
-                rjsConfig: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>/scripts/main.js'
+            'deploy-stage-wp': {
+                options: {
+                    src: 'website/',
+                    dest: '~/clients.simonheys.com/mykrobe/',
+                    host: 'simonheys@spica.dreamhost.com',
+                    args: ['-arvuz', '--delete', '-e "ssh"', '--exclude=.DS_Store', '--exclude=.htaccess', '--exclude=wp-content/themes/mykrobe']
+                }
             }
         }
     });
@@ -346,4 +355,5 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['build']);
     grunt.registerTask('backup-local-db', ['exec:backup-local-db']);
     grunt.registerTask('import-local-db', ['exec:import-local-db']);
+    grunt.registerTask('deploy-stage-theme', ['rsync:deploy-stage-theme']);
 };
