@@ -29,8 +29,8 @@ else if (strstr($_SERVER['SERVER_NAME'],'.simonheys.com')) {
 	define('DB_HOST', 'mysql.simonheys.com');    // 99% chance you won't need to change this value
 }
 else {
-	define('DB_NAME', 'mykrobe_com_wordpress');    // The name of the database
-	define('DB_USER', 'mykrobe_com');     // Your MySQL username
+	define('DB_NAME', 'mykrobe_wordpress');    // The name of the database
+	define('DB_USER', 'mykrobe');     // Your MySQL username
 	define('DB_PASSWORD', 'tkavxcUZmpWB4dsjp7AT'); // ...and password
 	define('DB_HOST', 'mysql.mykrobe.com');    // 99% chance you won't need to change this value
 }
