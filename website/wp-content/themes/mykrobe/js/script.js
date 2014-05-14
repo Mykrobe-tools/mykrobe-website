@@ -39,6 +39,8 @@ $(document).ready(function() {
             }
         });
     });
+
+    $('a:[href^=#]').smoothScroll();
 });
 
 $.modal.defaults = {
