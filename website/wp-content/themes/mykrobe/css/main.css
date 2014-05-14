@@ -487,15 +487,15 @@ a.button {
   font-size: 0.66667em;
   line-height: 1.875em;
   font-size: 0.66667em;
-  line-height: 3em;
+  line-height: 2.5em;
   text-align: center;
-  padding: 0 1.5em;
-  height: 3em;
-  -webkit-border-radius: 1.5em;
-  -moz-border-radius: 1.5em;
-  -ms-border-radius: 1.5em;
-  -o-border-radius: 1.5em;
-  border-radius: 1.5em;
+  padding: 0 1.25em;
+  height: 2.5em;
+  -webkit-border-radius: 1.25em;
+  -moz-border-radius: 1.25em;
+  -ms-border-radius: 1.25em;
+  -o-border-radius: 1.25em;
+  border-radius: 1.25em;
   cursor: pointer; }
   a.button.download {
     background-color: #3b9da7;
@@ -534,8 +534,7 @@ a.button {
 /* __________________________________________________________________________________________ home
 */
 .promo-container {
-  background-color: #f7f6f1;
-  position: relative; }
+  background-color: #f7f6f1; }
   .promo-container .promo {
     position: relative;
     margin: 0 auto;
@@ -545,6 +544,7 @@ a.button {
       position: absolute; }
     .promo-container .promo .promo-content {
       position: absolute;
+      width: 100%;
       text-align: center; }
       .promo-container .promo .promo-content h1.logo {
         margin: 13.5em auto 0 auto; }
@@ -637,6 +637,11 @@ a.button {
 .main .product-single-species {
   padding-top: 1em;
   padding-bottom: 1em; }
+.main .product-single-species-overview article {
+  font-size: 0.875em;
+  line-height: 1.14286em; }
+  .main .product-single-species-overview article p {
+    margin-bottom: 1.14286em; }
 .main .product-single-species-overview-logo {
   width: auto;
   height: 4em;
@@ -1071,7 +1076,9 @@ img {
     margin-right: 0; }
 
   body {
-    font-size: 120%; } }
+    font-size: 120%; }
+    body.home header.top-header {
+      display: none; } }
 @media only screen and (min-width: 900px) {
   .container {
     padding-left: 3.84615%;

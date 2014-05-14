@@ -2,10 +2,10 @@ var Mykrobe = Mykrobe || {};
 
 Mykrobe.isMobile = function() {
     if ( !($('html').hasClass('lte-ie8')) ) {
-        return Modernizr.mq("only screen and (max-width:767px)");
+        return Modernizr.mq("only screen and (max-width:684px)");
     }
     else {
-        return $(window).width() < 768;
+        return $(window).width() < 684;
     }
 };
 

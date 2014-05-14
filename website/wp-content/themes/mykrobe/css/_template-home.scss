@@ -1,7 +1,5 @@
 .promo-container {
   background-color: $color-buff;
-  // overflow:hidden;
-  position:relative;
 
   .promo {
     position:relative;
@@ -14,6 +12,7 @@
 
     .promo-content {
       position:absolute;
+      width:100%;
       text-align:center;
       h1.logo {
         margin: pixels-to-ems(216,16) auto 0 auto;

@@ -73,6 +73,12 @@ MykrobeMenu.prototype = {
 			}
 			$('#menu-overlay').fadeOut(150);
 		}
+		if ( !Mykrobe.isMobile() && $('body').hasClass('home')) {
+			// $('header.top-header').hide();
+		}
+		else {
+			// $('header.top-header').show();
+		}
 		return that;
 	}
 };

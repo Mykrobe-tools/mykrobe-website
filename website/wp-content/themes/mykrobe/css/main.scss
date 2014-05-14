@@ -623,6 +623,11 @@ img {
     @include grid-base;
     body {
       font-size: 120%;
+      &.home {
+        header.top-header {
+          display: none;
+        }
+      }
     }
   }
 }
