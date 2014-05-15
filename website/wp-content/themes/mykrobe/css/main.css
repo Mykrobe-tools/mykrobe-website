@@ -60,6 +60,8 @@ textarea {
   color: #222; }
 
 html {
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 100%; }
 
 body {
@@ -184,8 +186,8 @@ p {
   margin: 0 0 1.25em 0; }
 
 /*p:first-child {
-    margin:0;
-    }*/
+	margin:0;
+	}*/
 .main h1 {
   color: #3b9da7; }
 
@@ -631,7 +633,9 @@ a.button {
   padding-top: 1em;
   padding-bottom: 1em;
   min-height: 20em;
-  background: #f7f6f1; }
+  background: #f7f6f1;
+  position: relative;
+  overflow: hidden; }
   .main .product-overview header {
     min-height: 5em; }
     .main .product-overview header h1 {
@@ -830,22 +834,22 @@ a.button {
   padding: 0; }
 
 /*.blog .sidebar .search input[type="text"] {
-    width:69%;
-    display:block;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    float: left;
-    margin-right:2%;
+	width:69%;
+	display:block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	margin-right:2%;
 }
 
 .blog .sidebar .search input[type="submit"] {
-    width:29%;
-    display:block;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    }*/
+	width:29%;
+	display:block;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	}*/
 /* __________________________________________________________________________________________ forms
 */
 input[type="search"]:focus, input[type="submit"]:focus,

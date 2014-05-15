@@ -15,6 +15,8 @@
     article {
       @include font-format(21, 24);
     }
+    position:relative;
+    overflow:hidden;
     .product-overview-screenshots {
       // position: absolute;
       img {
