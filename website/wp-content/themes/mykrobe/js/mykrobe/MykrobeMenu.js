@@ -1,11 +1,4 @@
-var MykrobeMenu = function() {
-	var that = this,
-		showsTopBar,
-		expanded;
-	return that.init.apply(that, arguments);
-};
-
-MykrobeMenu.prototype = {
+var MykrobeMenu = Class.extend({
 	init:function(container_) {
 		var that = this;
 
@@ -23,7 +16,6 @@ MykrobeMenu.prototype = {
             that.update();
         });
 		that.update();
-		return that;
 	},
 
 	update:function() {
@@ -73,12 +65,6 @@ MykrobeMenu.prototype = {
 			}
 			$('#menu-overlay').fadeOut(150);
 		}
-		if ( !Mykrobe.isMobile() && $('body').hasClass('home')) {
-			// $('header.top-header').hide();
-		}
-		else {
-			// $('header.top-header').show();
-		}
 		return that;
 	}
-};
+});

@@ -74,11 +74,11 @@ $products = new Products;
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.smooth-scroll.min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.modal.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/fastclick.js"></script>
-		<!--script src="<?php bloginfo('template_directory'); ?>/js/vendor/swiffy/runtime.js"></script-->
 		<script src="<?php bloginfo('template_directory'); ?>/js/plugins.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/mykrobe/MykrobePrefix.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/mykrobe/MykrobeMenu.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/mykrobe/MykrobeHome.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/mykrobe/MykrobeProduct.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
 		<?php
 	}

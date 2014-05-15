@@ -26,6 +26,9 @@ $(document).ready(function() {
     if ( $('body').hasClass('home')) {
       that.mykrobeHome = new MykrobeHome();
     }
+    else if ( $('body').hasClass('page-template-template-product-php')) {
+      that.mykrobeProduct = new MykrobeProduct();
+    }
 
     that.mykrobeMenu = new MykrobeMenu();
 

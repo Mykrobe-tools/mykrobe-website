@@ -236,10 +236,13 @@ module.exports = function(grunt) {
             }
         },
         uglify: {
-            options:{
+            options: {
                 compress: {
-                    drop_console: true
-                }
+                    'drop_console':true
+                },
+                beautify : {
+                    'ascii_only' : true
+                }  
             },
             dist: {
                 files: {
