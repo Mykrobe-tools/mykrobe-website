@@ -60,7 +60,6 @@ textarea {
   color: #222; }
 
 html {
-  overflow-y: scroll;
   height: 100%; }
 
 body {
@@ -450,6 +449,11 @@ a.button {
     border-bottom-left-radius: 1.33333em;
     -webkit-border-top-left-radius: 1.33333em;
     border-top-left-radius: 1.33333em;
+    background-clip: padding-box;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
     background-clip: padding-box; }
   .mc-field-group input[type="submit"] {
     width: 34%;
@@ -466,6 +470,11 @@ a.button {
     border-bottom-right-radius: 1.33333em;
     -webkit-border-top-right-radius: 1.33333em;
     border-top-right-radius: 1.33333em;
+    background-clip: padding-box;
+    -webkit-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
     background-clip: padding-box;
     margin: 0;
     padding: 0;
@@ -615,7 +624,7 @@ a.button {
 
 @media only screen and (max-width: 480px) {
   .promo {
-    font-size: 85.71429%; } }
+    font-size: 78.57143%; } }
 /* __________________________________________________________________________________________ product
 */
 .main .product-overview {

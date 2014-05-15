@@ -71,6 +71,7 @@ a.button {
     margin:0;
     padding:0 pixels-to-ems(16, 12);
     @include border-left-radius(pixels-to-ems(16, 12));
+    @include border-right-radius(0);
     &:focus {
 
     }
@@ -84,6 +85,7 @@ a.button {
     line-height: pixels-to-ems(30, 12);
     height:pixels-to-ems(32, 12);
     @include border-right-radius(pixels-to-ems(16, 12));
+    @include border-left-radius(0);
     margin: 0;
     padding:0;
     cursor: pointer;
