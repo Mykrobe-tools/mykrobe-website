@@ -1,3 +1,7 @@
+#AuthType Basic
+#AuthUserFile /home/mykrobe_com_simonheys/mykrobe.com/.htpasswd
+#AuthName "Members Area"
+#require valid-user
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>

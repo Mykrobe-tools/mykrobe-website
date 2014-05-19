@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.1.66, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.9, for osx10.6 (i386)
 --
--- Host: mysql.simonheys.com    Database: mykrobe_com_wordpress
+-- Host: localhost    Database: mykrobe_com_wordpress
 -- ------------------------------------------------------
--- Server version	5.1.39-log
+-- Server version	5.5.9
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -376,4 +376,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-05-19  1:10:12
+-- Dump completed on 2014-05-19  9:10:24

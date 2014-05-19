@@ -344,6 +344,22 @@ module.exports = function(grunt) {
                     host: 'simonheys@spica.dreamhost.com',
                     args: ['-arvuz', '--delete', '-e "ssh"', '--exclude=.DS_Store', '--exclude=.htaccess', '--exclude=wp-content/themes/mykrobe']
                 }
+            },
+            'deploy-production-wp': {
+                options: {
+                    src: 'website/',
+                    dest: '~/mykrobe.com/',
+                    host: 'mykrobe_com_simonheys@tranquility.dreamhost.com',
+                    args: ['-arvuz', '--delete', '-e "ssh"', '--exclude=.DS_Store', '--exclude=.htaccess', '--exclude=wp-content/themes/mykrobe']
+                }
+            },
+            'deploy-production-theme': {
+                options: {
+                    src: '<%= yeomanConfig.dist %>',
+                    dest: '~/mykrobe.com/wp-content/themes/mykrobe',
+                    host: 'mykrobe_com_simonheys@tranquility.dreamhost.com',
+                    args: ['-arvuz', '--delete', '-e "ssh"', '--exclude=.DS_Store', '--exclude=.htaccess']
+                }
             }
         }
     });
