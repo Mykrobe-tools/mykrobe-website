@@ -3,20 +3,19 @@ var MykrobeHome = Class.extend({
 		var that = this;
 
 		that.promoContainer = $('.promo-container');
-		that.proboBackgroundContainer = $('.promo-container-background',that.promoContainer);		
+		that.promoBackgroundContainer = $('.promo-container-background',that.promoContainer);		
 		that.promoContent = $('.promo',that.promoContainer);
-
-		// $(window).bind('scroll.MykrobeMenu',function(e){
-		// 	that.update();
-		// });
-		var stage = new swiffy.Stage(that.proboBackgroundContainer.get(0),that.swiffyobject);
-		// stage.setBackground(null);
-		stage.start();
 
 		$(window).bind('orientationchange.MykrobeHome resize.MykrobeHome', function(e) {
             that.update();
         });
 		that.update();
+
+		// laod swiffy async, it's quite big
+		$.getScript( "//www.gstatic.com/swiffy/v6.0/runtime.js", function() {
+			that.stage = new swiffy.Stage(that.promoBackgroundContainer.get(0),that.swiffyobject);
+			that.stage.start();
+		});
 		
 		return that;
 	},
@@ -60,7 +59,7 @@ var MykrobeHome = Class.extend({
 			'height': promoContainerHeight+'px'
 		});
 
-		that.proboBackgroundContainer.css({
+		that.promoBackgroundContainer.css({
 			'position':'absolute',
 			'width': promoContainerWidth+'px',
 			'height': promoContainerHeight+'px'

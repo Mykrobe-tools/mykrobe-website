@@ -35,14 +35,31 @@ $first_species = reset($all_species);
 			</div>
 		</div>
 	</div>
-	<div class="product-species container">
+	
 <?php
-
 
 if ( count($all_species) > 1 ) {
 	// draw tabs here
-	echo '<!-- Tabs in here -->';
+	echo '
+		<ul class="product-species-tabs container">
+	';
+	$active = ' class="active"';
+	foreach($all_species as $species) {
+		$title = $species['title'];
+		$anchor = $species['anchor'];
+		echo '
+			<li><a'.$active.' href="#'.$anchor.'">'.$title.'</a></li>
+		';
+		$active = '';
+	}
+	echo '
+		</ul>
+	';
 }
+
+?>
+	<div class="product-species container">
+<?php
 
 foreach($all_species as $species) {
 	$full_title = $species['full_title'];
@@ -117,8 +134,7 @@ foreach($all_species as $species) {
 				<div class="onecol"></div>
 			</div>
 		</div>
-		<div class="product-single-species row">
-			<a name="'.$anchor.'" id="'.$anchor.'"></a>
+		<div id="'.$anchor.'" class="product-single-species row">
 			<div class="sixcol product-single-species-overview">
 				<img class="product-single-species-overview-logo" src="'.$url.'">
 				<article>

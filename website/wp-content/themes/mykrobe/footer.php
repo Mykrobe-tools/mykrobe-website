@@ -54,35 +54,6 @@ $products = new Products;
 		<div id="menu-overlay"></div>
 		<!-- <div id="overlay"></div> -->
 		<?php wp_footer(); ?>
-    	<script type="text/javascript">
-			var Mykrobe = Mykrobe || {};
-			Mykrobe.settings = {
-				"templateUrl" : "<?php bloginfo('template_directory'); ?>"
-			};
-		</script>
-		<script src="https://www.gstatic.com/swiffy/v6.0/runtime.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery-1.7.1.min.js"><\/script>')</script>
-
-	<?php if (useMinified()) {
-		?>
-		<script src="<?php bloginfo('template_directory'); ?>/js/script.min.js"></script>
-		<?php
-	}
-	else {
-		?>
-		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.smooth-scroll.min.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/jquery.modal.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/vendor/fastclick.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/plugins.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/mykrobe/MykrobePrefix.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/mykrobe/MykrobeMenu.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/mykrobe/MykrobeHome.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/mykrobe/MykrobeProduct.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/script.js"></script>
-		<?php
-	}
-	?>
 	<?php if (isLocalServer()) {
 		?>
 		<script src="//localhost:35729/livereload.js"></script>
