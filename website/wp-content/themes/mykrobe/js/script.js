@@ -40,6 +40,8 @@
             });
         });
         $('a:[href^=#]').smoothScroll();
+
+        // that.footerSpecies = $('.footer-product-single-species');
     });
 
     $.modal.defaults = {

@@ -84,13 +84,15 @@ class Products {
 			$image_attributes = wp_get_attachment_image_src($image_id, 'medium');
 			$url = $image_attributes[0];
 			echo '
-				<a href="'.$permalink.'#'.$anchor.'">
-					<img class="footer-products-species-logo" src="'.$url.'">
-				</a>
-				<article>
-					'.$teaser_description.'
-				</article>
-				<a href="'.$permalink.'#'.$anchor.'" class="button learn small">Learn more</a>
+				<div class="footer-product-single-species">
+					<a href="'.$permalink.'#'.$anchor.'">
+						<img class="footer-products-species-logo" src="'.$url.'">
+					</a>
+					<article>
+						'.$teaser_description.'
+					</article>
+					<a href="'.$permalink.'#'.$anchor.'" class="button learn small">Learn more</a>
+				</div>
 			';
 		}
 	}
