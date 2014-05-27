@@ -13,6 +13,8 @@
     }
 
     $(document).ready(function() {
+        var i;
+
         if (Modernizr.touch) {
             new FastClick(document.body);
             that.orientationChange();
@@ -39,10 +41,25 @@
                 }
             });
         });
-        $('a:[href^=#]').smoothScroll();
+        $('a:[href^=#]').not($('a[rel="modal:close"]')).smoothScroll();
 
-        // that.footerSpecies = $('.footer-product-single-species');
+        that.footerSpecies = $('.footer-product-single-species');
+        i = Math.floor(Math.random()*that.footerSpecies.length);
+        that.footerSpecies.not(that.footerSpecies[i]).hide();
+        // that.cycleFooterSpecies();
     });
+    
+    /*
+    that.cycleFooterSpecies = function() {
+        var currentlyVisible = $(':visible', that.footerSpecies);
+        var currentlyVisibleIndex = $(that.footerSpecies).index(currentlyVisible);
+        var nextIndex = (currentlyVisibleIndex+1) % that.footerSpecies.length;
+        var nextVisible = that.footerSpecies[nextIndex];
+        // $(currentlyVisible).hide(300);
+        $(nextVisible).delay(300).show(300);
+
+    };
+    */
 
     $.modal.defaults = {
         overlay: "#000", // Overlay color

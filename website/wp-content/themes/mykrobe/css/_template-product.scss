@@ -30,31 +30,33 @@
     }
   }
 
-  ul.product-species-tabs {
+  .product-species-tabs {
     background:$color-buff;
-    list-style-type: none;
-    overflow:hidden;
-    li {
-      float:left;
-      margin-left:1px;
-      &:first-child {
-        margin-left: 0;
-      }
-      a {
-        color:$color-base-text;
-        @include font-heading;
-        font-size: pixels-to-ems(16, 24);
-        line-height: pixels-to-ems(40, 16);
-        text-align: center;
-        padding: 0 pixels-to-ems(20, 16);
-        min-width: pixels-to-ems(140, 16);       
-        display: block;
-        background: $color-buff-dark;
-        &:hover {
-          background:$color-buff-dark-hover;
+    ul {
+      list-style-type: none;
+      overflow:hidden;
+      li {
+        float:left;
+        margin-left:1px;
+        &:first-child {
+          margin-left: 0;
         }
-        &.active {
-          background:white;
+        a {
+          color:$color-base-text;
+          @include font-heading;
+          font-size: pixels-to-ems(16, 24);
+          line-height: pixels-to-ems(40, 16);
+          text-align: center;
+          padding: 0 pixels-to-ems(20, 16);
+          min-width: pixels-to-ems(140, 16);       
+          display: block;
+          background: $color-buff-dark;
+          &:hover {
+            background:$color-buff-dark-hover;
+          }
+          &.active {
+            background:white;
+          }
         }
       }
     }

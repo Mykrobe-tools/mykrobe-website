@@ -5,7 +5,7 @@ var MykrobeProduct = Class.extend({
         that.screenShotContainer = $('.product-overview-screenshots');
         that.isHidden = true;
 
-        $('ul.product-species-tabs').each(function() {
+        $('.product-species-tabs ul').each(function() {
             // For each set of tabs, we want to keep track of
             // which tab is active and it's associated content
             var $active, $content, $links = $(this).find('a');
@@ -77,6 +77,11 @@ var MykrobeProduct = Class.extend({
                 'opacity': 1
             }, 500);
             that.isHidden = false;
+        }
+        else {
+        	$('img', that.screenShotContainer).css({
+                'opacity': 1
+            }, 500);
         }
         return that;
     }

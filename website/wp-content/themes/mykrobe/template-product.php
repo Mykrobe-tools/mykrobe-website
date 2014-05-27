@@ -41,19 +41,23 @@ $first_species = reset($all_species);
 if ( count($all_species) > 1 ) {
 	// draw tabs here
 	echo '
-		<ul class="product-species-tabs container">
+	<div class="product-species-tabs container">
+		<div class="row">
+			<ul>
 	';
 	$active = ' class="active"';
 	foreach($all_species as $species) {
 		$title = $species['title'];
 		$anchor = $species['anchor'];
 		echo '
-			<li><a'.$active.' href="#'.$anchor.'">'.$title.'</a></li>
+				<li><a'.$active.' href="#'.$anchor.'">'.$title.'</a></li>
 		';
 		$active = '';
 	}
 	echo '
-		</ul>
+			</ul>
+		</div>
+	</div>
 	';
 }
 
