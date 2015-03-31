@@ -126,6 +126,12 @@ base font size 24px
 html {
   background-color: #9a9893; }
 
+html, input {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-kerning: normal; }
+
 /*
 font-family: 'Minion Regular'
 font-family: 'Minion Bold'

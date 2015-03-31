@@ -3,7 +3,7 @@
 Plugin Name: Enable Media Replace
 Plugin URI: http://www.mansjonasson.se/enable-media-replace
 Description: Enable replacing media files by uploading a new file in the "Edit Media" section of the WordPress Media Library.
-Version: 2.9.5
+Version: 3.0.3
 Author: Måns Jonasson
 Author URI: http://www.mansjonasson.se
 
@@ -37,7 +37,7 @@ add_shortcode('file_modified', 'emr_get_modified_date');
  * To suppress it in the menu we give it an empty menu title.
  */
 function emr_menu() {
-	add_submenu_page(NULL, __("Replace media", "enable-media-replace"), '','upload_files', __FILE__, 'emr_options');
+	add_submenu_page(NULL, __("Replace media", "enable-media-replace"), '','upload_files', 'enable-media-replace/enable-media-replace', 'emr_options');
 }
 
 /**
@@ -45,7 +45,7 @@ function emr_menu() {
  * Only languages files needs loading during init.
  */
 function enable_media_replace_init() {
-	load_plugin_textdomain( 'enable-media-replace', false, dirname( plugin_basename( __FILE__ ) ) );
+	load_plugin_textdomain( 'enable-media-replace', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
 
 /**
@@ -55,29 +55,16 @@ function enable_media_replace_init() {
  */
 function enable_media_replace( $form_fields, $post ) {
 
-	// Check if we are on media upload screen for insertion of replace link
-	$on_media_edit_screen = false;
-	$current_wp_version = get_bloginfo('version');
-	if ($current_wp_version < 3.5) {
-		if (isset($_GET["attachment_id"]) && $_GET["attachment_id"]) { $on_media_edit_screen = true; } 
-	}
-	else {
-		$current_screen = get_current_screen();
-		if ( !is_null($current_screen) && $current_screen->base == 'post' && $current_screen->post_type == 'attachment' ) { $on_media_edit_screen = true; }
-	}
-	
-	if ($on_media_edit_screen == true) {
+	$url = admin_url( "upload.php?page=enable-media-replace/enable-media-replace.php&action=media_replace&attachment_id=" . $post->ID);
+	$action = "media_replace";
+  	$editurl = wp_nonce_url( $url, $action );
 
-		$url = admin_url( "upload.php?page=enable-media-replace/enable-media-replace.php&action=media_replace&attachment_id=" . $post->ID);
-		$action = "media_replace";
-      	$editurl = wp_nonce_url( $url, $action );
-
-		if (FORCE_SSL_ADMIN) {
-			$editurl = str_replace("http:", "https:", $editurl);
-		}
-		$link = "href=\"$editurl\"";
-		$form_fields["enable-media-replace"] = array("label" => __("Replace media", "enable-media-replace"), "input" => "html", "html" => "<p><a class='button-secondary'$link>" . __("Upload a new file", "enable-media-replace") . "</a></p>", "helps" => __("To replace the current file, click the link and upload a replacement.", "enable-media-replace"));
+	if (FORCE_SSL_ADMIN) {
+		$editurl = str_replace("http:", "https:", $editurl);
 	}
+	$link = "href=\"$editurl\"";
+	$form_fields["enable-media-replace"] = array("label" => __("Replace media", "enable-media-replace"), "input" => "html", "html" => "<p><a class='button-secondary'$link>" . __("Upload a new file", "enable-media-replace") . "</a></p>", "helps" => __("To replace the current file, click the link and upload a replacement.", "enable-media-replace"));
+
 	return $form_fields;
 }
 
@@ -138,7 +125,7 @@ function emr_get_modified_date($atts) {
 	if ($id == '') return false;
 
     // Get path to file
-	$current_file = get_attached_file($id, true);
+	$current_file = get_attached_file($id);
 
 	// Get file modification time
 	$filetime = filemtime($current_file);

@@ -9,6 +9,10 @@ module.exports = function(grunt) {
         themeName: 'mykrobe',
         dist: 'dist/wp-content/themes/mykrobe'
     };
+    var wordpressConfig = {
+        wordpressRoot: 'website',
+        dist: 'dist'
+    };
     var databaseConfig = {
         localDataRoot: 'data/sql',
         local: {
@@ -22,6 +26,7 @@ module.exports = function(grunt) {
     };
     grunt.initConfig({
         yeomanConfig: yeomanConfig,
+        wordpressConfig: wordpressConfig,
         databaseConfig: databaseConfig,
         exec: {
             'backup-local-db': {
@@ -294,16 +299,32 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     dot: true,
+                    cwd: '<%= wordpressConfig.wordpressRoot %>',
+                    dest: '<%= wordpressConfig.dist %>',
+                    src:[
+                        'wp-admin/**/*.*',
+                        'wp-includes/**/*.*',
+                        'wp-content/languages/**/*.*',
+                        'wp-content/plugins/**/*.*',
+                        'wp-content/uploads/**/*.*',
+                        'wp-content/themes/index.php',
+                        'wp-content/index.php',
+                        '*.*'
+                    ]
+                },
+                {
+                    expand: true,
+                    dot: true,
                     cwd: '<%= yeomanConfig.themeRoot %>/<%= yeomanConfig.themeName %>',
                     dest: '<%= yeomanConfig.dist %>',
                     src: [
-                        '*.{css,ico,png,txt}', 
-                        '.htaccess', 
-                        'images/{,*/}*.{webp,gif}',
+                        '*.{css,ico,png,txt,svg}', 
+                        '.htaccess',
                         '{,*/}*.html',
                         '{,*/}*.php',
+                        'img/*.{png,jpg,svg,gif}', 
                         'css/webfonts/{,*/}*.*',
-                        'api/**',
+                        'css/font-awesome/{,*/}*.*',
                         'scripts/**',
                         'js/vendor/modernizr.custom.62260.js',
                         'js/vendor/respond.min.js'
@@ -361,6 +382,34 @@ module.exports = function(grunt) {
                     args: ['-arvuz', '--delete', '-e "ssh"', '--exclude=.DS_Store', '--exclude=.htaccess']
                 }
             }
+        },
+        wordpressdeploy: {
+            options: {
+                backup_dir: "backups/",
+                rsync_args: ['--verbose', '--progress', '-rlpt', '--compress', '--omit-dir-times'],
+                exclusions: ['Gruntfile.js', '.git/', 'tmp/*', 'backups/', /*'wp-config.php',*/ 'composer.json', 'composer.lock', 'README.md', '.gitignore', 'package.json', 'node_modules','.htaccess']
+            },
+            local: {
+                // deploy to local machine
+                "title": "local",
+                "database": "mykrobe_com_wordpress",
+                "user": "mykrobe_com",
+                "pass": "tkavxcUZmpWB4dsjp7AT",
+                "host": "localhost",
+                "url": "http://telemachus.local/mykrobe/website",
+                "path": "dist/*"
+            },
+            production: {
+                // deploy to mykrobe.com
+                "title": "production",
+                "database": "mykrobe_wordpress",
+                "user": "mykrobe",
+                "pass": "tkavxcUZmpWB4dsjp7AT",
+                "host": "mysql.mykrobe.com",
+                "url": "http://www.mykrobe.com/",
+                "path": "~/mykrobe.com",
+                "ssh_host": "mykrobe_com_simonheys@tranquility.dreamhost.com"
+            }
         }
     });
     grunt.registerTask('server', function(target) {
@@ -370,7 +419,7 @@ module.exports = function(grunt) {
         grunt.task.run(['clean:server', 'concurrent:server', 'autoprefixer', 'connect:livereload', 'watch']);
     });
     grunt.registerTask('test', ['clean:server', 'concurrent:test', 'autoprefixer', 'connect:test', 'mocha']);
-    grunt.registerTask('build', ['clean:dist', 'concurrent:dist', 'autoprefixer', 'concat', 'uglify', 'cssmin', 'copy:dist']);
+    grunt.registerTask('build', ['clean:dist', 'concurrent:dist', 'autoprefixer', 'concat', 'uglify', 'cssmin', 'copy']);
     grunt.registerTask('default', ['build']);
     grunt.registerTask('backup-local-db', ['exec:backup-local-db']);
     grunt.registerTask('import-local-db', ['exec:import-local-db']);

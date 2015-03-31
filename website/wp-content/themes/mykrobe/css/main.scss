@@ -160,6 +160,13 @@ html {
 	background-color: $color-footer-background;
 }
 
+html, input {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-kerning: normal;
+}
+
 /*
 font-family: 'Minion Regular'
 font-family: 'Minion Bold'
