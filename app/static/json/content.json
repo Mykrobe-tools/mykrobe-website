@@ -1,0 +1,191 @@
+{
+  "all": {
+    "before": [],
+    "after": [
+      {
+        "type": "register",
+        "anchor": "register",
+        "title": "Stay up to date",
+        "body": "Find out about future versions for other organisms and new products."
+      },
+      {
+        "type": "footer",
+        "text": "Copyright in here",
+        "links": ["/about", "/contact", "/privacy"]
+      }
+    ]
+  },
+  "pages": {
+    "/": {
+      "exact": true,
+      "title": "Mykrobe",
+      "components": [
+        {
+          "type": "main-hero",
+          "title": "Mykrobe",
+          "body": "Antimicrobial resistance  \ninformation within minutes",
+          "image": "main-hero-mykrobe.png",
+          "buttons": [
+            {
+              "text": "Free Download",
+              "icon": "chevron-circle-down",
+              "to": "#download",
+              "size": "lg"
+            }
+          ]
+        },
+        {
+          "type": "editorial",
+          "title": "What is Mykrobe?",
+          "body": "Microbial DNA encapsulates an incredible amount of information which we can use, both at a global scale — tracking the spread of bacterial strains — and at the most local and personal level for diagnosis of a patient.\n\nWe build tools to make these available to all, primarily focussing on the biggest infectious disease, which infects more than 10 million people per year: tuberculosis."
+        },
+        {
+          "type": "promos",
+          "promos": [
+            {
+              "to": "#mykrobe",
+              "image": "promo-mykrobe-small.png",
+              "title": "Mykrobe",
+              "titleIcon": "chevron-circle-right",
+              "body": "Free, no network or expertise required. Runs on a standard desktop or laptop"
+            },
+            {
+              "to": "#mykrobe-atlas",
+              "image": "promo-mykrobe-atlas-small.png",
+              "title": "Mykrobe Atlas",
+              "titleIcon": "chevron-circle-right",
+              "body": "Coming soon - Global online service. Lorem ipsum dolor sit amet."
+            }
+          ]
+        },
+        {
+          "type": "hero",
+          "anchor": "mykrobe",
+          "title": "Mykrobe",
+          "body": "Free, no network or expertise required. Runs on a standard desktop or laptop.",
+          "buttons": [
+            {
+              "text": "Free Download",
+              "icon": "chevron-circle-down",
+              "to": "#download",
+              "size": "lg"
+            }
+          ],
+          "image": "hero-mykrobe.png"
+        },
+        {
+          "type": "editorial",
+          "body": "## How does Mykrobe work?\nMykrobe analyses the whole genome of a bacterial sample, all within a couple of minutes, and predicts which drugs the infection is resistant to. It has been heavily validated on thousands of samples,  is free, no expertise is needed to run or interpret it, and it works offline, on a standard desktop or laptop.\n## What sequencers does Mykrobe support?\nMykrobe supports both the traditional sequencing machine (Illumina), which tends to need a large hospital or lab and a lot of infrastructure, and also the new handheld sequencers (nanopore), which are very portable, and moving towards production readiness.\n## Where is Mykrobe used?"
+        },
+        {
+          "type": "video",
+          "image": "video-poster.png",
+          "to": "https://www.youtube.com/watch?v=ueWk180q900"
+        },
+        {
+          "type": "editorial",
+          "body": "We have been trialling Mykrobe both in England (where currently every TB sample gets illumina-sequenced and passed through Mykrobe) and with [collaborators using nanopore devices in Madagascar, Vietnam, and India](https://www.youtube.com/watch?v=ueWk180q900)."
+        },
+        {
+          "type": "hero",
+          "anchor": "mykrobe-atlas",
+          "title": "Mykrobe Atlas",
+          "body": "Coming soon - Global online service. Lorem ipsum dolor sit amet.",
+          "buttons": [
+            {
+              "text": "Notify me",
+              "icon": "bell",
+              "to": "#register",
+              "size": "lg"
+            }
+          ],
+          "image": "hero-mykrobe-atlas.png"
+        },
+        {
+          "type": "editorial",
+          "body": "# Lorem ipsum?\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus scelerisque, nunc at rhoncus euismod, quam turpis fringilla enim, ut condimentum orci orci nec erat. Suspendisse cursus venenatis massa a blandit. Phasellus lorem erat, elementum non eleifend quis, scelerisque vel nisl."
+        },
+        {
+          "type": "download",
+          "anchor": "download",
+          "image": "mykrobe-app-icon.png",
+          "title": "Download Mykrobe",
+          "body": "Mykrobe is available for Mac, Windows 64-bit Lorem ipsum dolor",
+          "promos": [
+            {
+              "title": "Mac",
+              "body": "Version and note about system requirements and file size lorem ipsum",
+              "button": {
+                "primaryUserAgent": "Mac",
+                "text": "Download",
+                "icon": "chevron-circle-down",
+                "to": "#download"
+              }
+            },
+            {
+              "title": "Windows",
+              "body": "Version and note about system requirements and file size lorem ipsum",
+              "button": {
+                "primaryUserAgent": "Windows",
+                "text": "Download",
+                "icon": "chevron-circle-down",
+                "to": "#"
+              }
+            },
+            {
+              "title": "Linux",
+              "body": "Version and note about system requirements and file size lorem ipsum",
+              "button": {
+                "primaryUserAgent": "Linux",
+                "text": "Download",
+                "icon": "chevron-circle-down",
+                "to": "#"
+              }
+            },
+            {
+              "title": "Open source",
+              "body": "Version and note about system requirements and file size lorem ipsum",
+              "button": {
+                "text": "GitHub",
+                "icon": "chevron-circle-right",
+                "to": "https://github.com/mykrobe-tools/mykrobe-atlas",
+                "target": "_blank",
+                "rel": "noopener noreferrer"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "/about": {
+      "title": "About",
+      "components": [
+        {
+          "type": "editorial",
+          "title": "About",
+          "body": "# About\n\nLorem ipsum"
+        }
+      ]
+    },
+    "/contact": {
+      "title": "Contact",
+      "components": [
+        {
+          "type": "editorial",
+          "title": "Contact",
+          "body": "# Contact\n\nLorem ipsum"
+        }
+      ]
+    },
+    "/privacy": {
+      "title": "Privacy Policy",
+      "components": [
+        {
+          "type": "editorial",
+          "title": "Privacy Policy",
+          "body": "# Privacy\n\nLorem ipsum"
+        }
+      ]
+    }
+  }
+}

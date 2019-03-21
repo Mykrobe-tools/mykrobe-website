@@ -1,0 +1,21 @@
+@import '~styles/use-bootstrap.global';
+@import '~styles/colors.global';
+@import '~styles/typography.scss';
+
+.container {
+  background-color: $color-grey-panel;
+  composes: global(py-5);
+}
+
+.content {
+  text-align: center;
+}
+
+.linkContainer {
+  &:before {
+    content: ' · ';
+  }
+  a {
+    color: $body-color;
+  }
+}

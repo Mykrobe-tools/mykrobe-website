@@ -1,32 +1,35 @@
-Mykrobe website
-===============
+# Mykrobe website
 
-# v1.0
+Note this is currently configured for deploy to Heroku; it creates a build on precommit and uses `npm` to negate installing private dependencies on deploy.
 
-2019-03-19 - Downloaded content and backed up database to `backups/2019-03-19 mykrobe_wordpress.sql`
+## Install
 
-# Deploy
+First, clone the repo then install dependencies.
 
-#### Push database ####
+```
+$ npm install
+```
 
-Pushes content changes to production
-~~~~
-grunt push_db --target=production
-~~~~
+## Setup environment variables
 
+Copy the template env file
 
-#### Push files ####
+```
+$ cp .env.example .env
+```
 
-Build theme then push WordPress + theme changes to production
-~~~~
-grunt build
-grunt push_files --target=production
-~~~~
+## Run development version
 
-#### Pull database ####
+This will launch a local dev server and instance of the app. This provides hot (live) reloading of modified files.
 
-Pulls database from production and imports into local machine
-~~~~
-grunt pull_db --target=production
-~~~~
+```
+$ npm run web-dev
+```
 
+Visit [http://localhost:3000/](http://localhost:3000/)
+
+## Deploy current branch to Heroku
+
+```
+$ git push heroku +HEAD:master
+```
