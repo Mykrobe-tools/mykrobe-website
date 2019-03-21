@@ -7,7 +7,6 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 const dirApp = path.join(__dirname, 'app');
 const dirNode = 'node_modules';
-const dirMakeAndShipJsCommon = path.join(dirNode, 'makeandship-js-common/src');
 const dirMykrobeAtlasApp = path.join(dirNode, 'mykrobe-atlas/app');
 
 const appHtmlTitle = 'Mykrobe';
@@ -17,7 +16,7 @@ module.exports = {
     bundle: ['whatwg-fetch', 'babel-polyfill', path.join(dirApp, 'index')],
   },
   resolve: {
-    modules: [dirApp, dirMykrobeAtlasApp, dirMakeAndShipJsCommon, dirNode],
+    modules: [dirApp, dirMykrobeAtlasApp, dirNode],
   },
   plugins: [
     new HtmlWebpackPlugin({
