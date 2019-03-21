@@ -14,7 +14,7 @@
     "lint:eslint": "eslint ./",
     "lint:prettier": "prettier -l './**/*.{js,json,css,scss}' || (echo '\nThese files are not formatted correctly. Did you forget to run \"npm run prettier\"?' && false)",
     "lint": "npm run lint:eslint && npm run lint:prettier",
-    "precommit": "npm run lint && npm run test && npm run check:es",
+    "precommit": "npm run lint && npm run test && npm run web-build",
     "prettier": "prettier --write './**/*.{js,json,css,scss}'",
     "start": "npm run web-build-server",
     "storybook": "cross-env NODE_ENV=development start-storybook --host 0.0.0.0 --port 6006",
