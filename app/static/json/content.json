@@ -138,7 +138,7 @@
               "button": {
                 "text": "GitHub",
                 "icon": "chevron-circle-right",
-                "to": "https://github.com/mykrobe-tools/mykrobe-atlas",
+                "to": "https://github.com/mykrobe-tools/",
                 "target": "_blank",
                 "rel": "noopener noreferrer"
               }

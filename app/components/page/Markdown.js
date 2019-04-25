@@ -9,7 +9,11 @@ const MarkdownLink = ({ href, children }: React.ElementProps<*>) => {
   if (href.startsWith('/') || href.startsWith('#')) {
     return <Link to={href}>{children}</Link>;
   }
-  return <a href={href}>{children}</a>;
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  );
 };
 
 const renderers = { link: MarkdownLink };
