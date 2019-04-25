@@ -30,7 +30,11 @@ class ComponentDownload extends React.Component<*> {
       <div className={styles.container}>
         <Container>
           <Row>
-            <Col md={{ size: 6, offset: 3 }} className={styles.content}>
+            <Col
+              md={{ offset: 1, size: 10 }}
+              lg={{ offset: 2, size: 8 }}
+              className={styles.content}
+            >
               <div className={styles.imageContainer}>
                 <Image image={image} />
               </div>

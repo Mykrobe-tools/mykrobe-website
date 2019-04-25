@@ -14,7 +14,11 @@ class ComponentEditorial extends React.Component<*> {
     return (
       <Container className={styles.container}>
         <Row>
-          <Col md={{ offset: 2, size: 8 }} className={styles.content}>
+          <Col
+            md={{ offset: 1, size: 10 }}
+            lg={{ offset: 2, size: 8 }}
+            className={styles.content}
+          >
             {title && <h1>{title}</h1>}
             <Markdown source={body} />
           </Col>

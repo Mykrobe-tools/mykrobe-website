@@ -12,7 +12,7 @@ class ComponentVideo extends React.Component<*> {
     return (
       <Container>
         <Row>
-          <Col md={{ offset: 2, size: 8 }}>
+          <Col md={{ offset: 1, size: 10 }} lg={{ offset: 2, size: 8 }}>
             <a
               className="d-block"
               href={to}
