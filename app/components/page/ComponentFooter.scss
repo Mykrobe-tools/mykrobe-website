@@ -3,8 +3,10 @@
 @import '~styles/typography.scss';
 
 .container {
+  position: relative;
   background-color: $color-grey-panel;
   composes: global(py-5);
+  box-shadow: 0 50vh 0 50vh $color-grey-panel;
 }
 
 .content {
@@ -18,4 +20,19 @@
   a {
     color: $body-color;
   }
+}
+
+.logos {
+  composes: global(pt-5);
+  composes: global(flex-column);
+  composes: global(flex-sm-row);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoContainer {
+  composes: global(mb-5);
+  composes: global(mx-sm-4);
+  composes: global(mb-sm-0);
 }

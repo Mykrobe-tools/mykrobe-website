@@ -2,18 +2,12 @@
 
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { HashLink as Link } from 'react-router-hash-link';
+
+import Link from './Link';
 import ReactMarkdown from 'react-markdown';
 
-const MarkdownLink = ({ href, children }: React.ElementProps<*>) => {
-  if (href.startsWith('/') || href.startsWith('#')) {
-    return <Link to={href}>{children}</Link>;
-  }
-  return (
-    <a href={href} target="_blank" rel="noopener noreferrer">
-      {children}
-    </a>
-  );
+const MarkdownLink = ({ href, ...rest }: React.ElementProps<*>) => {
+  return <Link to={href} {...rest} />;
 };
 
 const renderers = { link: MarkdownLink };

@@ -3,10 +3,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Image.scss';
+import { IMAGE_DIR } from '../../constants';
 
-const IMAGE_DIR =
-  process.env.NODE_ENV === 'development' ? 'app/static/img' : 'static/img';
+import styles from './Image.scss';
 
 class Image extends React.Component<*> {
   render() {

@@ -3,6 +3,7 @@
     "before": [],
     "after": [
       {
+        "enabled": false,
         "type": "register",
         "anchor": "register",
         "title": "Stay up to date",
@@ -11,7 +12,21 @@
       {
         "type": "footer",
         "text": "Copyright in here",
-        "links": ["/about", "/contact", "/privacy"]
+        "links": ["/about", "/contact", "/privacy"],
+        "logos": [
+          {
+            "image": "logo-ebi.svg",
+            "to": "https://www.ebi.ac.uk/"
+          },
+          {
+            "image": "logo-the-royal-society.svg",
+            "to": "https://royalsociety.org/"
+          },
+          {
+            "image": "logo-the-wellcome-trust.svg",
+            "to": "https://wellcome.ac.uk/"
+          }
+        ]
       }
     ]
   },
@@ -23,7 +38,7 @@
         {
           "type": "main-hero",
           "title": "Mykrobe",
-          "body": "Antimicrobial resistance and outbreak  \ninformation within minutes",
+          "body": "Antimicrobial resistance and outbreak information within minutes",
           "image": "main-hero-mykrobe.png",
           "buttons": [
             {
@@ -93,6 +108,7 @@
           "body": "Coming soon - Global online service",
           "buttons": [
             {
+              "enabled": false,
               "text": "Notify me",
               "icon": "bell",
               "to": "#register",
@@ -138,9 +154,7 @@
               "button": {
                 "text": "GitHub",
                 "icon": "chevron-circle-right",
-                "to": "https://github.com/mykrobe-tools/",
-                "target": "_blank",
-                "rel": "noopener noreferrer"
+                "to": "https://github.com/mykrobe-tools/"
               }
             }
           ]

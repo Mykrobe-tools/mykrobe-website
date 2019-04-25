@@ -30,17 +30,19 @@ class Page extends React.Component<*> {
     return (
       <React.Fragment>
         <DocumentTitle title={title} />
-        {components.map(({ type, anchor, ...rest }, index) => {
-          const Component = TypeToComponent[type];
-          if (Component) {
-            return (
-              <React.Fragment key={`${index}`}>
-                {anchor && <div id={anchor} />}
-                <Component {...rest} />
-              </React.Fragment>
-            );
-          } else {
-            return <pre>Unhandled type {type}</pre>;
+        {components.map(({ type, anchor, enabled, ...rest }, index) => {
+          if (enabled !== false) {
+            const Component = TypeToComponent[type];
+            if (Component) {
+              return (
+                <React.Fragment key={`${index}`}>
+                  {anchor && <div id={anchor} />}
+                  <Component {...rest} />
+                </React.Fragment>
+              );
+            } else {
+              return <pre>Unhandled type {type}</pre>;
+            }
           }
         })}
       </React.Fragment>

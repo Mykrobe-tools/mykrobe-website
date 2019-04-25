@@ -2,11 +2,11 @@
 
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { HashLink as Link } from 'react-router-hash-link';
 import { Container, Row, Col } from 'reactstrap';
 
 import Markdown from './Markdown';
 import Image from './Image';
+import Link from './Link';
 
 import styles from './ComponentPromos.scss';
 

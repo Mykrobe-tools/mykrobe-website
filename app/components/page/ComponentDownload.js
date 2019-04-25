@@ -8,15 +8,16 @@ import { IconButton } from 'makeandship-js-common/src/components/ui/Buttons';
 
 import Markdown from './Markdown';
 import Image from './Image';
+import Link from './Link';
 
 import styles from './ComponentDownload.scss';
 
 const DownloadButton = (props: React.ElementProps<*>) => {
-  const { text, primaryUserAgent, to, ...rest } = props;
+  const { text, primaryUserAgent, ...rest } = props;
   const primary =
     primaryUserAgent && navigator.userAgent.includes(primaryUserAgent);
   return (
-    <IconButton outline={!primary} tag={'a'} href={to} {...rest}>
+    <IconButton outline={!primary} tag={Link} {...rest}>
       {text}
     </IconButton>
   );

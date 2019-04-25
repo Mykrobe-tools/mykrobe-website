@@ -3,11 +3,11 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'reactstrap';
-import { Link } from 'react-router-dom';
 
 import Buttons from './Buttons';
 import Markdown from './Markdown';
 import Image from './Image';
+import Link from './Link';
 
 import styles from './ComponentMainHero.scss';
 

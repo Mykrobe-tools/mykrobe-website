@@ -2,16 +2,18 @@
 
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { HashLink as Link } from 'react-router-hash-link';
 import { Container } from 'reactstrap';
 
 import { getPageWithPath } from '../../modules/content';
+
+import { IMAGE_DIR } from '../../constants';
+import Link from './Link';
 
 import styles from './ComponentFooter.scss';
 
 class ComponentFooter extends React.Component<*> {
   render() {
-    const { text, links } = this.props;
+    const { text, logos, links } = this.props;
     return (
       <div className={styles.container}>
         <Container>
@@ -26,6 +28,18 @@ class ComponentFooter extends React.Component<*> {
               );
             })}
           </div>
+          <div className={styles.logos}>
+            {logos.map((logo, index) => {
+              const { image, to, ...rest } = logo;
+              return (
+                <span key={`${index}`} className={styles.logoContainer}>
+                  <Link to={to} {...rest}>
+                    <img className={styles.img} src={`${IMAGE_DIR}/${image}`} />
+                  </Link>
+                </span>
+              );
+            })}
+          </div>
         </Container>
       </div>
     );
@@ -35,6 +49,7 @@ class ComponentFooter extends React.Component<*> {
 ComponentFooter.propTypes = {
   text: PropTypes.string,
   links: PropTypes.array,
+  logos: PropTypes.array,
 };
 
 export default ComponentFooter;
