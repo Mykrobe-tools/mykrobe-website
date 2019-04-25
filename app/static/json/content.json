@@ -33,7 +33,6 @@
   "pages": {
     "/": {
       "exact": true,
-      "title": "Mykrobe",
       "components": [
         {
           "type": "main-hero",

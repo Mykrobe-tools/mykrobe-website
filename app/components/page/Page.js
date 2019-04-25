@@ -27,9 +27,17 @@ const TypeToComponent = {
 class Page extends React.Component<*> {
   render() {
     const { components, title } = this.props;
+    const titleParts = [
+      'Mykrobe',
+      'Antimicrobial resistance and outbreak information within minutes',
+    ];
+    if (title) {
+      titleParts.unshift(title);
+    }
+    const documentTitle = titleParts.join(' – ');
     return (
       <React.Fragment>
-        <DocumentTitle title={title} />
+        <DocumentTitle title={documentTitle} />
         {components.map(({ type, anchor, enabled, ...rest }, index) => {
           if (enabled !== false) {
             const Component = TypeToComponent[type];
