@@ -52,7 +52,7 @@
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.4.3",
-    "makeandship-js-common": "git+ssh://git@bitbucket.org:makeandship/makeandship-js-common#v0.0.66",
+    "makeandship-js-common": "git+ssh://git@bitbucket.org:makeandship/makeandship-js-common#v0.0.99",
     "mini-css-extract-plugin": "^0.4.0",
     "mykrobe-atlas": "git+ssh://git@github.com:mykrobe-tools/mykrobe-atlas#develop",
     "node-sass": "^4.7.2",
