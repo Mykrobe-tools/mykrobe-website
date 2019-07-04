@@ -35,6 +35,8 @@ node_modules.win
 .vscode
 jsconfig.json
 
+# Build
+build
 
 # Jest
 coverage/

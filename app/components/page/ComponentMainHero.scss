@@ -51,6 +51,8 @@
 }
 
 .imageContainer {
+  composes: global(px-4);
+  composes: global(px-sm-0);
   display: block;
   width: 100%;
 }
