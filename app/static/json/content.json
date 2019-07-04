@@ -99,7 +99,7 @@
         },
         {
           "type": "editorial",
-          "body": "We have been trialling Mykrobe both in England (where currently every TB sample gets illumina-sequenced and passed through Mykrobe) and with [collaborators using nanopore devices in Madagascar, Vietnam, and India](https://www.youtube.com/watch?v=ueWk180q900).\n## Further details\nThere are publications detailing Mykrobe capabilities\n\n * here: https://www.nature.com/articles/ncomms10063\n\n* and here: <put latest Mykrobe paper here when public>"
+          "body": "We have been trialling Mykrobe both in England (where currently every TB sample gets illumina-sequenced and passed through Mykrobe) and with [collaborators using nanopore devices in Madagascar, Vietnam, and India](https://www.youtube.com/watch?v=ueWk180q900).\n## Further details\nThere are publications detailing Mykrobe capabilities here: https://www.nature.com/articles/ncomms10063"
         },
         {
           "type": "hero",
@@ -129,6 +129,7 @@
           "body": "Mykrobe is open source and available to download for Mac and Windows 64-bit",
           "promos": [
             {
+              "enabled": false,
               "title": "Mac",
               "body": "Version and note about system requirements and file size lorem ipsum",
               "button": {
@@ -139,6 +140,7 @@
               }
             },
             {
+              "enabled": false,
               "title": "Windows",
               "body": "Version and note about system requirements and file size lorem ipsum",
               "button": {
@@ -150,11 +152,11 @@
             },
             {
               "title": "Open source",
-              "body": "Version and note about system requirements and file size lorem ipsum",
+              "body": "Mykrobe is open source",
               "button": {
                 "text": "GitHub",
                 "icon": "chevron-circle-right",
-                "to": "https://github.com/mykrobe-tools/"
+                "to": "https://github.com/mykrobe-tools/mykrobe"
               }
             }
           ]

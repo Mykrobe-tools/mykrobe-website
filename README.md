@@ -27,9 +27,3 @@ $ npm run web-dev
 ```
 
 Visit [http://localhost:3000/](http://localhost:3000/)
-
-## Deploy current branch to Heroku
-
-```
-$ git push heroku +HEAD:master
-```

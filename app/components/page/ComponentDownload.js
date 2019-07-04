@@ -39,13 +39,15 @@ class ComponentDownload extends React.Component<*> {
             </Col>
           </Row>
           <Row>
-            {promos.map(({ title, body, button }, index) => (
-              <Col key={`${index}`} className={styles.promoCol}>
-                <div className={styles.promoTitle}>{title}</div>
-                <Markdown source={body} />
-                <DownloadButton {...button} />
-              </Col>
-            ))}
+            {promos
+              .filter(({ enabled }) => enabled !== false)
+              .map(({ title, body, button }, index) => (
+                <Col key={`${index}`} className={styles.promoCol}>
+                  <div className={styles.promoTitle}>{title}</div>
+                  <Markdown source={body} />
+                  <DownloadButton {...button} />
+                </Col>
+              ))}
           </Row>
         </Container>
       </div>

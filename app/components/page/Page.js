@@ -30,8 +30,9 @@ class Page extends React.Component<*> {
     return (
       <React.Fragment>
         <DocumentTitle title={title} />
-        {components.map(({ type, anchor, enabled, ...rest }, index) => {
-          if (enabled !== false) {
+        {components
+          .filter(({ enabled }) => enabled !== false)
+          .map(({ type, anchor, enabled, ...rest }, index) => {
             const Component = TypeToComponent[type];
             if (Component) {
               return (
@@ -43,8 +44,7 @@ class Page extends React.Component<*> {
             } else {
               return <pre>Unhandled type {type}</pre>;
             }
-          }
-        })}
+          })}
       </React.Fragment>
     );
   }

@@ -16,24 +16,26 @@ class ComponentPromos extends React.Component<*> {
     return (
       <Container className={styles.container}>
         <Row>
-          {promos.map(({ to, title, titleIcon, body, image }, index) => (
-            <Col key={`${index}`} className={styles.promoCol}>
-              <Link smooth to={to} className={'d-block'}>
-                <Image image={image} />
-                <div className={styles.promoTextContainer}>
-                  <div className={styles.promoTitle}>
-                    {titleIcon && (
-                      <span>
-                        <i className={`fa fa-${titleIcon}`} />{' '}
-                      </span>
-                    )}
-                    {title}
+          {promos
+            .filter(({ enabled }) => enabled !== false)
+            .map(({ to, title, titleIcon, body, image }, index) => (
+              <Col key={`${index}`} className={styles.promoCol}>
+                <Link smooth to={to} className={'d-block'}>
+                  <Image image={image} />
+                  <div className={styles.promoTextContainer}>
+                    <div className={styles.promoTitle}>
+                      {titleIcon && (
+                        <span>
+                          <i className={`fa fa-${titleIcon}`} />{' '}
+                        </span>
+                      )}
+                      {title}
+                    </div>
+                    <Markdown source={body} />
                   </div>
-                  <Markdown source={body} />
-                </div>
-              </Link>
-            </Col>
-          ))}
+                </Link>
+              </Col>
+            ))}
         </Row>
       </Container>
     );

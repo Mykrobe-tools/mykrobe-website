@@ -12,16 +12,15 @@ class Buttons extends React.Component<*> {
     const { buttons } = this.props;
     return (
       <React.Fragment>
-        {buttons.map(({ text, enabled, ...rest }, index) => {
-          if (enabled === false) {
-            return null;
-          }
-          return (
-            <IconButton key={`${index}`} tag={Link} smooth {...rest}>
-              {text}
-            </IconButton>
-          );
-        })}
+        {buttons
+          .filter(({ enabled }) => enabled !== false)
+          .map(({ text, enabled, ...rest }, index) => {
+            return (
+              <IconButton key={`${index}`} tag={Link} smooth {...rest}>
+                {text}
+              </IconButton>
+            );
+          })}
       </React.Fragment>
     );
   }

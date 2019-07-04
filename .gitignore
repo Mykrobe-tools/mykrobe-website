@@ -41,8 +41,3 @@ coverage/
 
 # Environment
 .env
-
-# Heroku - currently we include the build, exclude lock files so only prod dependences install
-# build/
-yarn.lock
-package-lock.json
