@@ -32,6 +32,7 @@
   },
   "pages": {
     "/": {
+      "title": "Mykrobe - Antimicrobial resistance and outbreak information within minutes",
       "exact": true,
       "components": [
         {

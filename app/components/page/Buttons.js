@@ -14,7 +14,9 @@ class Buttons extends React.Component<*> {
       <React.Fragment>
         {buttons
           .filter(({ enabled }) => enabled !== false)
+          /* eslint-disable no-unused-vars */
           .map(({ text, enabled, ...rest }, index) => {
+            /* eslint-enable no-unused-vars */
             return (
               <IconButton key={`${index}`} tag={Link} smooth {...rest}>
                 {text}

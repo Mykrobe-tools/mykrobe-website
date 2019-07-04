@@ -32,7 +32,9 @@ class Page extends React.Component<*> {
         <DocumentTitle title={title} />
         {components
           .filter(({ enabled }) => enabled !== false)
+          /* eslint-disable no-unused-vars */
           .map(({ type, anchor, enabled, ...rest }, index) => {
+            /* eslint-enable no-unused-vars */
             const Component = TypeToComponent[type];
             if (Component) {
               return (

@@ -13,10 +13,10 @@ import Link from './Link';
 import styles from './ComponentDownload.scss';
 
 const DownloadButton = (props: React.ElementProps<*>) => {
-  const { text, primaryUserAgent, ...rest } = props;
-  const primary =
-    props.primary ||
-    (primaryUserAgent && navigator.userAgent.includes(primaryUserAgent));
+  let { text, primaryUserAgent, primary, ...rest } = props;
+  if (primaryUserAgent && navigator.userAgent.includes(primaryUserAgent)) {
+    primary = true;
+  }
   return (
     <IconButton outline={!primary} tag={Link} {...rest}>
       {text}
