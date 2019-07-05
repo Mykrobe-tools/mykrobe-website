@@ -1,0 +1,31 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:react/recommended",
+    "plugin:flowtype/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "plugins": ["import", "react", "flowtype"],
+  "rules": {
+    "react/display-name": ["off"],
+    "no-console": ["off"],
+    "no-constant-condition": ["off"]
+  },
+  "settings": {
+    "import/resolver": "webpack",
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}

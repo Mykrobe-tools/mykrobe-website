@@ -1,32 +1,53 @@
-Mykrobe website
-===============
+# Mykrobe website
 
-# v1.0
+Note this is currently configured for deploy to Heroku; it creates a build on precommit and uses `npm` to negate installing private dependencies on deploy.
 
-2019-03-19 - Downloaded content and backed up database to `backups/2019-03-19 mykrobe_wordpress.sql`
+## Install
 
-# Deploy
+First, clone the repo then install dependencies.
 
-#### Push database ####
+```
+$ yarn
+```
 
-Pushes content changes to production
-~~~~
-grunt push_db --target=production
-~~~~
+## Setup environment variables
 
+Copy the template env file
 
-#### Push files ####
+```
+$ cp .env.example .env
+```
 
-Build theme then push WordPress + theme changes to production
-~~~~
-grunt build
-grunt push_files --target=production
-~~~~
+## Run development version
 
-#### Pull database ####
+This will launch a local dev server and instance of the app. This provides hot (live) reloading of modified files.
 
-Pulls database from production and imports into local machine
-~~~~
-grunt pull_db --target=production
-~~~~
+```
+$ yarn web-dev
+```
 
+Visit [localhost:3000](http://localhost:3000/)
+
+## Deploy
+
+```
+$ yarn web-build
+```
+
+This will create the build inside the `build` folder.
+
+Web server is hosted on Dreamhost, simply transfer via sftp. This is a php/Apache server with `.htaccess` set to serve a single static page.
+
+* Server `rockdale.dreamhost.com`
+* Username `makeandship`
+* Key `mykrobe-website-sftp` from the usual location
+
+Example usage:
+
+```
+$ ssh makeandship@rockdale.dreamhost.com
+```
+
+The website is deployed in the `mykrobe.com` folder
+
+Visit [www.mykrobe.com](https://www.mykrobe.com/)

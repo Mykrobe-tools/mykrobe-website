@@ -1,0 +1,81 @@
+@import '~styles/use-bootstrap.global';
+@import '~styles/colors.global';
+@import '~styles/typography.scss';
+
+.container {
+  composes: global(py-5);
+  composes: global(py-md-0);
+  background-color: $color-panel-light;
+  composes: global(border-bottom);
+}
+
+.title {
+  @include sr-only;
+}
+
+.logoContainer {
+  display: block;
+  composes: global(mb-3);
+  composes: global(mb-md-4h);
+  width: 100% * 220 / 380;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  padding-bottom: 100% * 950 / 2779;
+  margin-bottom: 0;
+  background: url(mykrobe-atlas/app/static/desktop-logo.svg);
+  background: url(mykrobe-atlas/app/static/desktop-logo.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.bodyContainer {
+  composes: global(mb-3);
+  composes: global(mb-md-4h);
+}
+
+.content {
+  composes: global(mb-5);
+  composes: global(mb-md-0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  p {
+    @extend .bodyLargeCompact;
+    font-size: 28/16 * 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.imageContainer {
+  composes: global(px-4);
+  composes: global(px-sm-0);
+  display: block;
+  width: 100%;
+}
+
+@include media-breakpoint-up(md) {
+  .container {
+    overflow: hidden;
+  }
+  .row {
+    align-items: center;
+    position: relative;
+    height: 560/16 * 1rem;
+  }
+  .imageContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100% * 400 / 940;
+    width: auto;
+    display: flex;
+    align-items: center;
+    img {
+      max-width: none;
+    }
+  }
+}

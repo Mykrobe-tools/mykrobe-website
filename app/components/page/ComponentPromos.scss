@@ -1,0 +1,34 @@
+@import '~styles/use-bootstrap.global';
+@import '~styles/colors.global';
+@import '~styles/typography';
+
+.container {
+  composes: global(my-5);
+}
+
+.promoCol {
+  text-align: center;
+  + .promoCol {
+    border-left: 1px solid $color-rule;
+  }
+}
+
+.promoTextContainer {
+  p {
+    color: $body-color;
+    margin-bottom: 0;
+  }
+}
+
+.promoTitle {
+  composes: headingSecondary from 'styles/typography.scss';
+  composes: global(mb-2);
+}
+
+@include media-breakpoint-up(lg) {
+  .promoTextContainer {
+    p {
+      margin: 0 80/380 * 100%;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import '~mykrobe-atlas/app/styles/app.global.scss';
+
+// responsive rem sizes
+
+html {
+  font-size: 16/24 * 100%;
+}
+
+body {
+  line-height: 1.2;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 21/24 * 100%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 100%;
+  }
+}
