@@ -7,7 +7,7 @@ Note this is currently configured for deploy to Heroku; it creates a build on pr
 First, clone the repo then install dependencies.
 
 ```
-$ npm install
+$ yarn
 ```
 
 ## Setup environment variables
@@ -23,13 +23,31 @@ $ cp .env.example .env
 This will launch a local dev server and instance of the app. This provides hot (live) reloading of modified files.
 
 ```
-$ npm run web-dev
+$ yarn web-dev
 ```
 
-Visit [http://localhost:3000/](http://localhost:3000/)
+Visit [localhost:3000](http://localhost:3000/)
 
-## Deploy current branch to Heroku
+## Deploy
 
 ```
-$ git push heroku +HEAD:master
+$ yarn web-build
 ```
+
+This will create the build inside the `build` folder.
+
+Web server is hosted on Dreamhost, simply transfer via sftp. This is a php/Apache server with `.htaccess` set to serve a single static page.
+
+* Server `rockdale.dreamhost.com`
+* Username `makeandship`
+* Key `mykrobe-website-sftp` from the usual location
+
+Example usage:
+
+```
+$ ssh makeandship@rockdale.dreamhost.com
+```
+
+The website is deployed in the `mykrobe.com` folder
+
+Visit [www.mykrobe.com](https://www.mykrobe.com/)

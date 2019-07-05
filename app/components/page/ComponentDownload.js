@@ -13,9 +13,10 @@ import Link from './Link';
 import styles from './ComponentDownload.scss';
 
 const DownloadButton = (props: React.ElementProps<*>) => {
-  const { text, primaryUserAgent, ...rest } = props;
-  const primary =
-    primaryUserAgent && navigator.userAgent.includes(primaryUserAgent);
+  let { text, primaryUserAgent, primary, ...rest } = props;
+  if (primaryUserAgent && navigator.userAgent.includes(primaryUserAgent)) {
+    primary = true;
+  }
   return (
     <IconButton outline={!primary} tag={Link} {...rest}>
       {text}
@@ -30,7 +31,11 @@ class ComponentDownload extends React.Component<*> {
       <div className={styles.container}>
         <Container>
           <Row>
-            <Col md={{ size: 6, offset: 3 }} className={styles.content}>
+            <Col
+              md={{ offset: 1, size: 10 }}
+              lg={{ offset: 2, size: 8 }}
+              className={styles.content}
+            >
               <div className={styles.imageContainer}>
                 <Image image={image} />
               </div>
@@ -39,13 +44,15 @@ class ComponentDownload extends React.Component<*> {
             </Col>
           </Row>
           <Row>
-            {promos.map(({ title, body, button }, index) => (
-              <Col key={`${index}`} className={styles.promoCol}>
-                <div className={styles.promoTitle}>{title}</div>
-                <Markdown source={body} />
-                <DownloadButton {...button} />
-              </Col>
-            ))}
+            {promos
+              .filter(({ enabled }) => enabled !== false)
+              .map(({ title, body, button }, index) => (
+                <Col key={`${index}`} className={styles.promoCol}>
+                  <div className={styles.promoTitle}>{title}</div>
+                  <Markdown source={body} />
+                  <DownloadButton {...button} />
+                </Col>
+              ))}
           </Row>
         </Container>
       </div>

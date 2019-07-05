@@ -25,6 +25,7 @@ module.exports = {
       minify: {
         collapseWhitespace: true,
         preserveLineBreaks: false,
+        removeComments: true,
       },
     }),
     // Don't bundle moment locales - instead, add a require to each specific locale e.g. require('moment/locale/en');

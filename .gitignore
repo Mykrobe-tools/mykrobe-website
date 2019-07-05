@@ -35,14 +35,11 @@ node_modules.win
 .vscode
 jsconfig.json
 
+# Build
+build
 
 # Jest
 coverage/
 
 # Environment
 .env
-
-# Heroku - currently we include the build, exclude lock files so only prod dependences install
-# build/
-yarn.lock
-package-lock.json
