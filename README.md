@@ -26,15 +26,21 @@ This will launch a local dev server and instance of the app. This provides hot (
 $ yarn web-dev
 ```
 
-Visit [http://localhost:3000/](http://localhost:3000/)
+Visit [localhost:3000](http://localhost:3000/)
 
 ## Deploy
 
+```
+$ yarn web-build
+```
+
+This will create the build inside the `build` folder.
+
 Web server is hosted on Dreamhost, simply transfer via sftp. This is a php/Apache server with `.htaccess` set to serve a single static page.
 
-Server `rockdale.dreamhost.com`
-Username `makeandship`
-Key `mykrobe-website-sftp` from the usual location
+* Server `rockdale.dreamhost.com`
+* Username `makeandship`
+* Key `mykrobe-website-sftp` from the usual location
 
 Example usage:
 
@@ -43,3 +49,5 @@ $ ssh makeandship@rockdale.dreamhost.com
 ```
 
 The website is deployed in the `mykrobe.com` folder
+
+Visit [www.mykrobe.com](https://www.mykrobe.com/)
