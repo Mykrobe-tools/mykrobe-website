@@ -128,25 +128,25 @@
           "body": "Mykrobe is open source and available to download for Mac and Windows 64-bit",
           "promos": [
             {
-              "enabled": false,
+              "enabled": true,
               "title": "Mac",
-              "body": "Version and note about system requirements and file size lorem ipsum",
+              "body": "64-bit desktop app v0.6.1",
               "button": {
                 "primaryUserAgent": "Mac",
                 "text": "Download",
                 "icon": "chevron-circle-down",
-                "to": "#download"
+                "to": "https://github.com/Mykrobe-tools/mykrobe/releases/download/v0.6.1/Mykrobe-0.6.1.dmg"
               }
             },
             {
-              "enabled": false,
+              "enabled": true,
               "title": "Windows",
-              "body": "Version and note about system requirements and file size lorem ipsum",
+              "body": "64-bit desktop app v0.6.1",
               "button": {
                 "primaryUserAgent": "Windows",
                 "text": "Download",
                 "icon": "chevron-circle-down",
-                "to": "#"
+                "to": "https://github.com/Mykrobe-tools/mykrobe/releases/download/v0.6.1/mykrobe-setup-0.6.1.exe"
               }
             },
             {

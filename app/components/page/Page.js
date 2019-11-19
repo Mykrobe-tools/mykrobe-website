@@ -28,26 +28,27 @@ class Page extends React.Component<*> {
   render() {
     const { components, title } = this.props;
     return (
-      <React.Fragment>
-        <DocumentTitle title={title} />
-        {components
-          .filter(({ enabled }) => enabled !== false)
-          /* eslint-disable no-unused-vars */
-          .map(({ type, anchor, enabled, ...rest }, index) => {
-            /* eslint-enable no-unused-vars */
-            const Component = TypeToComponent[type];
-            if (Component) {
-              return (
-                <React.Fragment key={`${index}`}>
-                  {anchor && <div id={anchor} />}
-                  <Component {...rest} />
-                </React.Fragment>
-              );
-            } else {
-              return <pre>Unhandled type {type}</pre>;
-            }
-          })}
-      </React.Fragment>
+      <DocumentTitle title={title}>
+        <React.Fragment>
+          {components
+            .filter(({ enabled }) => enabled !== false)
+            /* eslint-disable no-unused-vars */
+            .map(({ type, anchor, enabled, ...rest }, index) => {
+              /* eslint-enable no-unused-vars */
+              const Component = TypeToComponent[type];
+              if (Component) {
+                return (
+                  <React.Fragment key={`${index}`}>
+                    {anchor && <div id={anchor} />}
+                    <Component {...rest} />
+                  </React.Fragment>
+                );
+              } else {
+                return <pre>Unhandled type {type}</pre>;
+              }
+            })}
+        </React.Fragment>
+      </DocumentTitle>
     );
   }
 }
