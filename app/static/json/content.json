@@ -130,23 +130,23 @@
             {
               "enabled": true,
               "title": "Mac",
-              "body": "64-bit desktop app v0.6.1",
+              "body": "64-bit desktop app v0.8.1",
               "button": {
                 "primaryUserAgent": "Mac",
                 "text": "Download",
                 "icon": "chevron-circle-down",
-                "to": "https://github.com/Mykrobe-tools/mykrobe/releases/download/v0.6.1/Mykrobe-0.6.1.dmg"
+                "to": "https://github.com/Mykrobe-tools/mykrobe/releases/download/v0.8.1/Mykrobe-0.8.1.dmg"
               }
             },
             {
               "enabled": true,
               "title": "Windows",
-              "body": "64-bit desktop app v0.6.1",
+              "body": "64-bit desktop app v0.8.1",
               "button": {
                 "primaryUserAgent": "Windows",
                 "text": "Download",
                 "icon": "chevron-circle-down",
-                "to": "https://github.com/Mykrobe-tools/mykrobe/releases/download/v0.6.1/Mykrobe-Setup-0.6.1.exe"
+                "to": "https://github.com/Mykrobe-tools/mykrobe/releases/download/v0.8.1/Mykrobe-Setup-0.8.1.exe"
               }
             },
             {
