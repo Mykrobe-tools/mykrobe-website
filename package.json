@@ -1,7 +1,7 @@
 {
   "name": "mykrobe-website",
   "productName": "Mykrobe Website",
-  "version": "0.6.1",
+  "version": "0.8.1",
   "description": "Mykrobe Website",
   "private": true,
   "main": "main.js",
