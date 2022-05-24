@@ -1,11 +1,11 @@
 /* @flow */
 
-import * as React from "react";
-import PropTypes from "prop-types";
+import * as React from 'react';
+import PropTypes from 'prop-types';
 
-import { IMAGE_DIR } from "../../constants";
+import { IMAGE_DIR } from '../../constants';
 
-import styles from "./Image.module.scss";
+import styles from './Image.module.scss';
 
 class Image extends React.Component<*> {
   render() {

@@ -1,10 +1,10 @@
 /* @flow */
 
-import * as React from "react";
-import { Button } from "reactstrap";
-import { Link } from "react-router-dom";
+import * as React from 'react';
+import { Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
-import styles from "./Buttons.module.scss";
+import styles from './Buttons.module.scss';
 
 const iconButtonClassName = ({ marginLeft, marginRight }) => {
   if (!marginLeft && !marginRight) {
@@ -46,10 +46,10 @@ const IconButton = ({
 };
 
 IconButton.defaultProps = {
-  icon: "chevron-circle-right",
+  icon: 'chevron-circle-right',
   marginLeft: false,
   marginRight: false,
-  children: "Submit",
+  children: 'Submit',
 };
 
 const SubmitButton = (props: React.ElementProps<*>): React.Element<*> => (

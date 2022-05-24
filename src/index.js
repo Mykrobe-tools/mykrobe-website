@@ -1,43 +1,41 @@
 /* @flow */
 
-import React from "react";
-import { render } from "react-dom";
-import { Provider } from "react-redux";
-import { ConnectedRouter } from "react-router-redux";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'react-router-redux';
+import reportWebVitals from './reportWebVitals';
 
-import "./styles/app.global.scss";
+import './styles/app.global.scss';
 
-import store, { history } from "./store";
+import store, { history } from './store';
 
-require("./analytics"); // eslint-disable-line import/default
-
-let element = document.getElementById("root");
+let element = document.getElementById('root');
 
 if (!element) {
   throw new Error(`Fatal - div with id 'root' not found`);
 }
 
-console.log("process.env.NODE_ENV", JSON.stringify(process.env.NODE_ENV));
-console.log("process.env.API_URL", JSON.stringify(process.env.API_URL));
+console.log('process.env.NODE_ENV', JSON.stringify(process.env.NODE_ENV));
+console.log('process.env.API_URL', JSON.stringify(process.env.API_URL));
 console.log(
-  "process.env.API_SWAGGER_URL",
+  'process.env.API_SWAGGER_URL',
   JSON.stringify(process.env.API_SWAGGER_URL)
 );
 
-const renderRoot = () => {
-  const routes = require("./routes").default;
-  render(
+const routes = require('./routes').default;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
     <Provider store={store}>
       <ConnectedRouter history={history}>{routes}</ConnectedRouter>
-    </Provider>,
-    element
-  );
-};
+    </Provider>
+    ,
+  </React.StrictMode>
+);
 
-renderRoot();
-
-if (module.hot) {
-  module.hot.accept("./routes", () => {
-    renderRoot();
-  });
-}
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

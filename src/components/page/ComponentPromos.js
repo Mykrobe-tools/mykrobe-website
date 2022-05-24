@@ -1,14 +1,14 @@
 /* @flow */
 
-import * as React from "react";
-import PropTypes from "prop-types";
-import { Container, Row, Col } from "reactstrap";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { Container, Row, Col } from 'reactstrap';
 
-import Markdown from "./Markdown";
-import Image from "./Image";
-import Link from "./Link";
+import Markdown from './Markdown';
+import Image from './Image';
+import Link from './Link';
 
-import styles from "./ComponentPromos.module.scss";
+import styles from './ComponentPromos.module.scss';
 
 class ComponentPromos extends React.Component<*> {
   render() {
@@ -20,13 +20,13 @@ class ComponentPromos extends React.Component<*> {
             .filter(({ enabled }) => enabled !== false)
             .map(({ to, title, titleIcon, body, image }, index) => (
               <Col key={`${index}`} className={styles.promoCol}>
-                <Link smooth to={to} className={"d-block"}>
+                <Link smooth to={to} className={'d-block'}>
                   <Image image={image} />
                   <div className={styles.promoTextContainer}>
                     <div className={styles.promoTitle}>
                       {titleIcon && (
                         <span>
-                          <i className={`fa fa-${titleIcon}`} />{" "}
+                          <i className={`fa fa-${titleIcon}`} />{' '}
                         </span>
                       )}
                       {title}

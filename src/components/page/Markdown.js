@@ -1,12 +1,12 @@
 /* @flow */
 
-import * as React from "react";
-import PropTypes from "prop-types";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import ReactMarkdown from 'react-markdown';
 
-import Link from "./Link";
-import ReactMarkdown from "react-markdown";
+import Link from './Link';
 
-import styles from "./Markdown.module.scss";
+import styles from './Markdown.module.scss';
 
 const MarkdownLink = ({ href, ...rest }: React.ElementProps<*>) => {
   return <Link to={href} {...rest} />;

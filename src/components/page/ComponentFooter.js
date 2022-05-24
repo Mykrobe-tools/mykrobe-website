@@ -1,15 +1,15 @@
 /* @flow */
 
-import * as React from "react";
-import PropTypes from "prop-types";
-import { Container } from "reactstrap";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { Container } from 'reactstrap';
 
-import { getPageWithPath } from "../../modules/content";
+import { getPageWithPath } from '../../modules/content';
 
-import { IMAGE_DIR } from "../../constants";
-import Link from "./Link";
+import { IMAGE_DIR } from '../../constants';
+import Link from './Link';
 
-import styles from "./ComponentFooter.module.scss";
+import styles from './ComponentFooter.module.scss';
 
 class ComponentFooter extends React.Component<*> {
   render() {

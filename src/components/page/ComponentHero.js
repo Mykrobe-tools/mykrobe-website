@@ -1,14 +1,14 @@
 /* @flow */
 
-import * as React from "react";
-import PropTypes from "prop-types";
-import { Container, Row, Col } from "reactstrap";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { Container, Row, Col } from 'reactstrap';
 
-import Buttons from "./Buttons";
-import Markdown from "./Markdown";
-import Image from "./Image";
+import Buttons from './Buttons';
+import Markdown from './Markdown';
+import Image from './Image';
 
-import styles from "./ComponentHero.module.scss";
+import styles from './ComponentHero.module.scss';
 
 class ComponentHero extends React.Component<*> {
   render() {

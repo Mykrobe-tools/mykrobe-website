@@ -1,12 +1,12 @@
 /* @flow */
 
-import * as React from "react";
-import PropTypes from "prop-types";
-import { Container, Row, Col } from "reactstrap";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { Container, Row, Col } from 'reactstrap';
 
-import Markdown from "./Markdown";
+import Markdown from './Markdown';
 
-import styles from "./ComponentEditorial.module.scss";
+import styles from './ComponentEditorial.module.scss';
 
 class ComponentEditorial extends React.Component<*> {
   render() {

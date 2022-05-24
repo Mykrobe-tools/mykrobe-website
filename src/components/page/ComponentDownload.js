@@ -1,16 +1,16 @@
 /* @flow */
 
-import * as React from "react";
-import PropTypes from "prop-types";
-import { Container, Row, Col } from "reactstrap";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { Container, Row, Col } from 'reactstrap';
 
-import { IconButton } from "../ui/Buttons";
+import { IconButton } from '../ui/Buttons';
 
-import Markdown from "./Markdown";
-import Image from "./Image";
-import Link from "./Link";
+import Markdown from './Markdown';
+import Image from './Image';
+import Link from './Link';
 
-import styles from "./ComponentDownload.module.scss";
+import styles from './ComponentDownload.module.scss';
 
 const DownloadButton = (props: React.ElementProps<*>) => {
   let { text, primaryUserAgent, primary, ...rest } = props;

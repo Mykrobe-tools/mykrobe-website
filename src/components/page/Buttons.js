@@ -1,11 +1,11 @@
 /* @flow */
 
-import * as React from "react";
-import PropTypes from "prop-types";
+import * as React from 'react';
+import PropTypes from 'prop-types';
 
-import { IconButton } from "../ui/Buttons";
+import { IconButton } from '../ui/Buttons';
 
-import Link from "./Link";
+import Link from './Link';
 
 class Buttons extends React.Component<*> {
   render() {

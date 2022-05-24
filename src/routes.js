@@ -20,7 +20,7 @@ export default (
         ...attributes,
         components: [...all.before, ...attributes.components, ...all.after],
       };
-      const Component = props => <Page {...props} {...pageAttributes} />;
+      const Component = (props) => <Page {...props} {...pageAttributes} />;
       return <Route key={path} path={path} exact component={Component} />;
     })}
   </Switch>

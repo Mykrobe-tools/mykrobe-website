@@ -1,7 +1,7 @@
 /* @flow */
 
-import * as React from "react";
-import PropTypes from "prop-types";
+import * as React from 'react';
+import PropTypes from 'prop-types';
 import {
   Container,
   Row,
@@ -9,13 +9,13 @@ import {
   InputGroup,
   InputGroupAddon,
   Input,
-} from "reactstrap";
+} from 'reactstrap';
 
-import { SubmitButton } from "../ui/Buttons";
+import { SubmitButton } from '../ui/Buttons';
 
-import Markdown from "./Markdown";
+import Markdown from './Markdown';
 
-import styles from "./ComponentRegister.module.scss";
+import styles from './ComponentRegister.module.scss';
 
 class ComponentRegister extends React.Component<*> {
   render() {
@@ -29,8 +29,8 @@ class ComponentRegister extends React.Component<*> {
               <Markdown source={body} />
               <InputGroup className={styles.inputContainer}>
                 <Input
-                  placeholder={"sam.smith@example.com"}
-                  type={"email"}
+                  placeholder={'sam.smith@example.com'}
+                  type={'email'}
                   className={styles.emailInput}
                 />
                 <InputGroupAddon addonType="append">
