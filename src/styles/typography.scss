@@ -1,0 +1,48 @@
+@import '~/src/styles/use-bootstrap.global';
+@import '~/src/styles/colors.global';
+
+// heading
+
+.headingPrimary {
+  font-size: 36/16 * 1rem;
+}
+
+.headingPrimaryLarge {
+  font-size: 48/16 * 1rem;
+}
+
+.headingSmall {
+  font-size: 21/16 * 1rem;
+}
+
+// heading - seconary - bryant, small caps
+
+.headingSecondary {
+  font-family: 'Bryant2-Bold', sans-serif;
+  text-transform: uppercase;
+  font-size: 21/16 * 1rem;
+  :global(i.fa) {
+    font-size: 18/16 * 1rem;
+  }
+}
+
+.headingSecondaryLarge {
+  composes: headingSecondary;
+  font-size: 24/16 * 1rem;
+}
+
+.headingSecondarySmall {
+  composes: headingSecondary;
+  font-size: 18/16 * 1rem;
+}
+
+// body
+
+.bodyLargeCompact {
+  font-size: 21/16 * 1rem;
+}
+
+.bodyLarge {
+  font-size: 21/16 * 1rem;
+  line-height: 36/16 * 1rem;
+}

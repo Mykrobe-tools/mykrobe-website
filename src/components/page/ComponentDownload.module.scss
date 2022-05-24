@@ -1,0 +1,45 @@
+@import '~/src/styles/use-bootstrap.global';
+@import '~/src/styles/colors.global';
+@import '~/src/styles/typography.scss';
+
+.container {
+  background-color: $color-panel-light;
+  composes: global(border-top);
+  composes: global(border-bottom);
+  composes: global(py-5);
+}
+
+.content {
+  composes: global(mb-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  p {
+    @extend .bodyLargeCompact;
+    margin-bottom: 0;
+  }
+}
+
+.imageContainer {
+  composes: global(mb-2);
+}
+
+.promoCol {
+  text-align: center;
+  + .promoCol {
+    border-left: 1px solid $color-rule;
+  }
+}
+
+.promoTextContainer {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.promoTitle {
+  composes: headingSecondarySmall from '~/src/styles/typography.scss';
+  composes: global(mb-2);
+  color: $color-tint-primary;
+}

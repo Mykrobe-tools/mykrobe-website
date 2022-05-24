@@ -1,0 +1,47 @@
+.button {
+  transition: opacity 0.15s;
+}
+
+.contentContainer {
+  display: flex;
+  align-items: center;
+}
+
+.activityIndicatorAnimatedContainer {
+  height: 0.9em;
+  position: relative;
+}
+
+.activityIndicatorAnimatedContainer--entering {
+  composes: activityIndicatorAnimatedContainer;
+  transition: width 0.15s, opacity 0.1s ease-in 0.05s;
+  width: 0.9em + 0.5em;
+  opacity: 1;
+}
+
+.activityIndicatorAnimatedContainer--entered {
+  composes: activityIndicatorAnimatedContainer;
+  width: 0.9em + 0.5em;
+  opacity: 1;
+}
+
+.activityIndicatorAnimatedContainer--exiting {
+  composes: activityIndicatorAnimatedContainer;
+  transition: width 0.15s, opacity 0.025s ease-out;
+  width: 0;
+  opacity: 0;
+}
+
+.activityIndicatorAnimatedContainer--exited {
+  composes: activityIndicatorAnimatedContainer;
+  width: 0;
+  opacity: 0;
+}
+
+.activityIndicatorContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.9em;
+  height: 0.9em;
+}

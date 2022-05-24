@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Minion-Regular';
+  src: url('~/src/styles/webfonts/2AB146_0_0.eot');
+  src: url('~/src/styles/webfonts/2AB146_0_0.eot?#iefix') format('embedded-opentype'),
+    url('~/src/styles/webfonts/2AB146_0_0.woff') format('woff'),
+    url('~/src/styles/webfonts/2AB146_0_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bryant2-Bold';
+  src: url('~/src/styles/webfonts/BryantWebBold.eot');
+  src: url('~/src/styles/webfonts/BryantWebBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('~/src/styles/webfonts/BryantWebBold.woff') format('woff');
+}
+
+@import '~/src/styles/colors.global';
+
+// override defaults before importing
+
+@import 'bootstrap.variables.global';
+
+@import 'default.global';
+
+// now override generated classes
+
+@import 'bootstrap.styles.global';
+
+/* fill the window */
+
+html {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  height: 100%;
+  font-variant-ligatures: common-ligatures;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+#app-root,
+#app-root > [data-reactroot] {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+@import 'variables.global.scss';
+
+/* third-party css bypass processing */
+@import 'vendor.global.scss';
+
+.fa-fw {
+  width: auto;
+}
+
+// responsive rem sizes
+
+html {
+  font-size: 16/24 * 100%;
+}
+
+body {
+  line-height: 1.2;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 21/24 * 100%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 100%;
+  }
+}

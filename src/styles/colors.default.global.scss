@@ -1,0 +1,48 @@
+/* Colours */
+
+$color-tint-primary: #f90 !default;
+$color-tint-secondary: #f60 !default;
+
+$color-white: #fff !default;
+
+$gray-100: #f9f9f9 !default;
+$gray-150: #f4f4f4 !default;
+$gray-200: #ececec !default;
+$gray-300: #e2e2e2 !default;
+$gray-400: #d4d4d4 !default;
+$gray-500: #b5b5b5 !default;
+$gray-600: #757575 !default;
+$gray-700: #505050 !default;
+$gray-800: #3a3a3a !default;
+$gray-900: #252525 !default;
+
+$color-app-red: #ea300f !default;
+$color-app-amber: #f7931e !default;
+$color-app-amber-dark: #f90 !default;
+$color-app-green: #3c0 !default;
+$color-app-blue: #009be5 !default;
+
+$color-placeholder: #aaa !default;
+$color-background: #fff !default;
+$color-text: #333 !default;
+$color-grey-light: #ccc !default;
+$color-grey-mid: #999 !default;
+$color-grey-dark: #666 !default;
+$color-text-secondary: #666 !default;
+
+$color-rule: $gray-400 !default;
+
+$color-panel: $gray-150 !default;
+$color-panel-light: $gray-100 !default;
+$color-panel-selected: $gray-300 !default;
+
+$color-transparent: rgba(255, 255, 255, 0) !default;
+$color-white-transparent: rgba(255, 255, 255, 0.95) !default;
+$color-panel-transparent: rgba(244, 244, 244, 0.95) !default;
+
+$primary: $color-tint-primary !default;
+$secondary: $color-tint-secondary !default;
+$success: $color-app-green !default;
+$info: $color-app-blue !default;
+$warning: $color-app-amber !default;
+$danger: $color-app-red !default;
