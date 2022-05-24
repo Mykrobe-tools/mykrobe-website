@@ -6,7 +6,6 @@ import { Container } from 'reactstrap';
 
 import { getPageWithPath } from '../../modules/content';
 
-import { IMAGE_DIR } from '../../constants';
 import Link from './Link';
 
 import styles from './ComponentFooter.module.scss';
@@ -35,6 +34,7 @@ class ComponentFooter extends React.Component<*> {
                 <span key={`${index}`} className={styles.logoContainer}>
                   <Link to={to} {...rest}>
                     <img
+                      alt=""
                       className={styles.img}
                       src={`${process.env.PUBLIC_URL}/img/${image}`}
                     />
