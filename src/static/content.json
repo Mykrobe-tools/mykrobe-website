@@ -98,7 +98,7 @@
         },
         {
           "type": "editorial",
-          "body": "We have been trialling Mykrobe both in England (where currently every TB sample gets illumina-sequenced and passed through Mykrobe) and with [collaborators using nanopore devices in Madagascar, Vietnam, and India](https://www.youtube.com/watch?v=ueWk180q900).\n## Further details\nThere are publications detailing Mykrobe capabilities here: https://www.nature.com/articles/ncomms10063"
+          "body": "We have been trialling Mykrobe both in England (where currently every TB sample gets illumina-sequenced and passed through Mykrobe) and with [collaborators using nanopore devices in Madagascar, Vietnam, and India](https://www.youtube.com/watch?v=ueWk180q900).\n## Further details\nThere are publications detailing Mykrobe capabilities here: [https://www.nature.com/articles/ncomms10063](https://www.nature.com/articles/ncomms10063)"
         },
         {
           "type": "hero",
@@ -118,7 +118,7 @@
         },
         {
           "type": "editorial",
-          "body": "# Global\nIn the modern age, where we can search the entire internet, we should be able to monitor global TB in real-time. There are two major public health wins if we can do this:\n\n1. Bacterial DNA contains markers which allow you to spot whether infections are likely to be due to direct transmission, or totally unrelated. Thus we ought to be able to take the bacterial DNA from a patient, and compare with all the TB in the world, and see if there is a local outbreak or whether this patient has the same strain as was recently seen in another country/city.\n\n2. Drug resistance in M. tuberculosis (the bacteria that causes TB) is a major global health threat, and is growing. There is an urgent need to be able to monitor the burden of resistance.\n\nUntil recently it has been inconceivable to work at this scale. We recently developed the underlying technology to do this (published in Nature Biotechnology here: https://www.nature.com/articles/s41587-018-0010-1, open access link here: https://biorxiv.org/content/early/2017/12/15/234955). Working with collaborators across the world, we are building a live online tool automating all of this."
+          "body": "# Global\nIn the modern age, where we can search the entire internet, we should be able to monitor global TB in real-time. There are two major public health wins if we can do this:\n\n1. Bacterial DNA contains markers which allow you to spot whether infections are likely to be due to direct transmission, or totally unrelated. Thus we ought to be able to take the bacterial DNA from a patient, and compare with all the TB in the world, and see if there is a local outbreak or whether this patient has the same strain as was recently seen in another country/city.\n\n2. Drug resistance in M. tuberculosis (the bacteria that causes TB) is a major global health threat, and is growing. There is an urgent need to be able to monitor the burden of resistance.\n\nUntil recently it has been inconceivable to work at this scale. We recently developed the underlying technology to do this (published in Nature Biotechnology here: [https://www.nature.com/articles/s41587-018-0010-1](https://www.nature.com/articles/s41587-018-0010-1), open access link here: [https://biorxiv.org/content/early/2017/12/15/234955](https://biorxiv.org/content/early/2017/12/15/234955)). Working with collaborators across the world, we are building a live online tool automating all of this."
         },
         {
           "type": "download",

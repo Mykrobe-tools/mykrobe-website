@@ -10,19 +10,6 @@ import './styles/app.global.scss';
 
 import store, { history } from './store';
 
-let element = document.getElementById('root');
-
-if (!element) {
-  throw new Error(`Fatal - div with id 'root' not found`);
-}
-
-console.log('process.env.NODE_ENV', JSON.stringify(process.env.NODE_ENV));
-console.log('process.env.API_URL', JSON.stringify(process.env.API_URL));
-console.log(
-  'process.env.API_SWAGGER_URL',
-  JSON.stringify(process.env.API_SWAGGER_URL)
-);
-
 const routes = require('./routes').default;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
