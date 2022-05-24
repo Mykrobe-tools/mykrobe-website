@@ -3,8 +3,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import { IMAGE_DIR } from '../../constants';
-
 import styles from './Image.module.scss';
 
 class Image extends React.Component<*> {
@@ -15,6 +13,7 @@ class Image extends React.Component<*> {
     }
     return (
       <img
+        alt=""
         className={styles.img}
         src={`${process.env.PUBLIC_URL}/img/${image}`}
       />
