@@ -1,0 +1,27 @@
+@import '~/src/styles/bootstrap.variables.global';
+@import '~bootstrap/scss/bootstrap';
+
+.col-form-label {
+  color: $gray-600;
+}
+
+.table {
+  margin-bottom: 0;
+  thead th {
+    border: none;
+  }
+}
+
+.btn-white {
+  color: $primary;
+}
+
+.form-control[readonly] {
+  border-color: transparent;
+  background: none;
+  padding-left: 0;
+  padding-right: 0;
+  &:focus {
+    box-shadow: none;
+  }
+}
